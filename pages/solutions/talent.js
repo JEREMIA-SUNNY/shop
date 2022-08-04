@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 function Talent(){
     return (
         <>
@@ -52,18 +53,11 @@ function Talent(){
               iste exercitationem voluptatum eius odit repudiandae quos
               excepturi odio debitis itaque eum, incidunt nam in dolorum nisi
               suscipit minus voluptatibus provident, nemo fuga. elit. Nobis
-              suscipit illum quasi voluptatem laudantium, omnis delectus vero
-              mollitia facere, nemo rem adipisci, fugiat sed fuga nesciunt
-              similique consectetur iste qui. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Deserunt, culpa. Natus eligendi
-              vitae numquam atque ducimus repellat aliquam corrupti autem
-              cupiditate optio omnis, ex nisi veritatis alias ab blanditiis sed
-              obcaecati adipisci officiis! Ipsa blanditiis veritatis doloremque,
-              rem hic minus quae. Esse quod, nam veritatis aspernatur vel modi
-              fugit ut.
+            
             </p>
+            <p className="mb-4" > <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
           </div>
-          <div className="h-64 w-1/2 flex items-start  relative">
+          <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
             <Image
               className=""
               layout="fill"
@@ -76,7 +70,7 @@ function Talent(){
 
         <hr />
         <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-          <div className="h-64 w-1/2 flex items-start  relative">
+          <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
             <Image
               className=""
               layout="fill"
@@ -100,14 +94,9 @@ function Talent(){
               suscipit minus voluptatibus provident, nemo fuga. elit. Nobis
               suscipit illum quasi voluptatem laudantium, omnis delectus vero
               mollitia facere, nemo rem adipisci, fugiat sed fuga nesciunt
-              similique consectetur iste qui. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Deserunt, culpa. Natus eligendi
-              vitae numquam atque ducimus repellat aliquam corrupti autem
-              cupiditate optio omnis, ex nisi veritatis alias ab blanditiis sed
-              obcaecati adipisci officiis! Ipsa blanditiis veritatis doloremque,
-              rem hic minus quae. Esse quod, nam veritatis aspernatur vel modi
-              fugit ut.
+             
             </p>
+            <p className="mb-4" > <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
           </div>
         </div>
         <hr />
@@ -126,17 +115,11 @@ function Talent(){
               excepturi odio debitis itaque eum, incidunt nam in dolorum nisi
               suscipit minus voluptatibus provident, nemo fuga. elit. Nobis
               suscipit illum quasi voluptatem laudantium, omnis delectus vero
-              mollitia facere, nemo rem adipisci, fugiat sed fuga nesciunt
-              similique consectetur iste qui. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Deserunt, culpa. Natus eligendi
-              vitae numquam atque ducimus repellat aliquam corrupti autem
-              cupiditate optio omnis, ex nisi veritatis alias ab blanditiis sed
-              obcaecati adipisci officiis! Ipsa blanditiis veritatis doloremque,
-              rem hic minus quae. Esse quod, nam veritatis aspernatur vel modi
-              fugit ut.
+             
             </p>
+            <p className="mb-4" > <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
           </div>
-          <div className="h-64 w-1/2 flex items-start  relative">
+          <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
             <Image
               className=""
               layout="fill"
@@ -149,7 +132,7 @@ function Talent(){
         <hr />
 
         <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-          <div className="h-64 w-1/2 flex items-start  relative">
+          <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
             <Image
               className=""
               layout="fill"
@@ -171,15 +154,7 @@ function Talent(){
               iste exercitationem voluptatum eius odit repudiandae quos
               excepturi odio debitis itaque eum, incidunt nam in dolorum nisi
               suscipit minus voluptatibus provident, nemo fuga. elit. Nobis
-              suscipit illum quasi voluptatem laudantium, omnis delectus vero
-              mollitia facere, nemo rem adipisci, fugiat sed fuga nesciunt
-              similique consectetur iste qui. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Deserunt, culpa. Natus eligendi
-              vitae numquam atque ducimus repellat aliquam corrupti autem
-              cupiditate optio omnis, ex nisi veritatis alias ab blanditiis sed
-              obcaecati adipisci officiis! Ipsa blanditiis veritatis doloremque,
-              rem hic minus quae. Esse quod, nam veritatis aspernatur vel modi
-              fugit ut.
+             
             </p>
           </div>
         </div>

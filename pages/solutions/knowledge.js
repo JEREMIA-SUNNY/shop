@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 function Knowledge() {
   return (
     <>
@@ -29,13 +30,9 @@ function Knowledge() {
               porro natus atque, repellat architecto dolorem neque soluta
               necessitatibus a at fugiat suscipit temporibus ipsum quaerat.
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              omnis velit, delectus quam eius suscipit fugit aspernatur
-              doloremque deleniti odio! Aspernatur non dignissimos ducimus
-              aliquam incidunt reiciendis vero dicta quasi omnis aut voluptas
-              hic quas tempora modi impedit voluptatem repellat quia, laborum
-              rem. Cupiditate doloribus, illum cum amet reprehenderit
-              consequuntur?
+            
             </p>
+            <p> <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
           </div>
         </section>
 
@@ -55,16 +52,11 @@ function Knowledge() {
                 in dolorum nisi suscipit minus voluptatibus provident, nemo
                 fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
                 omnis delectus vero mollitia facere, nemo rem adipisci, fugiat
-                sed fuga nesciunt similique consectetur iste qui. Lorem, ipsum
-                dolor sit amet consectetur adipisicing elit. Deserunt, culpa.
-                Natus eligendi vitae numquam atque ducimus repellat aliquam
-                corrupti autem cupiditate optio omnis, ex nisi veritatis alias
-                ab blanditiis sed obcaecati adipisci officiis! Ipsa blanditiis
-                veritatis doloremque, rem hic minus quae. Esse quod, nam
-                veritatis aspernatur vel modi fugit ut.
+               
               </p>
+              <p className="mb-5"> <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
             </div>
-            <div className="h-64 w-1/2 flex items-start  relative">
+            <div className="h-80 lg:w-1/2 w-full flex items-start  relative">
               <Image
                 className=""
                 layout="fill"
@@ -77,7 +69,7 @@ function Knowledge() {
 
           <hr />
           <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="h-64 w-1/2 flex items-start  relative">
+            <div className="h-80 lg:w-1/2 w-full flex items-start  relative">
               <Image
                 className=""
                 layout="fill"
@@ -100,15 +92,9 @@ function Knowledge() {
                 repudiandae quos excepturi odio debitis itaque eum, incidunt nam
                 in dolorum nisi suscipit minus voluptatibus provident, nemo
                 fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
-                omnis delectus vero mollitia facere, nemo rem adipisci, fugiat
-                sed fuga nesciunt similique consectetur iste qui. Lorem, ipsum
-                dolor sit amet consectetur adipisicing elit. Deserunt, culpa.
-                Natus eligendi vitae numquam atque ducimus repellat aliquam
-                corrupti autem cupiditate optio omnis, ex nisi veritatis alias
-                ab blanditiis sed obcaecati adipisci officiis! Ipsa blanditiis
-                veritatis doloremque, rem hic minus quae. Esse quod, nam
-                veritatis aspernatur vel modi fugit ut.
+                
               </p>
+              <p> <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
             </div>
           </div>
           <hr />
@@ -126,18 +112,12 @@ function Knowledge() {
                 Architecto, odio! Autem iste exercitationem voluptatum eius odit
                 repudiandae quos excepturi odio debitis itaque eum, incidunt nam
                 in dolorum nisi suscipit minus voluptatibus provident, nemo
-                fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
-                omnis delectus vero mollitia facere, nemo rem adipisci, fugiat
-                sed fuga nesciunt similique consectetur iste qui. Lorem, ipsum
-                dolor sit amet consectetur adipisicing elit. Deserunt, culpa.
-                Natus eligendi vitae numquam atque ducimus repellat aliquam
-                corrupti autem cupiditate optio omnis, ex nisi veritatis alias
-                ab blanditiis sed obcaecati adipisci officiis! Ipsa blanditiis
-                veritatis doloremque, rem hic minus quae. Esse quod, nam
-                veritatis aspernatur vel modi fugit ut.
+                
               </p>
+              
+              <p className="mb-4" > <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
             </div>
-            <div className="h-64 w-1/2 flex items-start  relative">
+            <div className="h-80 lg:w-1/2 w-full flex items-start  relative">
               <Image
                 className=""
                 layout="fill"
@@ -150,7 +130,7 @@ function Knowledge() {
           <hr />
 
           <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="h-64 w-1/2 flex items-start  relative">
+            <div className="h-80 lg:w-1/2 w-full flex items-start  relative">
               <Image
                 className=""
                 layout="fill"
@@ -173,15 +153,10 @@ function Knowledge() {
                 repudiandae quos excepturi odio debitis itaque eum, incidunt nam
                 in dolorum nisi suscipit minus voluptatibus provident, nemo
                 fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
-                omnis delectus vero mollitia facere, nemo rem adipisci, fugiat
-                sed fuga nesciunt similique consectetur iste qui. Lorem, ipsum
-                dolor sit amet consectetur adipisicing elit. Deserunt, culpa.
-                Natus eligendi vitae numquam atque ducimus repellat aliquam
-                corrupti autem cupiditate optio omnis, ex nisi veritatis alias
-                ab blanditiis sed obcaecati adipisci officiis! Ipsa blanditiis
-                veritatis doloremque, rem hic minus quae. Esse quod, nam
-                veritatis aspernatur vel modi fugit ut.
+                
               </p>
+              
+              <p> <Link href="/contact"><a className='active:text-red underline decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
             </div>
           </div>
         </section>

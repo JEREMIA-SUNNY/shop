@@ -26,7 +26,7 @@ export default function Layout({ children }) {
     },
     {
       name: "About",
-      path: "",
+      path: "/about",
       sub: [
         { name: "Who We Are", path: "/about#WhoWe-Are" },
         { name: "Core Values", path: "/about#Core-values" },
@@ -36,7 +36,7 @@ export default function Layout({ children }) {
 
     {
       name: "Solutions",
-      path: "",
+      path: "/solutions/knowledge",
       sub: [
         { name: "Knowledge As A Service ", path: "/solutions/knowledge" },
         { name: "Talent As A Service", path: "/solutions/talent" },
@@ -46,7 +46,7 @@ export default function Layout({ children }) {
     },
     {
       name: "Capabilities",
-      path: "",
+      path: "/capabilities",
 
       sub: [
         { name: "Consulting ", path: "/capabilities#Consulting" },
@@ -166,7 +166,7 @@ export default function Layout({ children }) {
                     <a
                       className={`${
                         pathname === path &&
-                        "underline decoration-orange decoration-2  underline-offset-4 "
+                        "underline decoration-orange decoration-2 font-bold underline-offset-4 "
                       } hover:font-bold mx-3  2xl:mx-4 transition-all`}
                     >
                       {name}

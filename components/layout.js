@@ -417,6 +417,7 @@ export default function Layout({ children }) {
             Copyright © 2022. All Rights Reserved. Designed by Deedbee Social
             Ventures.
           </p>
+          <p>Image Courtesy | unsplash.com | freepik.com</p>
         </div>
       </footer>
     </>

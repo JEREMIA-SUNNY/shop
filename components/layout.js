@@ -154,7 +154,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
             <div className="lg:pl-2 lg:flex  text-center  py-3 flex-col justify-center ">
-                  <span className="text-sm  text-black capitalize">
+                  <span className="text-sm font-bold text-black capitalize">
                     TALENT TRANSFORMATION. SIMPLIFIED.
                   </span>
                 </div>

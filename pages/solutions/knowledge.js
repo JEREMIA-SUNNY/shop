@@ -50,7 +50,7 @@ function Knowledge() {
                 online and offline, in self-learning mode and an instructor-led
                 mode. We also offer hybrid models, where employees can go
                 through a series of courses online followed by advanced offline
-                sessions with instructors. Whether it&apos;'s a project specific
+                sessions with instructors. Whether it&apos;s a project specific
                 training or long-term capacity building, experienced
                 professionals or campus recruits, we got your upskilling needs
                 covered.

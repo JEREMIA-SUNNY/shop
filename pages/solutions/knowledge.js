@@ -8,6 +8,7 @@ function Knowledge() {
           <Image
             layout="fill"
             alt="ser"
+            className="brightness-50"
             src="/ouroffering/knowledge1.png"
             objectFit="cover "
           />
@@ -34,6 +35,15 @@ function Knowledge() {
               with experts who can deliver online/offline trainings on several
               in-demand technology skills for your project teams and campus
               recruits.
+              <span className="mb-5">
+                Click &nbsp;
+                <Link href="/education">
+                  <a className="active:text-red underline font-bold decoration-emerald-600 text-emerald-600">
+                    here
+                  </a>
+                </Link>
+                &nbsp; to view our current course offerings.
+              </span>
             </p>
           </div>
         </section>
@@ -61,7 +71,7 @@ function Knowledge() {
                   <a className="active:text-red underline font-bold decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
-                </Link>{" "}
+                </Link>
                 to know more.
               </p>
             </div>
@@ -111,14 +121,7 @@ function Knowledge() {
             </div>
           </div>
 
-          <div className="w-full h-full flex justify-center mt-5 mb-10">
-            <div className="bg-orange flex justify-center w-[150px] shadow-lg h-10 hover:scale-110 rounded-lg ">
-              {" "}
-              <Link href="/education" className="">
-                <button className="font-semibold ">View Courses</button>
-              </Link>
-            </div>
-          </div>
+        
         </section>
       </div>
     </>

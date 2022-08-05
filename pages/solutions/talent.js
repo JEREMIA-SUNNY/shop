@@ -8,6 +8,7 @@ function Talent() {
           <Image
             layout="fill"
             alt="ser"
+            className="brightness-75"
             src="/ouroffering/talent1.png"
             objectFit="cover "
           />
@@ -22,20 +23,25 @@ function Talent() {
         <section className="text-black  ">
           <div className="container px-5 py-24 mx-auto">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              error in asperiores tempore neque similique doloremque. Aut
-              nesciunt repudiandae ipsa quia natus assumenda tenetur qui quos
-              quo incidunt dolore corrupti, libero repellendus vitae nihil
-              quisquam fuga nemo quasi id dolor consequuntur veniam? Odit quos
-              porro natus atque, repellat architecto dolorem neque soluta
-              necessitatibus a at fugiat suscipit temporibus ipsum quaerat.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              omnis velit, delectus quam eius suscipit fugit aspernatur
-              doloremque deleniti odio! Aspernatur non dignissimos ducimus
-              aliquam incidunt reiciendis vero dicta quasi omnis aut voluptas
-              hic quas tempora modi impedit voluptatem repellat quia, laborum
-              rem. Cupiditate doloribus, illum cum amet reprehenderit
-              consequuntur?
+              People are the key ingredient to the success of any project or
+              initiative. Getting people on-boarded on-time within the budget is
+              always a challenge. This is where our expertise can help you. We
+              have a strong network of skilled professionals who can be staffed
+              quickly across multiple roles, and many of our customers have
+              realized enhanced productivity, reduced staffing and recruitment
+              costs by partnering with us. We deploy talent with not just the
+              right skills, but also the right attitude and experience needed
+              for your projects. We also specialize in deploying SAP, Oracle
+              professionals and senior executive hiring.{" "}
+              <span className="mb-5">
+                Click &nbsp;
+                <Link href="/career">
+                  <a className="active:text-red underline font-bold decoration-blue hover:text-orange text-blue">
+                    here
+                  </a>
+                </Link>
+                &nbsp; to view our portfolio of roles.
+              </span>
             </p>
           </div>
         </section>
@@ -43,26 +49,23 @@ function Talent() {
         <section className="text-black flex flex-col">
           <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
             <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
-              <h1 className="text-3xl mb-4  text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h1>
+              <h1 className="text-3xl mb-4  text-black">Flexible Staffing</h1>
               <p className="mb-8 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Harum est
-                perferendis repudiandae modi, maiores doloremque rem neque
-                dolorem excepturi officiis tenetur aliquid iusto dolorum.
-                Architecto, odio! Autem iste exercitationem voluptatum eius odit
-                repudiandae quos excepturi odio debitis itaque eum, incidunt nam
-                in dolorum nisi suscipit minus voluptatibus provident, nemo
-                fuga. elit. Nobis
+                We offer a diverse portfolio of staffing services tailored to
+                your business needs. We specialize in full-time, part-time,
+                long-term and short-term staffing models, covering a wide
+                spectrum of roles from software engineers to CXOs. Our talent
+                supply chain is agile and precise, helping you focus on your
+                core activities and reduce operational costs while improving
+                productivity. We have helped many of our clients optimize their
+                talent mix, minimizing the need for full-time hires.
               </p>
               <p className="mb-4">
-                {" "}
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
-                </Link>{" "}
+                </Link>
                 to know more.
               </p>
             </div>
@@ -72,7 +75,7 @@ function Talent() {
                 layout="fill"
                 objectFit="cover"
                 alt="ser"
-                src="/about/abt4.jpg"
+                src="/solutions/flexible.png"
               />
             </div>
           </div>
@@ -85,106 +88,35 @@ function Talent() {
                 layout="fill"
                 objectFit="cover"
                 alt="ser"
-                src="/about/abt4.jpg"
+                src="/solutions/network2.png"
               />
             </div>
 
             <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
-              <h1 className="text-3xl mb-4  text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h1>
+              <h1 className="text-3xl mb-4  text-gray-900">Strong Network</h1>
               <p className="mb-8 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Harum est
-                perferendis repudiandae modi, maiores doloremque rem neque
-                dolorem excepturi officiis tenetur aliquid iusto dolorum.
-                Architecto, odio! Autem iste exercitationem voluptatum eius odit
-                repudiandae quos excepturi odio debitis itaque eum, incidunt nam
-                in dolorum nisi suscipit minus voluptatibus provident, nemo
-                fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
-                omnis delectus vero mollitia facere, nemo rem adipisci, fugiat
-                sed fuga nesciunt
+                Our robust talent ecosystem has been built over several years of
+                trust, and is constantly evolving in breadth and depth. Our
+                network today consists of 30000+ SAP professionals, 10000+
+                Oracle professionals, and thousands of others with diverse skill
+                sets relevant for IT industry of the future. We have placed over
+                15000 professionals in the last 5 years, including 200+ CXOs.
               </p>
-              <p className="mb-4">
-                {" "}
-                <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
-                    Get in touch
-                  </a>
-                </Link>{" "}
-                to know more.
-              </p>
-            </div>
-          </div>
-          <hr />
-
-          <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
-              <h1 className="text-3xl mb-4  text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h1>
-              <p className="mb-8 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Harum est
-                perferendis repudiandae modi, maiores doloremque rem neque
-                dolorem excepturi officiis tenetur aliquid iusto dolorum.
-                Architecto, odio! Autem iste exercitationem voluptatum eius odit
-                repudiandae quos excepturi odio debitis itaque eum, incidunt nam
-                in dolorum nisi suscipit minus voluptatibus provident, nemo
-                fuga. elit. Nobis suscipit illum quasi voluptatem laudantium,
-                omnis delectus vero
-              </p>
-
               <p className="mb-4">
                 
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
-                </Link>{" "}
+                </Link>
                 to know more.
               </p>
-            </div>
-            <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
-              <Image
-                className=""
-                layout="fill"
-                objectFit="cover"
-                alt="ser"
-                src="/about/abt4.jpg"
-              />
             </div>
           </div>
           <hr />
 
-          <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
-              <Image
-                className=""
-                layout="fill"
-                objectFit="cover"
-                alt="ser"
-                src="/about/abt4.jpg"
-              />
-            </div>
-
-            <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
-              <h1 className="text-3xl mb-4  text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h1>
-              <p className="mb-8 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Harum est
-                perferendis repudiandae modi, maiores doloremque rem neque
-                dolorem excepturi officiis tenetur aliquid iusto dolorum.
-                Architecto, odio! Autem iste exercitationem voluptatum eius odit
-                repudiandae quos excepturi odio debitis itaque eum, incidunt nam
-                in dolorum nisi suscipit minus voluptatibus provident, nemo
-                fuga. elit. Nobis
-              </p>
-              <p className="mb-4" > <Link href="/contact"><a className='active:text-red underline font-bold decoration-emerald-600 text-emerald-600'>Get in touch</a></Link> to know more.</p>
-            </div>
-          </div>
+          
+         
         </section>
       </div>
     </>

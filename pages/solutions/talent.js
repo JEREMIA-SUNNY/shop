@@ -62,7 +62,7 @@ function Talent() {
               </p>
               <p className="mb-4">
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red font-bold underline decoration-blue hover:text-orange text-blue">
                     Get in touch
                   </a>
                 </Link>
@@ -105,7 +105,7 @@ function Talent() {
               <p className="mb-4">
                 
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red font-bold underline decoration-blue hover:text-orange text-blue">
                     Get in touch
                   </a>
                 </Link>

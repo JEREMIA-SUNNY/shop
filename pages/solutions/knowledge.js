@@ -38,7 +38,7 @@ function Knowledge() {
               <span className="mb-5">
                 Click &nbsp;
                 <Link href="/education">
-                  <a className="active:text-red underline font-bold decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red underline font-bold hover:text-orange decoration-green text-green">
                     here
                   </a>
                 </Link>
@@ -68,7 +68,7 @@ function Knowledge() {
               <p className="mb-5">
                 {" "}
                 <Link href="/contact">
-                  <a className="active:text-red underline font-bold decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red underline font-bold hover:text-orange decoration-green text-green">
                     Get in touch
                   </a>
                 </Link>
@@ -112,7 +112,7 @@ function Knowledge() {
               <p>
                 {" "}
                 <Link href="/contact">
-                  <a className="active:text-red underline decoration-emerald-600 text-emerald-600 font-bold">
+                  <a className="active:text-red underline decoration-green hover:text-orange text-green font-bold">
                     Get in touch
                   </a>
                 </Link>{" "}

@@ -40,7 +40,7 @@ function Itservices() {
               <p className="mb-4">
                 
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
                 </Link>
@@ -84,7 +84,7 @@ function Itservices() {
               <p className="mb-4">
                 {" "}
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-emerald-600 text-emerald-600">
+                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
                 </Link>{" "}

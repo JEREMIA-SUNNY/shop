@@ -36,13 +36,13 @@ function Knowledge() {
               in-demand technology skills for your project teams and campus
               recruits.
               <span className="mb-5">
-                Click &nbsp;
+                &nbsp;Click&nbsp;
                 <Link href="/education">
                   <a className="active:text-red underline font-bold hover:text-orange decoration-green text-green">
                     here
                   </a>
                 </Link>
-                &nbsp; to view our current course offerings.
+                &nbsp;to view our current course offerings.
               </span>
             </p>
           </div>
@@ -71,7 +71,7 @@ function Knowledge() {
                   <a className="active:text-red underline font-bold hover:text-orange decoration-green text-green">
                     Get in touch
                   </a>
-                </Link>
+                </Link>{" "}
                 to know more.
               </p>
             </div>
@@ -120,8 +120,6 @@ function Knowledge() {
               </p>
             </div>
           </div>
-
-        
         </section>
       </div>
     </>

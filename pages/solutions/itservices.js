@@ -43,8 +43,8 @@ function Itservices() {
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
                   </a>
-                </Link>
-                to know more.
+                </Link>{" "}
+                 to know more.
               </p>
             </div>
             <div className="h-80 lg:w-1/2 w-full flex items-start  relative">

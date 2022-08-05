@@ -34,13 +34,13 @@ function Talent() {
               for your projects. We also specialize in deploying SAP, Oracle
               professionals and senior executive hiring.{" "}
               <span className="mb-5">
-                Click &nbsp;
+                Click&nbsp;
                 <Link href="/career">
-                  <a className="active:text-red underline font-bold decoration-blue hover:text-orange text-blue">
+                  <a className="active:text-red underline font-bold decoration-green hover:text-orange text-green">
                     here
                   </a>
                 </Link>
-                &nbsp; to view our portfolio of roles.
+                &nbsp;to view our portfolio of roles.
               </span>
             </p>
           </div>
@@ -62,11 +62,11 @@ function Talent() {
               </p>
               <p className="mb-4">
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-blue hover:text-orange text-blue">
+                  <a className="active:text-red font-bold underline decoration-green hover:text-orange text-green">
                     Get in touch
                   </a>
                 </Link>
-                to know more.
+                &nbsp;to know more.
               </p>
             </div>
             <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
@@ -103,21 +103,18 @@ function Talent() {
                 15000 professionals in the last 5 years, including 200+ CXOs.
               </p>
               <p className="mb-4">
-                
                 <Link href="/contact">
-                  <a className="active:text-red font-bold underline decoration-blue hover:text-orange text-blue">
+                  <a className="active:text-red font-bold underline decoration-green hover:text-orange text-green">
                     Get in touch
                   </a>
                 </Link>
-                to know more.
+                &nbsp;to know more.
               </p>
             </div>
           </div>
           <hr />
-
-          
-         
         </section>
+        
       </div>
     </>
   );

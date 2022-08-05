@@ -147,8 +147,7 @@ function Capabilities() {
               <h2 className="text-xl ">Outsourcing</h2>
               <p className="prose pt-8">
                 In this age of technology disruption, organizations are
-                constantly riddled with the challenge of Changing wheels on the
-                go to remain competitive. This requires a clear vision and
+                constantly riddled with the challenge of wheels on-the-go to remain competitive. This requires a clear vision and
                 strategy for agility and scale. SFJ has an exceptional track
                 record in managed IT services, and a customer retention ratio of
                 over 90% over the past decade is a testimony to the

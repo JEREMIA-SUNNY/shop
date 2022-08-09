@@ -20,90 +20,171 @@ import Itservicescard from "../components/itservicescard";
 export default function Home() {
   const Itservice = [
     {
-      name: "Accessibility",
+      name: "Java Stack",
       icon: <FaAccessibleIcon size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 1,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
     {
-      name: "Design",
+      name: "Hadoop",
       icon: <FaAddressBook size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 2,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
     {
-      name: "Development",
+      name: "React JS ",
       icon: <FaAdjust size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 3,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
     {
-      name: "Marketing",
+      name: "Snowflake",
       icon: <FaBeer size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 4,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
     {
-      name: "Sales",
+      name: "Teradata",
       icon: <FaDownload size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 5,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
     {
-      name: "Video",
+      name: "Azure Data Bricks/ADF ",
       icon: <FaVideo size={40} color="white" />,
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 6,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
+    },
+    {
+      name: "SAP BODS ",
+      icon: <FaVideo size={40} color="white" />,
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      id: 7,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
+    },
+    {
+      name: "SAP SuccessFactors ",
+      icon: <FaVideo size={40} color="white" />,
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      id: 8,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
+    },
+    {
+      name: " Salesforce",
+      icon: <FaVideo size={40} color="white" />,
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      id: 9,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
+    },
+    {
+      name: "Oracle/OIS/Finance",
+      icon: <FaVideo size={40} color="white" />,
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      id: 10,
+      type: " Full-time/Contract",
+      role: "Developer/Consultant/Architect",
     },
   ];
   const Knowledge = [
     {
-      name: "Accessibility",
-      icon: <FaAccessibleIcon size={40} color="black" />,
+      name: "Testing",
+      icon: "/know/.png",
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 1,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
     {
-      name: "Design",
-      icon: <FaAddressBook size={40} color="black" />,
+      name: "Dot net",
+      icon: "/know/net.png",
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 2,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
     {
-      name: "Development",
-      icon: <FaAdjust size={40} color="black" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      name: "Java",
+      icon: "/know/java.png",
+
       id: 3,
+
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
     {
-      name: "Marketing",
-      icon: <FaBeer size={40} color="black" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      name: "SAP",
+      icon: "/know/sap.png",
+
       id: 4,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
     {
-      name: "Sales",
-      icon: <FaDownload size={40} color="black" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      name: "AZURE",
+      icon: "/know/azure.png",
+
       id: 5,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
     {
-      name: "Video",
-      icon: <FaVideo size={40} color="black" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      name: "Mainframe",
+      icon: "/know/mainframe.png",
+
       id: 6,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
+    },
+    {
+      name: "Service Now",
+      icon: "/know/Service.png",
+
+      id: 7,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
+    },
+    {
+      name: "Siebel",
+      icon: "/know/siebel.png",
+
+      id: 8,
+      mode: "Hybrid (Online + Offline)",
+      Levels: "Beginner, Advanced",
+      dur: "1 year",
     },
   ];
 
@@ -296,18 +377,23 @@ export default function Home() {
             </h1>
             <span className="inline-block w-20 h-[2px] rounded-full mt-5 bg-black"></span>
           </div>
-          <div className="flex flex-wrap -m-4">
-            {Knowledge.map(({ name, icon, description, id }) => {
-              return (
-                <KnowledgeCard
-                  key={id}
-                  name={name}
-                  icon={icon}
-                  description={description}
-                  id={id}
-                />
-              );
-            })}
+          <div className="md:grid md:grid-cols-4   flex flex-col -m-4">
+            {Knowledge.map(
+              ({ name, icon, description, id, mode, Levels, dur }) => {
+                return (
+                  <KnowledgeCard
+                    key={id}
+                    name={name}
+                    icon={icon}
+                    description={description}
+                    id={id}
+                    mode={mode}
+                    Levels={Levels}
+                    dur={dur}
+                  />
+                );
+              }
+            )}
           </div>
           {/* <button className="flex mx-auto mt-16 text-black bg-orange border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             Read more
@@ -324,8 +410,8 @@ export default function Home() {
             </h1>
             <span className="inline-block w-20 h-[2px] rounded-full mt-5 bg-white"></span>
           </div>
-          <div className="flex flex-wrap -m-4">
-            {Itservice.map(({ name, icon, description, id }) => {
+          <div className="md:grid md:grid-cols-5  flex flex-col -m-4">
+            {Itservice.map(({ name, icon, description, id, type, role }) => {
               return (
                 <Itservicescard
                   key={id}
@@ -333,6 +419,8 @@ export default function Home() {
                   icon={icon}
                   description={description}
                   id={id}
+                  type={type}
+                  role={role}
                 />
               );
             })}

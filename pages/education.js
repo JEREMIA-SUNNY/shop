@@ -89,7 +89,7 @@ function Education() {
         { name: "Azure app services and plans." },
         { name: "How to access Azure sql database from local machine." },
         { name: "Azure deployment slots." },
-        { name: "Deploy asp.net core web api to Azure app service." },
+        { name: "Deploy ASP.NET core web api to Azure app service." },
         { name: "Adding API to Azure API management. " },
       ],
       

@@ -55,7 +55,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                       {point.map(({ name },index) => {
                         return (
                           <li key={index} className="text-black">
-                            <p className="list-disc">{name}</p>
+                            <p className="list-disc tracking-widest ">{name}</p>
                           </li>
                         );
                       })}

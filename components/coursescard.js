@@ -52,9 +52,9 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   </h1>
                   <div className="flex ">
                     <ul className=" ml-14 flex flex-col list-disc  text-left ">
-                      {point.map(({ name }) => {
+                      {point.map(({ name },index) => {
                         return (
-                          <li className="text-black">
+                          <li key={index} className="text-black">
                             <p className="list-disc">{name}</p>
                           </li>
                         );

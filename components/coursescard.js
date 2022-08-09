@@ -36,18 +36,18 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
             <div className="flex">
               <div className="lg:w-full">
                 <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-5 pb-24 rounded-lg border text-center relative">
-                  <h2 className="tracking-widest  text-left   text-black mb-3">
-                    <span className="font-bold">Level :-</span>
+                  <h2 className=" text-left   text-black mb-3">
+                    <span className="font-bold">Level : </span>
                     {levels}
                   </h2>
-                  <h1 className="tracking-widest  text-left text-black mb-3">
-                    <span className="font-bold">Mode :-</span> {mode}
+                  <h1 className="  text-left text-black mb-3">
+                    <span className="font-bold">Mode :</span> {mode}
                   </h1>
-                  <h1 className="tracking-widest  text-left text-black mb-3">
+                  <h1 className="  text-left text-black mb-3">
                     <span className="font-bold">Duration :-</span>
                     {dur}
                   </h1>
-                  <h1 className="tracking-widest  text-left text-black mb-3">
+                  <h1 className="  text-left text-black mb-3">
                     <span className="font-bold">Curriculum :-</span>
                   </h1>
                   <div className="flex ">
@@ -55,7 +55,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                       {point.map(({ name },index) => {
                         return (
                           <li key={index} className="text-black">
-                            <p className="list-disc tracking-widest ">{name}</p>
+                            <p className="list-disc  ">{name}</p>
                           </li>
                         );
                       })}

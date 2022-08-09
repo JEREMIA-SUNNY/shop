@@ -21,90 +21,75 @@ export default function Home() {
   const Itservice = [
     {
       name: "Java Stack",
-      icon: <FaAccessibleIcon size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/java.png",
       id: 1,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "Hadoop",
-      icon: <FaAddressBook size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/hadoop.png",
       id: 2,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "React JS ",
-      icon: <FaAdjust size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/react.png",
+     
       id: 3,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "Snowflake",
-      icon: <FaBeer size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/snowflake.png",
       id: 4,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "Teradata",
-      icon: <FaDownload size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon:"/tal/teradata.png",
+     
       id: 5,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "Azure Data Bricks/ADF ",
-      icon: <FaVideo size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon:"/tal/azurew.png",
+     
       id: 6,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "SAP BODS ",
-      icon: <FaVideo size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/sapw.png",
+     
       id: 7,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "SAP SuccessFactors ",
-      icon: <FaVideo size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon:"/tal/sapw.png",
+     
       id: 8,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: " Salesforce",
-      icon: <FaVideo size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon:"/tal/sfw.png",
       id: 9,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
     },
     {
       name: "Oracle/OIS/Finance",
-      icon: <FaVideo size={40} color="white" />,
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      icon: "/tal/Oracle.png",
       id: 10,
       type: " Full-time/Contract",
       role: "Developer/Consultant/Architect",
@@ -113,7 +98,7 @@ export default function Home() {
   const Knowledge = [
     {
       name: "Testing",
-      icon: "/know/.png",
+      icon: "/know/testing.png",
       description:
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
       id: 1,

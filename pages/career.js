@@ -271,7 +271,7 @@ export default function Career() {
       <section className="text-black  ">
         <div className="container px-5 py-11 mx-auto bg-coustom1">
           <p>
-          We are always on the lookout for talented, committed individuals and help them achieve their career goals by providing the right opportunities at the right time, tailored to each individual's preferences. We have successfully placed 15000+ professionals in the recent years in several Fortune 100 companies and MNCs, across several key roles. Our talent services cover a wide spectrum of roles in the digital ecosystem, from engineers, consultants, architects, and even CXOs. Sign-up with SFJ today and join a strong growing network of IT professionals.
+          We are always on the lookout for talented, committed individuals and help them achieve their career goals by providing the right opportunities at the right time, tailored to each individual&apos;s preferences. We have successfully placed 15000+ professionals in the recent years in several Fortune 100 companies and MNCs, across several key roles. Our talent services cover a wide spectrum of roles in the digital ecosystem, from engineers, consultants, architects, and even CXOs. Sign-up with SFJ today and join a strong growing network of IT professionals.
           </p>
         </div>
       </section>

@@ -36,27 +36,30 @@ function Careercard({ id, title, description, type, role, point }) {
             <div className="flex">
               <div className="p-4 lg:w-full">
                 <div className="h-full bg-gray-100 border bg-opacity-75 px-8 pt-5 pb-24 rounded-lg overflow-hidden text-center relative">
-                  
-
-                  
                   <h1 className="  text-black mb-3 tracking-widest text-left">
-                   <span className="font-bold">Type:</span> {type}
+                    <span className="font-bold">Type:</span> {type}
                   </h1>
-                  <h1 className="tracking-widest  text-black mb-3  text-left"><span className="font-bold">Role:</span>{role}</h1>
-                  <h2 className="tracking-widest   text-black mb-3">
-                    {}
-                  </h2>
-                  <p className="text-left font-bold tracking-widest">Skills :-</p>
-                 <div className="flex ">
-                  <ul class=" ml-14 flex flex-col list-disc  text-left ">
-                    {point.map(({ name },index) => {
-                      return (
-                        <li key={index} className="text-black tracking-widest">
-                          <p className="list-disc tracking-widest">{name}</p>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <h1 className="tracking-widest  text-black mb-3  text-left">
+                    <span className="font-bold">Role:</span>
+                    {role}
+                  </h1>
+                  <h2 className="tracking-widest   text-black mb-3">{}</h2>
+                  <p className="text-left font-bold tracking-widest">
+                    Skills :-
+                  </p>
+                  <div className="flex ">
+                    <ul className=" ml-14 flex flex-col list-disc  text-left ">
+                      {point.map(({ name }, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="text-black tracking-widest"
+                          >
+                            <p className="list-disc tracking-widest">{name}</p>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
                   <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
                     <button

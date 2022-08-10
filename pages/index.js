@@ -267,7 +267,7 @@ export default function Home() {
       links: "/solutions/staffing",
     },
     {
-      id: 1,
+      id: 3,
       name1: "IT  ",
       name2: "Services",
       images: "/ouroffering/it1.png",

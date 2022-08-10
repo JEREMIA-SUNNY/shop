@@ -191,7 +191,7 @@ function Education() {
               {careerdata.map(({ id, dur, title, mode, Levels, point }) => {
                 return (
                   <CoursesCard
-                    key={id}
+                    key={`${id}-${title}`}
                     dur={dur}
                     title={title}
                     mode={mode}
@@ -206,7 +206,7 @@ function Education() {
                 ({ id, description, title, mode, Levels, point,dur }) => {
                   return (
                     <CoursesCard
-                      key={id}
+                      key={`${id}-${title}`}
                       dur={dur}
                       title={title}
                       mode={mode}

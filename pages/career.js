@@ -267,7 +267,7 @@ export default function Career() {
               {careerdata.map(({ id, description, title,type,point,role }) => {
                 return (
                   <Careercard
-                    key={id}
+                    key={`${id}-${title}`}
                     description={description}
                     title={title}
                     type={type}
@@ -281,7 +281,7 @@ export default function Career() {
               {careerdata1.map(({ id, description, title,type,role,point }) => {
                 return (
                   <Careercard
-                    key={id}
+                    key={`${id}-${title}`}
                     description={description}
                     title={title}
                     type={type}

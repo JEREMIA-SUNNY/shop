@@ -44,11 +44,11 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                     <span className="font-bold">Mode :</span> {mode}
                   </h1>
                   <h1 className="  text-left text-black mb-3">
-                    <span className="font-bold">Duration :-</span>
+                    <span className="font-bold">Duration :</span>
                     {dur}
                   </h1>
                   <h1 className="  text-left text-black mb-3">
-                    <span className="font-bold">Curriculum :-</span>
+                    <span className="font-bold">Curriculum :</span>
                   </h1>
                   <div className="flex ">
                     <ul className=" ml-14 flex flex-col list-disc  text-left ">

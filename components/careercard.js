@@ -47,7 +47,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   </h1>
                  
                   <h1 className="  text-left text-black mb-3">
-                    <span className="font-bold">Skills :- </span>
+                    <span className="font-bold">Skills : </span>
                   </h1>
                   <div className="flex ">
                     <ul className=" ml-14 flex flex-col list-disc  text-left ">

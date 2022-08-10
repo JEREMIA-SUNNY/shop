@@ -22,7 +22,7 @@ function Education() {
     },
     {
       id: 2,
-      title: "Dot Net",
+      title: "DotNet",
       mode: "Hybrid (Online + Offline)",
       Levels: "Beginner, Advanced",
       point: [
@@ -32,7 +32,7 @@ function Education() {
         { name: "ADO.NET-Data access from SQL" },
       
         { name: "Collections and Assemblies" },
-        { name: "ASP.NET." },
+        { name: "ASP.NET" },
         { name: "Web server controls" },
        
         {name:"LINQ, Web Architecture"}
@@ -114,7 +114,7 @@ function Education() {
     },
     {
       id: 3,
-      title: "Service Now",
+      title: "ServiceNow",
       mode: "Hybrid (Online + Offline)",
       point: [
         { name: "Introduction to ServiceNow" },

@@ -20,7 +20,7 @@ function KnowledgeCard({name,icon,mode,Levels,dur}) {
                     
                 
                 </div>
-                <h2 className="text-lg text-black text-center  mb-2">
+                <h2 className="text-lg text-black font-bold text-center  mb-2">
                  {name}
                 </h2>
                 <p className="leading-relaxed text-black text-center">

@@ -107,10 +107,9 @@ export default function Home() {
       dur: "1 year",
     },
     {
-      name: "Dot net",
+      name: "Dotnet",
       icon: "/know/net.png",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+    
       id: 2,
       mode: "Hybrid (Online + Offline)",
       Levels: "Beginner, Advanced",
@@ -154,7 +153,7 @@ export default function Home() {
       dur: "1 year",
     },
     {
-      name: "Service Now",
+      name: "ServiceNow",
       icon: "/know/Service.png",
 
       id: 7,

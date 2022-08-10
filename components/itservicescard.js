@@ -18,7 +18,7 @@ function Itservicescard({name,icon,description,id,type,role}) {
                     
                   />
         </div>
-        <h2 className="text-lg text-white text-center  mb-2">
+        <h2 className="text-lg text-white text-center font-semibold  mb-2">
           
           {name}
         </h2>

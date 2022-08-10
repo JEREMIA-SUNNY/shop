@@ -16,6 +16,12 @@ module.exports = {
       screens: {
         '3xl': '104 0px',
       },
+      screens: {
+        'tablet': '1300px',
+        // => @media (min-width: 640px) { ... }
+  
+        
+      },
     },
   },
   plugins: [],

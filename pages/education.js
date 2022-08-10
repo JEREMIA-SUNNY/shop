@@ -49,7 +49,7 @@ function Education() {
         { name: "Variables and type" },
         { name: "Control flow" },
         { name: "Classes and interfaces" },
-        { name: "Object-oriented" },
+        { name: "Object-oriented programming" },
         { name: "Exception Handling" },
         { name: "Lambda expressions" },
         { name: "Asynchronous programming" },

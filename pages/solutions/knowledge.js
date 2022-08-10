@@ -49,8 +49,8 @@ function Knowledge() {
         </section>
 
         <section className="text-black flex flex-col">
-          <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
+          <div className="container mx-auto lg:gap-16  flex px-5 py-14 tablet:items-start items-center tablet:flex-row flex-col ">
+            <div className="lg:flex-grow tablet:w-1/2  flex  flex-col  text-left  md:mb-0  ">
               <h1 className="text-3xl mb-4  text-black">Hybrid Learning</h1>
               <p className="mb-8 leading-relaxed">
                 When it comes to workforce training, each organization has
@@ -87,8 +87,8 @@ function Knowledge() {
           </div>
 
           <hr />
-          <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
-            <div className="h-80 lg:w-1/2 w-full flex items-start  relative">
+          <div className="container mx-auto lg:gap-16  flex px-5 py-14 tabletitems-start items-center tablet:flex-row flex-col ">
+            <div className="h-80 lg:w-1/2 w-full flex items-start  mb-5 relative">
               <Image
                 className=""
                 layout="fill"
@@ -98,7 +98,7 @@ function Knowledge() {
               />
             </div>
 
-            <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
+            <div className="lg:flex-grow tablet:w-1/2  flex  flex-col  text-left  md:mb-0  ">
               <h1 className="text-3xl mb-4  text-gray-900">Strong Network</h1>
               <p className="mb-8 leading-relaxed">
                 Our knowledge services ecosystem is constantly connected and

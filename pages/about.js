@@ -84,7 +84,7 @@ function About() {
               </p>
             </div>
             
-            <div className="w-full flex lg:flex-row  flex-1 lg:w-full md:h-fit lg:gap-0 gap-10 items-center  md:flex-col flex-col   ">
+            <div className="w-full flex lg:flex-row  flex-1 lg:w-full md:h-fit lg:gap-0 gap-10 items-center justify-center  md:flex-col flex-col   ">
              
               <div className="lg:w-1/2 max-w-[400px] flex   lg:min-w-[357px]   lg:h-full  md:h-[400px]  h-[300px] relative">
                 <Image layout="fill" alt="" objectFit=" cover " src="/aboutus/visionn.png" />
@@ -135,7 +135,7 @@ function About() {
         </h1>
 
         <div className="lg:container mb-10  mx-auto">
-          <div className="flex lg:flex-row  flex-col gap-5 justify-center items-center">
+          <div className="flex tablet:flex-row  flex-col gap-5 justify-center  items-center">
             <div className="p-4 lg:w-[400px] ">
               <div className="h-full rounded-lg ">
                 <div className="h-60 w-full flex justify-center relative">
@@ -231,9 +231,9 @@ function About() {
           </h1>
 
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
-            {team.map(({ name, image, role, description, id }) => {
+            {team.map(({ name, image, role, description },index) => {
               return (
-                <div key={id} className="flex flex-col items-center p-5">
+                <div key={index} className="flex flex-col items-center p-5">
                   <div className="relative lg:w-[300px] lg:h-[300px]  md:w-[300px] md:h-[300px] w-[200px]  h-[200px]  rounded-full">
                     <Image
                       className="rounded-full"

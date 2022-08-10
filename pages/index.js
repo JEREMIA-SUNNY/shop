@@ -395,7 +395,7 @@ export default function Home() {
             </h1>
             <span className="inline-block w-20 h-[2px] rounded-full mt-5 bg-white"></span>
           </div>
-          <div className="md:grid md:grid-cols-5  flex flex-col -m-4">
+          <div className="md:grid lg:grid-cols-3 tablet:grid-cols-5  flex flex-col -m-4">
             {Itservice.map(({ name, icon, description, id, type, role }) => {
               return (
                 <Itservicescard

@@ -167,7 +167,7 @@ export default function Contact() {
                       </span>
                       <select
                         onChange={changeInterest}
-                        className=" block w-full    lg:h-[47px] rounded-sm border-black focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block w-full    lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                       >
                         <option>Knowledge As A Service</option>
                         <option>Talent As A Service </option>

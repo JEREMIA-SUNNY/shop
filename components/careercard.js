@@ -33,9 +33,7 @@ function Careercard({ id, title, description, type, role, point }) {
         </div>
         <div>
           <section {...getCollapseProps()}>
-            
-                 
-              <div className="flex">
+            <div className="flex">
               <div className="lg:w-full">
                 <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-5 pb-24 rounded-lg border text-center relative">
                   <h2 className=" text-left   text-black mb-3">
@@ -45,13 +43,13 @@ function Careercard({ id, title, description, type, role, point }) {
                   <h1 className="  text-left text-black mb-3">
                     <span className="font-bold">Role :</span> {role}
                   </h1>
-                 
+
                   <h1 className="  text-left text-black mb-3">
                     <span className="font-bold">Skills : </span>
                   </h1>
                   <div className="flex ">
                     <ul className=" ml-14 flex flex-col list-disc  text-left ">
-                      {point.map(({ name },index) => {
+                      {point.map(({ name }, index) => {
                         return (
                           <li key={index} className="text-black">
                             <p className="list-disc  ">{name}</p>
@@ -61,7 +59,6 @@ function Careercard({ id, title, description, type, role, point }) {
                     </ul>
                   </div>
 
-                 
                   <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
                     <button
                       onClick={() =>
@@ -85,20 +82,23 @@ function Careercard({ id, title, description, type, role, point }) {
         >
           <div
             className={`
-           
-               " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
-        `}
+         
+             " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
+      `}
           >
+            <div className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full">
+              X
+            </div>
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-              className="lg:w-fit p-5 md:py-16 md:px-10  bg-white flex flex-col justify-center w-full  "
+              className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
             >
-              <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Feedback
+              <h2 className="text-gray-900 text-lg mb-1 font-normal title-font">
+                Sign-up with SFJ today and join a strong growing network of IT
+                professionals.
               </h2>
-              <p className="leading-relaxed mb-5 text-black">
-                Post-ironic portland shabby chic echo park, banjo fashion axe
-              </p>
+
+              <p className="w-full h-[2px] mb-8 bg-blue"></p>
               <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-black">
                   Name
@@ -107,7 +107,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
               <div className="relative mb-4">
@@ -118,32 +118,86 @@ function Careercard({ id, title, description, type, role, point }) {
                   type="email"
                   id="email"
                   name="email"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div className="relative mb-4">
+                <label
+                  htmlFor="mobile"
+                  className="leading-7 text-sm text-black"
+                >
+                  Mobile
+                </label>
+                <input
+                  type="text"
+                  id="mobile"
+                  name="mobile"
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
+
               <div className="relative mb-4">
                 <label
                   htmlFor="message"
                   className="leading-7 text-sm text-black"
                 >
-                  {title}
+                  Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-24 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
-              <button className="text-white bg-blue border-0 py-2 px-6 focus:outline-none  rounded text-lg">
-                Button
-              </button>
+              <div className="relative mb-4">
+                <label htmlFor="email" className="leading-7 text-sm text-black">
+                  Linkedin Profile URL
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
 
-              <button
-                onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-                className="text-white py-2 px-6 bg-slate-700  mt-5"
-              >
-                close
-              </button>
+              <div className="relative mb-4">
+                {" "}
+                <label className="block">
+                  <span className="text-black">Select Technology</span>
+                  <select className=" block w-full border border-gray-300   lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
+                    <option>Java Stack</option>
+                    <option>Hadoop</option>
+                    <option>React JS </option>
+                    <option>Snowflake </option>
+                    <option>Teradata </option>
+                    <option>Data Sciences </option>
+                    <option>Azure Data Bricks/ADF </option>
+                    <option>SAP BODS </option>
+                    <option>SAP BW</option>
+                    <option>SAP BW/4 HANA</option>
+                    <option>SAP SuccessFactors </option>
+                    <option>Salesforce</option>
+                    <option>Oracle/OIS/Finance</option>
+                  </select>
+                </label>
+              </div>
+              <div className=" flex justify-center">
+                <button
+                  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
+                  className="text-white bg-blue border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg"
+                >
+                  Submit
+                </button>
+              </div>
+              <div className=" flex justify-center">
+                <button
+                  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
+                  className="text-white md:hidden block py-2 px-6 bg-slate-700  mt-5"
+                >
+                  close
+                </button>
+              </div>
             </div>
           </div>
         </div>

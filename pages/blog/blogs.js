@@ -216,7 +216,7 @@ export default function Blogs() {
                     </p>
                   </div>
                   <div className="flex justify-center mt-6 ">
-                    <a href={link} target="_blank">
+                    <a href={link} rel="noreferrer" target="_blank">
                       <p className="text-black  p-2 font-bold ease-in duration-300 rounded-md  hover:bg-orange  flex justify-center items-center text-left hover:cursor-pointer">
                         Read More
                       </p>

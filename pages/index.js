@@ -190,27 +190,39 @@ export default function Home() {
   const blog = [
     {
       id: 1,
-      name: "   how is ml related to block chain",
-      logo: "/aiml2.jpg",
-      desc: "  using AI and Big Data in Blockchain Technology: A step closer to the futureThere has been a number of changes in the IT world recently......",
+      name: " The Enterprise Project",
+      logo: "/blog/1.jpg",
+      desc: "Many organizations are struggling with the digital transformation efforts that they have begun,” says David Rogers, author of The Digital Transformation... ",
+      link:"https://enterprisersproject.com/article/2022/7/it-talent-upskilling-boost-digital-transformation",
+      auth:"Gorden haff",
+      sorc:"enterprisersproject.com",
     },
     {
       id: 2,
-      name: "   how is ml related to block chain",
-      logo: "/aiml2.jpg",
-      desc: "  Building solutions using artificial intelligence, machine learning and blockchain technologies. Artificial intelligence and machine learning ....",
+      name: "Hiring Trend in IT Industry",
+      logo: "/blog/2.jpg",
+      desc: "  The hiring landscape is constantly changing. At the same time, a range of external factors are impacting the U.S. economy.........",
+      link:"https://www.smartrecruiters.com/blog/4-hiring-trends-you-need-to-know-about/",
+      auth:"Augusta Henning",
+      sorc:"smartrecruiters.com",
     },
     {
       id: 3,
-      name: "   how is ml related to block chain",
-      logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis of data ........... ",
+      name: "Recruiters Using Automation Fill",
+      logo: "/blog/3.jpg",
+      desc: " Staffing and recruitment firms that embrace automation have a 64% higher fill rate, submit 33% more candidates per recruiter........",
+      link:"https://aithority.com/robots/automation/recruiters-using-automation-fill-64-more-job-vacancies/",
+      auth:"Ait News desk",
+      sorc:"aithority.com",
     },
     {
       id: 4,
-      name: "   how is ml related to block chain",
-      logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis ...........",
+      name: "Learning Trends in IT Skills",
+      logo: "/blog/4.jpg",
+      desc: "  As businesses and organizations look towards the future with optimism, hoping for normalcy to return soon, there is no............  ",
+      link:"https://www.peoplematters.in/blog/hr-technology/learning-trends-in-india-skilling-digital-learning-and-the-future-28784",
+      auth:"Manav Seth",
+      sorc:"peoplematters.in",
     },
   ];
   const whyworkwithus = [
@@ -432,7 +444,7 @@ export default function Home() {
           </div>
 
           <div className="flex  flex-wrap gap-1 ">
-            {blog.map(({ name, logo, id, desc }) => {
+            {blog.map(({ name, logo, id, desc,link,auth,sorc }) => {
               return (
                 <div
                   key={id}
@@ -452,14 +464,16 @@ export default function Home() {
                     <h1 className="title-font sm:text-2xl text-xl text-left font-medium text-gray-900 mb-3">
                       {name}
                     </h1>
+                    <p className="text-left">Source : {sorc}</p>
+                    <p className="text-left">Author : {auth}</p>
                     <p className="leading-relaxed mt-10 text-left ">{desc}</p>
                   </div>
                   <div className="flex justify-center mt-4">
-                    <Link href={"/blog/blogs"}>
+                    <a href={link} target="_blank" >
                       <p className="text-black  p-2 font-bold ease-in duration-300 rounded-md  hover:bg-orange  flex justify-center items-center text-left hover:cursor-pointer">
                         Read More
                       </p>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               );

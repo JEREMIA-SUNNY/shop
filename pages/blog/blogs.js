@@ -2,86 +2,177 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Blogs() {
-  const blogs = [
-    {
-      id: 1,
-      title: "How to build a successful business",
-      heading: "How to build a successful business",
-      image: "/blogimage/blog1.jpg",
-      links:"/blog/blog1",
-    },
-    {
-      id: 2,
-      title: "How to build a successful business",
-      heading: "How to build a successful business",
-      image: "/blogimage/blog2.jpg",
-      links:"/blog/blog1",
-    },
-    {
-      id: 3,
-      title: "How to build a successful business",
-      heading: "How to build a successful business",
-      image: "/blogimage/blog3.jpg",
-      links:"/blog/blog1",
-    },
-    {
-      id: 4,
-      title: " Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis of data purposes...................",
-      heading: "How is ml related to block chain",
-      image: "/blogimage/blog1.jpg",
-      links:"/blog/blog1",
-    },
-    {
-      id: 5,
-      title: "How to build a successful business",
-      heading: "How to build a successful business",
-      image: "/blogimage/blog2.jpg",
-      links:"/blog/blog2",
-    },
-    {
-      id: 6,
-      title: "How to build a successful business",
-      heading: "How to build a successful business",
-      image: "/blogimage/blog3.jpg",
-      links:"/blog/blog3",
-    },
-  ];
+  
   const blog = [
     {
       id: 1,
-      name: "   how is ml related to block chain",
-      logo: "/aiml2.jpg",
-      desc: "  using AI and Big Data in Blockchain Technology: A step closer to the futureThere has been a number of changes in the IT world recently......",
+      name: " The Enterprise Project",
+      logo: "/blog/1.jpg",
+      desc: "Many organizations are struggling with the digital transformation efforts that they have begun,” says David Rogers, author of The Digital Transformation... ",
+      link:"https://enterprisersproject.com/article/2022/7/it-talent-upskilling-boost-digital-transformation",
+      auth:"Gorden haff",
+      sorc:"enterprisersproject.com",
     },
     {
       id: 2,
-      name: "   how is ml related to block chain",
-      logo: "/aiml2.jpg",
-      desc: "  Building solutions using artificial intelligence, machine learning and blockchain technologies. Artificial intelligence and machine learning ....",
+      name: "Hiring Trend in IT Industry",
+      logo: "/blog/2.jpg",
+      desc: "  The hiring landscape is constantly changing. At the same time, a range of external factors are impacting the U.S. economy.........",
+      link:"https://www.smartrecruiters.com/blog/4-hiring-trends-you-need-to-know-about/",
+      auth:"Augusta Henning",
+      sorc:"smartrecruiters.com",
     },
     {
       id: 3,
-      name: "   how is ml related to block chain",
-      logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis of data ........... ",
+      name: "Recruiters Using Automation Fill",
+      logo: "/blog/3.jpg",
+      desc: " Staffing and recruitment firms that embrace automation have a 64% higher fill rate, submit 33% more candidates per recruiter........",
+      link:"https://aithority.com/robots/automation/recruiters-using-automation-fill-64-more-job-vacancies/",
+      auth:"Ait News desk",
+      sorc:"aithority.com",
     },
     {
       id: 4,
-      name: "   how is ml related to block chain",
-      logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis ...........",
+      name: "Learning Trends in IT Skills",
+      logo: "/blog/4.jpg",
+      desc: "  As businesses and organizations look towards the future with optimism, hoping for normalcy to return soon, there is no............  ",
+      link:"https://www.peoplematters.in/blog/hr-technology/learning-trends-in-india-skilling-digital-learning-and-the-future-28784",
+      auth:"Manav Seth",
+      sorc:"peoplematters.in",
     },
     {
       id: 5,
-      name: "   how is ml related to block chain",
-      logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis ...........",
+      name: "Learning Trends in IT Skills",
+      logo: "/blog/six.jpg",
+      desc: " Over the last two decades, the rapid rise of digital technologies has resulted in organisations reevaluating........",
+      link:"https://moodle.com/news/workplace-learning-trends-power-skills/",
+      auth:"Abby fry",
+      sorc:"moodle.com",
     },
     {
       id: 6,
-      name: "   how is ml related to block chain",
+      name: "Future of Work Spaces",
+      logo: "/blog/5.jpg",
+      desc: " The world of work has become incredibly complex. Workers are trying to navigate a maze of hierarchies, work processes.........",
+      link:"https://www2.deloitte.com/global/en/pages/human-capital/articles/future-of-work-blog.html",
+      auth:"Deloitte professionals",
+      sorc:"deloitte.com",
+    },
+    {
+      id: 7,
+      name: "Role of Big Data Analytics For Business",
+      logo: "/blog/7.jpg",
+      desc: "Succeeding in today digital era is difficult. Business leaders have to be extremely aware of their market ........",
+      link:"https://appinventiv.com/blog/big-data-analytics/",
+      auth:"Sudeep Srivastava",
+      sorc:"appinventiv.com",
+    },
+    {
+      id: 8,
+      name: "Role of Big Data Analytics For Business",
+      logo: "/blog/eight.jpg",
+      desc: " Big data analytics is the use of advanced computing technologies on huge data sets to discover valuable........",
+      link:"https://blog.rgbsi.com/big-data-analytics-in-industry-4.0",
+      auth:"null",
+      sorc:"rgbsi.com",
+    },
+    {
+      id: 9,
+      name: "Relevance and Impact of AI/ML For Business",
       logo: "/aiandml.jpg",
-      desc: "  Machine learning models can use the data stored in the blockchain network for making the prediction or for the analysis ...........",
+      desc: "The world of work has become incredibly complex. Workers are trying to navigate a maze of hierarchies, work processes.........",
+      link:"https://www.business2community.com/strategy/why-is-ai-ml-important-and-how-will-it-impact-buisiness-02404860",
+      auth:"",
+      sorc:"",
+    },
+    {
+      id: 10,
+      name: "Relevance and Impact of AI/ML For Business",
+      logo: "/blog/10.jpg",
+      desc: "AI/ML—short for artificial intelligence (AI) and machine learning (ML)represents an important evolution.......",
+      link:"https://www.redhat.com/en/blog/what-aiml-and-why-does-it-matter-your-business",
+      auth:"Abeer Aulakh",
+      sorc:"grazitti.com",
+    },
+    {
+      id: 11,
+      name: "Relevance and Impact of AI/ML For Business",
+      logo: "/blog/eleven.jpg",
+      desc: "Artificial Intelligence (AI) and Machine Learning (ML) are not on the way anymore. They are already here!.......",
+      link:"https://www.grazitti.com/blog/the-impact-of-ai-ml-on-marketing/",
+      auth:"",
+      sorc:"",
+    },
+    {
+      id: 12,
+      name: "it Skills For The Future Economy",
+      logo: "/blog/twelve.jpg",
+      desc: "Many feel anxious about the impact of new technology on their jobs. This is not new. In fact, it dates .......",
+      link:"https://blogs.imf.org/2018/05/01/technology-and-the-future-of-work/",
+      auth:"Adrian Peralta",
+      sorc:"blogs.imf.org",
+    },
+    {
+      id: 13,
+      name: "Cloud Service Industry Trends",
+      logo: "/blog/13.jpg",
+      desc: "Over the years, cloud hosting has become synonymous with quality, speed and performance. The ........",
+      link:"https://www.cloudoye.com/?utm_source=google&utm_medium=search&utm_campaign=Cloud&utm_id=CloudOYE-Cloudhosting&utm_term=Cloud-Hosting-India",
+      auth:"Cloudoye",
+      sorc:"cloudoye.com",
+    },
+    {
+      id: 14,
+      name: "Salesforces",
+      logo: "/blog/14.jpg",
+      desc: "A recession may be on the way. Now is the time to develop a game plan for your sales .....",
+      link:"https://www.salesforce.com/blog/",
+      auth:"Jen Gustavson",
+      sorc:"salesforce.com",
+    },
+    {
+      id: 15,
+      name: "Salesforces",
+      logo: "/blog/15.jpg",
+      desc: "Apex is the core language for customizing business logic on the Salesforce Platform .......",
+      link:"https://developer.salesforce.com/blogs",
+      auth:"Anthony Tavan",
+      sorc:"salesforce.com",
+    },
+    {
+      id: 16,
+      name: "Salesforces",
+      logo: "/blog/16.jpg",
+      desc: "A marketplace called AppExchange provides products including software, parts, and .......",
+      link:"https://www.forcetalks.com/blog/what-is-a-salesforce-appexchange-app-heres-all-you-need-to-know/",
+      auth:"Codnix",
+      sorc:"forcetalks.com",
+    }, {
+      id: 17,
+      name: "Salesforces",
+      logo: "/blog/17.png",
+      desc: "Partner Portal is required by our clients to provide access to Salesforce data to .......",
+      link:"https://salesforcecodex.com/salesforce/create-partner-portal-user-in-salesforce/",
+      auth:"Dhanik Lal Sahni",
+      sorc:"salesforcecodex.com",
+    },
+    {
+      id: 18,
+      name: "Oracle",
+      logo: "/blog/18.jpg",
+      desc: "Today, at Microsoft Inspire, Satya Nadella, CEO of Microsoft, and Larry Ellison,.........",
+      link:"https://blogs.oracle.com/cloud-infrastructure/post/announcing-oracle-database-service-for-microsoft-azure",
+      auth:"Karan Batta",
+      sorc:"oracle.com",
+    },
+    {
+      id: 19,
+      name: "SAP",
+      logo: "/blog/19.jpg",
+      desc: "Hello Everyone, Welcome to the technical series of the SAP Transportation Management .....",
+      link:"https://blogs.sap.com/tags/73554900100800000266/",
+      auth:"Andreas Riehl",
+      sorc:"sap.com",
     },
   ];
 
@@ -96,8 +187,8 @@ export default function Blogs() {
               Blogs
             </h1>
           </div>
-          <div className="flex lg:grid lg:grid-cols-4 flex-wrap gap-1 ">
-            {blog.map(({ name, logo, id, desc }) => {
+          <div className="flex lg:grid md:grid md:grid-cols-3 lg:grid-cols-4 flex-wrap gap-1 ">
+            {blog.map(({ name, logo, id, desc,link,auth,sorc}) => {
               return (
                 <div
                   key={id}
@@ -113,20 +204,23 @@ export default function Blogs() {
                         alt=""
                       ></Image>
                     </div>
+                   
 
                     <h1 className="title-font sm:text-2xl text-xl text-left  text-gray-900 mb-3">
                       {name}
                     </h1>
-                    <p className="leading-relaxed mt-10 text-left ">
+                    <p className="text-left">Source : {sorc}</p>
+                    <p className="text-left">Author : {auth}</p>
+                    <p className="leading-relaxed mt-5 text-left ">
                       {desc}
                     </p>
                   </div>
                   <div className="flex justify-center mt-6 ">
-                    <Link href={"/blog/blogs"}>
+                    <a href={link} target="_blank">
                       <p className="text-black  p-2 font-bold ease-in duration-300 rounded-md  hover:bg-orange  flex justify-center items-center text-left hover:cursor-pointer">
                         Read More
                       </p>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               );

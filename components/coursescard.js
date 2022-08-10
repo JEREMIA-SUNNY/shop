@@ -101,7 +101,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 the next level.
               </h2>
 
-              <p className="w-full h-[2px] mb-8 bg-blue"></p>
+              <p className="w-full h-[2px] mb-8 bg-green"></p>
               <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-black">
                   Name
@@ -149,7 +149,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-24 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
               <div className="relative mb-4">
@@ -167,12 +167,13 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
               <div className="relative mb-4">
                 {" "}
                 <label className="block">
-                  <span className="text-black">Select Course</span>
-                  <select className=" block w-full border border-gray-300   lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
+                  <span className="text-black text-sm">Select Course</span>
+                  <select className=" block w-full border border-gray-300 text-sm  lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
                     <option>Testing</option>
                     <option>Dotnet</option>
                     <option>Java</option>
                     <option>SAP</option>
+                    <option>Azure</option>
                     <option>Mainframe</option>
                     <option>ServiceNow</option>
                     <option>Siebel</option>

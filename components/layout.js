@@ -304,7 +304,7 @@ export default function Layout({ children }) {
             <div className="lg:grid-cols-2 flex justify-center gap-2 lg:inline-grid  ">
               <a
                 className="hover:scale-105 transition-all"
-                href=""
+                href="https://www.facebook.com/SFJBusinesssolution/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -329,7 +329,7 @@ export default function Layout({ children }) {
               </a>
               <a
                 className="hover:scale-105 transition-all"
-                href=""
+                href="https://twitter.com/sfjbusiness"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -354,9 +354,10 @@ export default function Layout({ children }) {
               </a>
               <a
                 className="hover:scale-105 transition-all"
-                href=""
+                href="https://www.linkedin.com/company/sfj-business-solutions-pvt-ltd-/?originalSubdomain=in"
                 target="_blank"
                 rel="noreferrer"
+              
               >
                 <svg
                   className="w-8 h-8 linkedin"
@@ -384,7 +385,7 @@ export default function Layout({ children }) {
 
               <a
                 className="hover:scale-105 transition-all"
-                href=""
+                href="https://www.youtube.com/channel/UC-Ol7VzrG_xsL6iyhhAIRzw"
                 target="_blank"
                 rel="noreferrer"
               >

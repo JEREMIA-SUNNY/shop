@@ -168,7 +168,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 {" "}
                 <label className="block">
                   <span className="text-black text-sm">Select Course</span>
-                  <select className=" block w-full border border-green text-sm  lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
+                  <select className=" block w-full border border-green text-sm lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
                     <option>Testing</option>
                     <option>Dotnet</option>
                     <option>Java</option>

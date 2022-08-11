@@ -134,7 +134,7 @@ export default function Contact() {
                       <span className="text-black">Name</span>
                       <input
                         type="text"
-                        className="block  w-full lg:h-[47px] rounded-sm   focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className="block  w-full lg:h-[47px] rounded-sm  border border-green  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
                         value={name}
                         onChange={changeName}
@@ -144,7 +144,7 @@ export default function Contact() {
                       <span className="text-black">Email</span>
                       <input
                         type="email"
-                        className=" block w-full rounded-sm border-black   lg:h-[47px]  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block w-full rounded-sm border border-green  lg:h-[47px]  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
                         value={email}
                         onChange={changeEmail}
@@ -154,7 +154,7 @@ export default function Contact() {
                       <span className="text-black">Phone</span>
                       <input
                         type="tel"
-                        className=" block  rounded-sm w-full lg:h-[47px]  border-black focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block  rounded-sm w-full lg:h-[47px] border border-green focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
                         value={phone}
                         onChange={changePhone}
@@ -167,7 +167,7 @@ export default function Contact() {
                       </span>
                       <select
                         onChange={changeInterest}
-                        className=" block w-full    lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block w-full  border border-green  lg:h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                       >
                         <option>Knowledge As A Service</option>
                         <option>Talent As A Service </option>
@@ -180,7 +180,7 @@ export default function Contact() {
                   <label className="block mt-6">
                     <span className="text-black">Additional details</span>
                     <textarea
-                      className="mt-1 block w-full   lg:h-28 rounded-sm border-black focus:border-green-700 focus:ring focus:ring-green-100 focus:ring-opacity-50"
+                      className="mt-1 block w-full border border-green  lg:h-28 rounded-sm  focus:border-green-700 focus:ring focus:ring-green focus:ring-opacity-50"
                       rows="3"
                       value={info}
                       onChange={changeInfo}

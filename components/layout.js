@@ -243,7 +243,7 @@ export default function Layout({ children }) {
                 <div className="bg-transparent w-auto absolute top-6 -right-2 flex-col z-50 rounded-sm transition-all">
                   <div className="pt-4 w-auto">
                     {menu2.map(({ name2, path2, subm, sub }, index) => (
-                      <div
+                      <div key={index}
                         tabIndex={1}
                         className="w-40 group top-4 px-4 bg-white relative inline-flex p-2 normal-case text-sm whitespace-nowrap border-b border-t border-zinc-100 "
                       >

@@ -61,8 +61,8 @@ export default function Testimonials() {
     logo: "/blog/10.jpg",
     desc: "AI/ML—short for artificial intelligence (AI) and machine learning (ML)represents an important evolution.......",
     link:"https://www.redhat.com/en/blog/what-aiml-and-why-does-it-matter-your-business",
-    auth:"Abeer Aulakh",
-    sorc:"grazitti.com",
+    auth:"Deb Richardson",
+    sorc:"redhat.com",
   },
   {
     id: 11,
@@ -70,12 +70,12 @@ export default function Testimonials() {
     logo: "/blog/eleven.jpg",
     desc: "Artificial Intelligence (AI) and Machine Learning (ML) are not on the way anymore. They are already here!.......",
     link:"https://www.grazitti.com/blog/the-impact-of-ai-ml-on-marketing/",
-    auth:"",
-    sorc:"",
+    auth:"Abeer Aulakh",
+    sorc:"grazitti.com",
   },
   {
     id: 12,
-    name: "It Skills For The Future Economy",
+    name: "IT Skills For The Future Economy",
     logo: "/blog/twelve.jpg",
     desc: "Many feel anxious about the impact of new technology on their jobs. This is not new. In fact, it dates .......",
     link:"https://blogs.imf.org/2018/05/01/technology-and-the-future-of-work/",
@@ -120,7 +120,7 @@ export default function Testimonials() {
       logo: "/blog/eight.jpg",
       desc: " Big data analytics is the use of advanced computing technologies on huge data sets to discover valuable........",
       link:"https://blog.rgbsi.com/big-data-analytics-in-industry-4.0",
-      auth:"null",
+      auth:"",
       sorc:"rgbsi.com",
     },
     
@@ -207,7 +207,7 @@ export default function Testimonials() {
               speed={800}
             >
               <SwiperSlide>
-                <p className="text-center text-3xl  capitalize lg:text-4xl text-black  mb-10 ">News</p>
+                <p className="text-center text-3xl  capitalize lg:text-4xl text-black  mb-10 ">Blogs</p>
               <div className="flex  flex-wrap gap-1 mb-4 ">
                 {blog2.map(({ name, logo, id, desc,link,sorc,auth }) => {
                   return (
@@ -296,7 +296,7 @@ export default function Testimonials() {
 
 
               <SwiperSlide>
-              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-7">Media</p>
+              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-7">Blogs</p>
               <div className="flex  flex-wrap gap-1 ">
               {blog1.map(({ name, logo, id, desc,link,auth,sorc }) => {
                   return (

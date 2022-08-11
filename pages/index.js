@@ -189,44 +189,7 @@ export default function Home() {
     </svg>
   );
 
-  const blog = [
-    {
-      id: 1,
-      name: " The Enterprise Project",
-      logo: "/blog/1.jpg",
-      desc: "Many organizations are struggling with the digital transformation efforts that they have begun,” says David Rogers, author of The Digital Transformation... ",
-      link:"https://enterprisersproject.com/article/2022/7/it-talent-upskilling-boost-digital-transformation",
-      auth:"Gorden haff",
-      sorc:"enterprisersproject.com",
-    },
-    {
-      id: 2,
-      name: "Hiring Trend in IT Industry",
-      logo: "/blog/2.jpg",
-      desc: "  The hiring landscape is constantly changing. At the same time, a range of external factors are impacting the U.S. economy.........",
-      link:"https://www.smartrecruiters.com/blog/4-hiring-trends-you-need-to-know-about/",
-      auth:"Augusta Henning",
-      sorc:"smartrecruiters.com",
-    },
-    {
-      id: 3,
-      name: "Recruiters Using Automation Fill",
-      logo: "/blog/3.jpg",
-      desc: " Staffing and recruitment firms that embrace automation have a 64% higher fill rate, submit 33% more candidates per recruiter........",
-      link:"https://aithority.com/robots/automation/recruiters-using-automation-fill-64-more-job-vacancies/",
-      auth:"Ait News desk",
-      sorc:"aithority.com",
-    },
-    {
-      id: 4,
-      name: "Learning Trends in IT Skills",
-      logo: "/blog/4.jpg",
-      desc: "  As businesses and organizations look towards the future with optimism, hoping for normalcy to return soon, there is no............  ",
-      link:"https://www.peoplematters.in/blog/hr-technology/learning-trends-in-india-skilling-digital-learning-and-the-future-28784",
-      auth:"Manav Seth",
-      sorc:"peoplematters.in",
-    },
-  ];
+  
   const whyworkwithus = [
     {
       id: 1,
@@ -435,54 +398,7 @@ export default function Home() {
 
       {/* blogs */}
 
-      <section className="text-black bg-coustom1 body-font md:pt-14 md:pb-10 pt-7 pb-5">
-        <div className="container px-5  mx-auto">
-          <div className="flex gap-4 justify-center mb-10">
-            <span className="inline-block w-20 h-[2px] mt-5 rounded-full bg-black"></span>
-            <h1 className="text-3xl  capitalize lg:text-4xl text-black  text-center">
-              Blogs
-            </h1>
-            <span className="inline-block w-20 h-[2px] rounded-full mt-5 bg-black"></span>
-          </div>
-
-          <div className="flex  flex-wrap gap-1 ">
-            {blog.map(({ name, logo, id, desc,link,auth,sorc }) => {
-              return (
-                <div
-                  key={id}
-                  className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75 px-8   rounded-lg overflow-hidden text-center relative"
-                >
-                  <div>
-                    <div className=" w-full transition duration-150 ease-out hover:ease-in hover:opacity-50">
-                      <Image
-                        className=" flex-shrink-0 object-cover xl:w-[100%] xl:h-[34rem]"
-                        src={logo}
-                        width={400}
-                        height={300}
-                        alt=""
-                      ></Image>
-                    </div>
-
-                    <h1 className="title-font sm:text-2xl text-xl text-left font-medium text-gray-900 mb-3">
-                      {name}
-                    </h1>
-                    <p className="text-left">Source : {sorc}</p>
-                    <p className="text-left">Author : {auth}</p>
-                    <p className="leading-relaxed mt-10 text-left ">{desc}</p>
-                  </div>
-                  <div className="flex justify-center mt-4">
-                    <a href={link} target="_blank " rel="noreferrer" >
-                      <p className="text-black  p-2 font-bold ease-in duration-300 rounded-md  hover:bg-orange  flex justify-center items-center text-left hover:cursor-pointer">
-                        Read More
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       <Blognew/>
     </>

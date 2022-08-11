@@ -91,8 +91,8 @@ export default function Blogs() {
       logo: "/blog/10.jpg",
       desc: "AI/ML—short for artificial intelligence (AI) and machine learning (ML)represents an important evolution.......",
       link:"https://www.redhat.com/en/blog/what-aiml-and-why-does-it-matter-your-business",
-      auth:"Abeer Aulakh",
-      sorc:"grazitti.com",
+      auth:"Deb Richardson",
+      sorc:"redhat.com",
     },
     {
       id: 11,
@@ -100,8 +100,8 @@ export default function Blogs() {
       logo: "/blog/eleven.jpg",
       desc: "Artificial Intelligence (AI) and Machine Learning (ML) are not on the way anymore. They are already here!.......",
       link:"https://www.grazitti.com/blog/the-impact-of-ai-ml-on-marketing/",
-      auth:"",
-      sorc:"",
+      auth:"Abeer Aulakh",
+      sorc:"grazitti.com",
     },
     {
       id: 12,

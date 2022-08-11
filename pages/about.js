@@ -165,7 +165,7 @@ function About() {
             </div>
 
             <div className="p-4 lg:w-[400px] ">
-              <div className="h-full flex flex-col-reverse rounded-lg ">
+              <div className="h-full flex flex-col md:flex-col-reverse rounded-lg ">
                 <div className="h-60 w-full flex justify-center relative">
                   <div className="w-[300px] h-full relative">
                     <Image

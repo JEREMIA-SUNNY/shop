@@ -222,10 +222,14 @@ export default function Blogs() {
                       </p>
                     </a>
                   </div>
+                  <div className="w-full md:hidden block h-[1px] mt-5 bg-black"></div>
                 </div>
+                
               );
             })}
+           
           </div>
+        
         </div>
       </section>
 

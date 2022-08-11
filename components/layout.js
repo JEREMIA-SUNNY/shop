@@ -5,8 +5,11 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Layout({ children }) {
+ 
+  const [view, setView] = useState(false);
   const { pathname } = useRouter();
   const [navbr, setNavbr] = useState(false);
+
   const changeBackground = () => {
     if (window.scrollY >= 300) {
       setNavbr(true);
@@ -54,7 +57,6 @@ export default function Layout({ children }) {
 
         { name: "Mobility", path: "/capabilities#Mobility" },
 
-       
         { name: "Outsourcing", path: "/capabilities#Outsourcing" },
         { name: "Upskilling", path: "/capabilities#Upskilling" },
         { name: "Staffing", path: "/capabilities#Staffing" },
@@ -80,29 +82,41 @@ export default function Layout({ children }) {
   ];
   const menu2 = [
     {
-      name2: "Home",
-      path2: "/",
+      name2: "About",
+      path2: "",
+      subm: false,
+      sub: [
+        { name: "Who We Are", path: "/about#WhoWe-Are" },
+        { name: "Core Values", path: "/about#Core-values" },
+        { name: "Meet Our Team", path: "/about#MeetOur-Team" },
+      ],
+    },
+    {
+      name2: "Solution",
+      path2: "",
+      subm: false,
+      sub: [
+        { name: "Knowledge As A Service ", path: "/solutions/knowledge" },
+        { name: "Talent As A Service", path: "/solutions/talent" },
+
+        { name: "IT Services", path: "/solutions/itservices" },
+      ],
     },
 
     {
-      name2: "About",
-      path2: "/about",
-    },
-    {
-      name2: "Knowledge As A Service",
-      path2: "/solutions/knowledge",
-    },
-    {
-      name2: "Talent As A Service",
-      path2: "/solutions/talent",
-    },
-    {
-      name2: "IT Services",
-      path2: "/solutions/itservices",
-    },
-    {
       name2: "Capabilities",
-      path2: "/capabilities",
+      path2: "",
+      subm: false,
+      sub: [
+        { name: "Consulting ", path: "/capabilities#Consulting" },
+        { name: "Analytics", path: "/capabilities#Analytics" },
+
+        { name: "Mobility", path: "/capabilities#Mobility" },
+
+        { name: "Outsourcing", path: "/capabilities#Outsourcing" },
+        { name: "Upskilling", path: "/capabilities#Upskilling" },
+        { name: "Staffing", path: "/capabilities#Staffing" },
+      ],
     },
 
     {
@@ -122,6 +136,23 @@ export default function Layout({ children }) {
       path2: "/contact",
     },
   ];
+  function click() {
+    if (pathname === "/about") {
+      setAbout(true);
+    } else {
+      setAbout(false);
+    }
+    if (pathname === "/solutions") {
+      setSoultion(true);
+    } else {
+      setSoultion(false);
+    }
+    if (pathname === "/capabilities") {
+      setCapablitily(true);
+    } else {
+      setCapablitily(false);
+    }
+  }
 
   return (
     <>
@@ -150,14 +181,13 @@ export default function Layout({ children }) {
                     height={100}
                   />
                 </div>
-                
               </a>
             </Link>
             <div className="lg:pl-2 lg:flex  text-center  py-3 flex-col justify-center ">
-                  <span className="text-sm font-bold text-black capitalize">
-                    TALENT TRANSFORMATION. SIMPLIFIED.
-                  </span>
-                </div>
+              <span className="text-sm font-bold text-black capitalize">
+                TALENT TRANSFORMATION. SIMPLIFIED.
+              </span>
+            </div>
 
             <nav className="text-sm uppercase  tracking-tight hidden  lg:flex justify-end flex-1">
               {menu.map(({ name, path, sub }, index) => (
@@ -192,8 +222,11 @@ export default function Layout({ children }) {
               ))}
             </nav>
 
-            <nav className=" lg:hidden mr-2 p-2 relative group  flex justify-end ">
+            <nav className=" lg:hidden mr-2 p-2 relative   flex justify-end ">
               <svg
+                onClick={() => {
+                  setView((prev) => !prev);
+                }}
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 viewBox="0 0 20 20"
@@ -205,26 +238,56 @@ export default function Layout({ children }) {
                   clipRule="evenodd"
                 />
               </svg>
-
-              <div className="bg-transparent w-auto absolute top-6 right-0 flex-col z-50 rounded-sm invisible group-active:visible group-hover:visible transition-all">
-                <div className="pt-4 w-auto">
-                  <div className="w-full shadow-md">
-                    {menu2.map(({ name2, path2 }, index) => (
-                      <Link key={index} href={path2}>
-                        <a className="w-48 hover:bg-green-100 px-4 bg-white inline-flex p-2 normal-case text-md whitespace-nowrap border-b border-t border-black-100">
-                          {name2}
-                        </a>
-                      </Link>
+              {/* ////////////////////////////////////// */}
+              {view && (
+                <div className="bg-transparent w-auto absolute top-6 -right-2 flex-col z-50 rounded-sm transition-all">
+                  <div className="pt-4 w-auto">
+                    {menu2.map(({ name2, path2, subm, sub }, index) => (
+                      <div
+                        tabIndex={1}
+                        className="w-40 group px-4 bg-white relative inline-flex p-2 normal-case text-sm whitespace-nowrap border-b border-t border-zinc-100 "
+                      >
+                        {sub ? (
+                          name2
+                        ) : (<div onClick={() => {
+                          setView(false);
+                        }} >
+                          <Link
+                            
+                            href={path2}
+                          >
+                            {name2}
+                          </Link>
+                          </div>
+                        )}
+                        <div className="bg-white right-[102%] group-focus:visible invisible  shadow-md absolute z-[1000] flex flex-col">
+                          {sub?.map(({ name, path }, index) => (
+                            <div
+                              onClick={() => {
+                                setView((prev) => !prev);
+                              }}
+                              key={index}
+                              className="text-center text-sm  px-4 py-2"
+                            >
+                              <Link href={path}>
+                                <div className="">{name}</div>
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     ))}
+
+                    {/* ////// */}
                   </div>
                 </div>
-              </div>
+              )}
             </nav>
           </div>
         </header>
       </div>
 
-      <main className="text-zinc-900 font-sans  ">{children}</main>
+      <main className="text-zinc-900 font-sans">{children}</main>
 
       <footer className="border bg-white border-t mx-auto  py-6 lg:py-8">
         <div className="grid grid-cols-2 lg:flex lg:flex-row justify-around items-start">
@@ -249,7 +312,6 @@ export default function Layout({ children }) {
             <p>B-Block, 4th Floor, Kudlu Gate,</p>
             <p>Hosur Main Road,</p>
             <p>Bangalore – 560068. Karnataka, INDIA</p>
-           
           </div>
           {/* <div className="text-sm p-4 lg:p-0 pl-6  text-left">
             <p className="font-semibold">SFJ Computers Consulting</p>
@@ -357,7 +419,6 @@ export default function Layout({ children }) {
                 href="https://www.linkedin.com/company/sfj-business-solutions-pvt-ltd-/?originalSubdomain=in"
                 target="_blank"
                 rel="noreferrer"
-              
               >
                 <svg
                   className="w-8 h-8 linkedin"

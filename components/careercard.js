@@ -34,7 +34,7 @@ function Careercard({ id, title, description, type, role, point }) {
         <div>
           <section {...getCollapseProps()}>
             <div className="flex">
-              <div className="lg:w-full">
+              <div className="w-full">
                 <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-5 pb-24 rounded-lg border text-center relative">
                   <h2 className=" text-left   text-black mb-3">
                     <span className="font-bold">Type : </span>

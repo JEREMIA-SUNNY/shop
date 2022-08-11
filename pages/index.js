@@ -4,6 +4,7 @@ import Link from "next/link";
 import Clients from "../components/client";
 import Testimonials from "../components/testimonial";
 import KnowledgeCard from "../components/knowledgecard";
+import Blognew from "../components/blognew";
 
 import {
   FaAccessibleIcon,
@@ -16,6 +17,7 @@ import {
 } from "react-icons/fa";
 import Footprint from "../components/footprint";
 import Itservicescard from "../components/itservicescard";
+
 
 export default function Home() {
   const Itservice = [
@@ -481,6 +483,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Blognew/>
     </>
   );
 }

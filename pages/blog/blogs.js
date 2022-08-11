@@ -105,7 +105,7 @@ export default function Blogs() {
     },
     {
       id: 12,
-      name: "it Skills For The Future Economy",
+      name: "IT Skills For The Future Economy",
       logo: "/blog/twelve.jpg",
       desc: "Many feel anxious about the impact of new technology on their jobs. This is not new. In fact, it dates .......",
       link:"https://blogs.imf.org/2018/05/01/technology-and-the-future-of-work/",

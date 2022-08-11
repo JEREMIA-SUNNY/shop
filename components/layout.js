@@ -253,21 +253,21 @@ export default function Layout({ children }) {
                           setView(false);
                         }} >
                           <Link
-                            
+                    
                             href={path2}
                           >
                             {name2}
                           </Link>
                           </div>
                         )}
-                        <div className="bg-white right-[102%] group-focus:visible invisible  shadow-md absolute z-[1000] flex flex-col">
+                        <div className="bg-white right-[102%]  group-focus:visible invisible  shadow-md absolute z-[1000] flex flex-col">
                           {sub?.map(({ name, path }, index) => (
                             <div
                               onClick={() => {
                                 setView((prev) => !prev);
                               }}
                               key={index}
-                              className="text-center text-sm  px-4 py-2"
+                              className="text-center border border-b border-zinc-100 text-sm  px-4 py-2"
                             >
                               <Link href={path}>
                                 <div className="">{name}</div>

@@ -243,7 +243,7 @@ export default function Layout({ children }) {
             </Link>
           </div>
 
-          <div className="text-sm p-4 lg:p-0 pl-6  text-left">
+          <div className="text-sm p-4 lg:p-0 pl-6 text-center md:text-left">
             <p className="font-semibold">INDIA - HEAD OFFICE</p>
             <p>Uma Sree Dream World, Unit -2,</p>
             <p>B-Block, 4th Floor, Kudlu Gate,</p>

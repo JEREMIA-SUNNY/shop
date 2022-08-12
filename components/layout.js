@@ -92,7 +92,7 @@ export default function Layout({ children }) {
       ],
     },
     {
-      name2: "Solution",
+      name2: "Solutions",
       path2: "",
       subm: false,
       sub: [

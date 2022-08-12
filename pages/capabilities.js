@@ -51,7 +51,7 @@ function Capabilities() {
                 business goals.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
@@ -81,7 +81,7 @@ function Capabilities() {
                 and Machine Learning.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red underline font-bold hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
@@ -128,7 +128,7 @@ function Capabilities() {
                 needs while ensuring data security, scalability and usability.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
@@ -160,7 +160,7 @@ function Capabilities() {
                 operations.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
@@ -207,7 +207,7 @@ function Capabilities() {
                 for your project teams and campus recruits.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch
@@ -236,7 +236,7 @@ function Capabilities() {
                 deploying SAP, Oracle professionals and senior executive hiring.
               </p>
 
-              <p className="prose pt-8">
+              <p className="prose lg:mb-0 mb-5 pt-8">
                 <Link href="/contact">
                   <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
                     Get in touch

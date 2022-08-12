@@ -86,20 +86,21 @@ function Careercard({ id, title, description, type, role, point }) {
              " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
       `}
           >
-            <div className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full">
-              X
-            </div>
+          
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
               className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
             >
+                <div  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)} className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full">
+              X
+            </div>
               <h2 className="text-gray-900 text-lg mb-1 font-normal title-font">
                 Sign-up with SFJ today and join a strong growing network of IT
                 professionals.
               </h2>
 
               <p className="w-full h-[2px] mb-8 bg-blue"></p>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label htmlFor="name" className="leading-7 text-sm text-black">
                   Name
                 </label>
@@ -110,7 +111,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Email
                 </label>
@@ -121,7 +122,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="mobile"
                   className="leading-7 text-sm text-black"
@@ -136,7 +137,7 @@ function Careercard({ id, title, description, type, role, point }) {
                 />
               </div>
 
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="message"
                   className="leading-7 text-sm text-black"
@@ -149,7 +150,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   className="w-full bg-white rounded border border-blue focus:border-indigo-500 focus:ring-2 focus:ring-blue h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Linkedin Profile URL
                 </label>
@@ -161,11 +162,11 @@ function Careercard({ id, title, description, type, role, point }) {
                 />
               </div>
 
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 {" "}
                 <label className="block">
                   <span className="text-black text-sm">Select Technology</span>
-                  <select className=" block w-full border border-blue  text-sm  lg:h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
+                  <select className=" block w-full border border-blue  text-sm  h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
                     <option>Java Stack</option>
                     <option>Hadoop</option>
                     <option>React JS </option>
@@ -190,14 +191,14 @@ function Careercard({ id, title, description, type, role, point }) {
                   Submit
                 </button>
               </div>
-              <div className=" flex justify-center">
+              {/* <div className=" flex justify-center">
                 <button
                   onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
                   className="text-white md:hidden block py-2 px-6 bg-slate-700  mt-5"
                 >
                   close
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

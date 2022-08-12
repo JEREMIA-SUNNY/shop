@@ -183,7 +183,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   </select>
                 </label>
               </div>
-              <div className=" flex justify-center">
+              <div className=" flex mt-3 justify-center">
                 <button
                   onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
                   className="text-white bg-blue border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg"

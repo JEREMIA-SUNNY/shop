@@ -181,7 +181,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   </select>
                 </label>
               </div>
-              <div className=" flex justify-center">
+              <div className=" flex mt-3 justify-center">
                 <button className="text-white bg-green border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
                   Submit
                 </button>

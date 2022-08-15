@@ -169,7 +169,7 @@ export default function Testimonials() {
 
   return (
     <>
-      <section className="text-black bg-lightgray body-font md:pt-14 md:pb-10 pt-7 pb-5">
+      <section className="text-black bg-coustom1 body-font md:pt-14 md:pb-10 pt-7 pb-5">
         <div className="container px-5  mx-auto">
           
 

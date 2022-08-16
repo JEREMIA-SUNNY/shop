@@ -698,9 +698,7 @@ export default function Career() {
         {name:"Familiarity with Linux/Unix OS and Android OS will have preference"},
         {name:"Support our customers in a professional and friendly manner even under suffering unfair treatment"},
         {name:"Can work under pressure. Need to work on weekend, holidays and even overnight if the project is urgent"},
-        {name:" "},
-    { name: "" },
-    { name: "" },
+    
 
 
       ],

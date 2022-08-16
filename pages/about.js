@@ -1,56 +1,39 @@
 import Image from "next/image";
 function About() {
   const team = [
+
     {
-      name: "tom",
-      image: "/about/team1.jpg",
-      role: "Founder & Managing Director",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-    },
-    {
-      name: "jerry",
-      image: "/about/team2.jpg",
-      role: "CEO",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-    },
-    {
-      name: "james",
+      name: "Nisha Menon",
       image: "/about/team3.jpg",
-      role: "General Manager",
+      role: "DELIVERY MANAGER",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+        "https://www.linkedin.com/in/nisha-menon-2a328924/",
     },
     {
-      name: "james",
-      image: "/about/team4.jpg",
-      role: "Head of Sourcing",
+      name: "Swati Sharma",
+      image: "/about/swathi.jpg",
+      role: "Manager(Talent Acquisition)",
 
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+        "https://www.linkedin.com/in/swati-sharma-aa944113/",
     },
     {
-      name: "james",
-      image: "/about/team5.jpg",
-      role: "Head of Quality",
+      name: "Rakhi Dujrayan",
+      image: "/about/0.jpg",
+      role: "senior business developer manager",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+        "https://www.linkedin.com/in/rakhi-dujrayan-69192273/",
     },
     {
-      name: "james",
-      image: "/about/team6.jpg",
-      role: "Head of Research",
+      name: "Yatin Anand",
+      image: "/about/1.jpg",
+      role: "Manager – Key Accounts",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+        "https://www.linkedin.com/in/yatin-anand-958919161/",
     },
-    {
-      name: "james",
-      image: "/about/team7.jpg",
-      role: "Head of Research",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-    },
+    
+    
+    
   ];
 
   return (
@@ -230,11 +213,11 @@ function About() {
             Meet Our Team
           </h1>
 
-          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-4 ">
             {team.map(({ name, image, role, description },index) => {
               return (
                 <div key={index} className="flex flex-col items-center p-5">
-                  <div className="relative lg:w-[300px] lg:h-[300px]  md:w-[300px] md:h-[300px] w-[200px]  h-[200px]  rounded-full">
+                  <div className="relative lg:w-[200px] lg:h-[200px]  md:w-[200px] md:h-[000px] w-[200px]  h-[200px]  rounded-full">
                     <Image
                       className="rounded-full"
                       alt="profle"
@@ -247,12 +230,41 @@ function About() {
                     {name}
                   </h1>
                   <div className="flex flex-col gap-5 justify-center">
-                    <p className=" text-black capitalize text-center  ">
+                    <p className=" text-black mt-2 capitalize text-center  ">
                       {role}
                     </p>
-                    <h1 className="md:w-[255px] h-[2px]  bg-blue mb-5"></h1>
+                    {/* <h1 className="md:w-[255px] h-[2px]  bg-blue mb-5"></h1> */}
                   </div>
-                  <p className="text-center">{description}</p>
+                
+                 <a
+                className="hover:scale-105 mt-5 transition-all"
+                href={description }
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  className="w-8 h-8 linkedin"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 201 201"
+                >
+                  <rect
+                    width="201"
+                    height="201"
+                    fill="#0072b1"
+                    rx="19"
+                    ry="19"
+                  />
+                  <polygon
+                    fill="#fefefe"
+                    points="39 102 39 162 68 162 68 97 68 80 39 80"
+                  />
+                  <path
+                    fill="#fefefe"
+                    d="M54 39c-8 0-15 7-15 15 0 7 7 14 15 14 7 0 14-7 14-14 0-8-7-15-14-15zM161 105c-2-15-9-25-30-25-12 0-20 5-24 11l0 0 0-11-23 0 0 16 0 66 24 0 0-41c0-10 2-21 15-21 13 0 14 13 14 22l0 40 25 0 0-45 0 0c0-4 0-8-1-12z"
+                  />
+                </svg>
+              </a>
                 </div>
               );
             })}

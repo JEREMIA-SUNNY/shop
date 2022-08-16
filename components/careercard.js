@@ -86,14 +86,16 @@ function Careercard({ id, title, description, type, role, point }) {
              " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
       `}
           >
-          
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
               className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
             >
-                <div  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)} className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full">
-              X
-            </div>
+              <div
+                onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
+                className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full"
+              >
+                X
+              </div>
               <h2 className="text-gray-900 text-lg mb-1 font-normal title-font">
                 Sign-up with SFJ today and join a strong growing network of IT
                 professionals.
@@ -180,6 +182,25 @@ function Careercard({ id, title, description, type, role, point }) {
                     <option>SAP SuccessFactors </option>
                     <option>Salesforce</option>
                     <option>Oracle/OIS/Finance</option>
+                    <option>Salesforce trainer</option>
+                    <option>Azure</option>
+                    <option>BDM/CSM</option>
+                    <option>Fullstack Developer</option>
+                    <option>Windows Admin</option>
+                    <option>Network Data</option>
+                    <option>IBM Storage SME (SAN) </option>
+                    <option>Network engineer-Ericsson Integration</option>
+                    <option>OS Monitoring</option>
+                    <option>VMware VDI, Horizon View Architect</option>
+                    <option>ASP.NET MVC</option>
+                    <option>IFS EAM CONSULTANTS</option>
+                    <option> CSM(Customer Success Manager)</option>
+                    <option>Python Developer</option>
+                    <option>Dft Engineer</option>
+                    <option>Kenan Software Developer</option>
+                    <option>Corporate Treasury Advisory</option>
+                    <option>Software Engineer</option>
+                    <option>CAD Engineers</option>
                   </select>
                 </label>
               </div>

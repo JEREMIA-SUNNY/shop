@@ -175,25 +175,7 @@ export default function Career() {
       ],
       role: "Developer/Consultant/Architect",
     },
-    // {
-    //   id: ,
-    //   title: "",
-    //   type:" Full-time/Contract",
-    //   point:[
-    //     {name:""},
-    //     {name:""},
-    //     {name:""},
-    //     {name:" "},
-    //     {name:""},
-    //     {name:" "},
-    // { name: "" },
-    // { name: "" },
-
-
-    //   ],
-    //   role:"Developer/Consultant/Architect",
-
-    // },
+    
     {
       id: 9,
       title: "Fullstack Developer",
@@ -210,7 +192,7 @@ export default function Career() {
         { name: "Comfortable in using Git, branching, and merging" },
         { name: "Dot Net, C#, SQL Server, and Angular" },
       ],
-      role: "Developer/Consultant/Architect",
+      role: "Developer",
     },
     {
       id: 10,
@@ -251,7 +233,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
      {
@@ -327,7 +309,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
     {
@@ -363,48 +345,10 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
-    // {
-    //   id: ,
-    //   title: "",
-    //   type:" Full-time/Contract",
-    //   point:[
-    //     {name:""},
-    //     {name:""},
-    //     {name:""},
-    //     {name:" "},
-    //     {name:""},
-    //     {name:" "},
-    // { name: "" },
-    // { name: "" },
-
-
-    //   ],
-    //   role:"Developer/Consultant/Architect",
-
-    // },
-    // {
-    //   id: ,
-    //   title: "",
-    //   type:" Full-time/Contract",
-    //   point:[
-    //     {name:""},
-    //     {name:""},
-    //     {name:""},
-    //     {name:" "},
-    //     {name:""},
-    //     {name:" "},
-    // { name: "" },
-    // { name: "" },
-
-
-    //   ],
-    //   role:"Developer/Consultant/Architect",
-
-    // },
-
+   
   ];
  
  
@@ -495,8 +439,7 @@ export default function Career() {
       
       ],
       role: "Developer/Consultant/Architect",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+     
     },
     {
       id: 5,
@@ -685,7 +628,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
     {
@@ -702,7 +645,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
   ];

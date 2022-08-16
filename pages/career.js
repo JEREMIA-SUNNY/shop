@@ -593,7 +593,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
     {
@@ -612,7 +612,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
     {

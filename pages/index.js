@@ -392,9 +392,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <Testimonials />
-      </section>
+      </section> */}
 
       {/* blogs */}
 

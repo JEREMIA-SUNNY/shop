@@ -4,14 +4,14 @@ function About() {
 
     {
       name: "Nisha Menon",
-      image: "/about/team3.jpg",
+      image: "/about/nisha.png",
       role: "DELIVERY MANAGER",
       description:
         "https://www.linkedin.com/in/nisha-menon-2a328924/",
     },
     {
       name: "Swati Sharma",
-      image: "/about/swathi.jpg",
+      image: "/about/defualt.jpeg",
       role: "Manager(Talent Acquisition)",
 
       description:
@@ -19,14 +19,14 @@ function About() {
     },
     {
       name: "Rakhi Dujrayan",
-      image: "/about/0.jpg",
+      image: "/about/rakhi.png",
       role: "senior business developer manager",
       description:
         "https://www.linkedin.com/in/rakhi-dujrayan-69192273/",
     },
     {
       name: "Yatin Anand",
-      image: "/about/1.jpg",
+      image: "/about/yatin.jpg",
       role: "Manager – Key Accounts",
       description:
         "https://www.linkedin.com/in/yatin-anand-958919161/",

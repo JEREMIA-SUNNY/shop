@@ -12,6 +12,16 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
     easing: "cubic-bezier(0.37, 0, 0.63, 1)",
     duration: 600,
   });
+  const opt = [
+    "Testing",
+    "DotNet",
+    "Java",
+    "SAP",
+    "AZURE",
+    "Mainframe",
+    "ServiceNow",
+    "Siebel",
+  ];
 
   return (
     <>
@@ -89,14 +99,16 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
         `}
           >
-           
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
               className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
             >
-               <div onClick={() => setExpanded1((prevExpanded) => !prevExpanded)} className=" hover:cursor-pointer text-xl text-end font-extrabold text-green animate-bounce  w-full">
-              X
-            </div>
+              <div
+                onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
+                className=" hover:cursor-pointer text-xl text-end font-extrabold text-green animate-bounce  w-full"
+              >
+                X
+              </div>
               <h2 className="text-black text-lg mb-1 font-normal title-font">
                 Sign-up with our learning programs today and take your career to
                 the next level.
@@ -139,6 +151,20 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
+              <div className="relative mb-2">
+                <label
+                  htmlFor="mobile"
+                  className="leading-7 text-sm text-black"
+                >
+                  Location
+                </label>
+                <input
+                  type="text"
+                  id="Location"
+                  name="Location"
+                  className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
 
               <div className="relative mb-2">
                 <label
@@ -153,6 +179,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
+
               <div className="relative mb-2">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Linkedin Profile URL
@@ -170,14 +197,24 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 <label className="block">
                   <span className="text-black text-sm">Select Course</span>
                   <select className=" block w-full border border-green text-sm h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
-                    <option>Testing</option>
-                    <option>Dotnet</option>
-                    <option>Java</option>
-                    <option>SAP</option>
-                    <option>Azure</option>
-                    <option>Mainframe</option>
-                    <option>ServiceNow</option>
-                    <option>Siebel</option>
+
+
+
+                  {opt.map((item, index) => {
+                   
+                   if(title===item){
+                    return (
+                      <option key={index} value={item} selected>{item}</option>
+                    );
+                   }
+                    else{
+                   
+                   
+                   return(
+                      <option key={index} value={item}>{item}</option>
+                    )}
+
+                   })}
                   </select>
                 </label>
               </div>

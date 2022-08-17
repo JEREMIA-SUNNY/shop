@@ -178,7 +178,7 @@ export default function Career() {
     
     {
       id: 9,
-      title: "Fullstack Developer",
+      title: "Fullstack ",
       type: " Full-time/Contract",
       point: [
         {
@@ -220,7 +220,7 @@ export default function Career() {
     },
     {
       id:11,
-      title: "Network engineer-Ericsson Integration",
+      title: "Ericsson Network  Integration",
       type:" Full-time/Contract",
       point:[
         {name:"Plan the implementation of the product configuration"},
@@ -238,7 +238,7 @@ export default function Career() {
     },
      {
       id:12,
-      title: "VMware VDI, Horizon View Architec",
+      title: "VMware VDI, Horizon View ",
       type:" Full-time/Contract",
       point:[
         {name:"Configure, manage and maintain the VMware, VMware horizon view and windows server infrastructure"},
@@ -247,17 +247,17 @@ export default function Career() {
         {name:"Strong knowledge on Virtual desktop infrastructure management"},
         {name:"Strong knowledge on Active directory ,group, policy management"},
         {name:" Strong knowledge PowerShell and PowerShell CLI"},
-    { name: "Datacenter understanding" },
+    { name: "Data center understanding" },
     { name: "Experience with hardware platforms" },
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Architect",
 
     },
     {
       id:13,
-      title: "IFS EAM Consultant",
+      title: "IFS EAM",
       type:" Full-time/Contract",
       point:[
         {name:" IFS Implementation Profile"},
@@ -271,31 +271,13 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Consultant",
 
     },
+    
     {
       id:14,
-      title: " CSM(Customer Success Manager)",
-      type:" Full-time/Contract",
-      point:[
-        {name:"Project review on regular basis with the delivery team"},
-        {name:"Must have Insurance Domain knowledge"},
-        {name:"Must have 5+ years of experience in relevant field"},
-        {name:"Build and maintain client relationships"},
-        {name:"Having experience working on pre-sales and sales"},
-        {name:"Resolve customer concerns and requests efficiently"},
-    { name: "Develop and assess account strategies to meet revenue targets" },
-    { name: "create business proposals for clients and management" },
-
-
-      ],
-      role:"Developer/Consultant/Architect",
-
-    },
-    {
-      id:15,
-      title: "Dft Engineer",
+      title: "DFT",
       type:" Full-time/Contract",
       point:[
         {name:"FULL CHIP EXPOSURE"},
@@ -313,8 +295,8 @@ export default function Career() {
 
     },
     {
-      id:16,
-      title: "Corporate Treasury Advisory",
+      id:15,
+      title: "Corporate Treasury ",
       type:" Full-time/Contract",
       point:[
         {name:"The candidate will be expected to lead"},
@@ -327,12 +309,12 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Manager",
 
     },
     {
-      id:17,
-      title: "CAD Engineers",
+      id:16,
+      title: "CAD",
       type:" Full-time/Contract",
       point:[
         {name:"Solution Development, Solution Implementation, Rollout and Application Support using Proficy Plant Apps"},
@@ -472,14 +454,20 @@ export default function Career() {
     },
     {
       id: 7,
-      title: "Salesforce trainer",
+      title: "Salesforce",
       type: " Full-time/Contract",
       point: [
         { name: " Sales Cloud Einstein" },
         { name: "Service Cloud Einstein" },
         { name: "CRM Analytics" },
+        { name: "Knowledge of web coding including HTML and CSS." },
+        { name: "Strong Communications skills" },
+        { name: "Ability to solve problem sets" },
+        { name: "Testing the stability and functionality of the application" },
+        { name: "Troubleshooting and fixing bugs" },
+        { name: "Writing documents and providing technical training for Salesforce staff" },
       ],
-      role: "Developer/Consultant/Architect",
+      role: "Developer/Consultant/Architect/Trainer",
     },
     {
       id: 8,
@@ -557,7 +545,7 @@ export default function Career() {
 
 
       ],
-      role:"Developer/Consultant/Architect",
+      role:"Developer",
 
     },
     {
@@ -579,7 +567,7 @@ export default function Career() {
     },
     {
       id:13,
-      title: "PHP Developer",
+      title: "PHP ",
       type:" Full-time/Contract",
       point:[
         {name:"Role Software Engineer/Senior Software Engineer PHP/Cake PHP"},
@@ -598,7 +586,7 @@ export default function Career() {
     },
     {
       id:14,
-      title: "Python Developer",
+      title: "Python ",
       type:" Full-time/Contract",
       point:[
         {name:"Write effective, scalable code"},
@@ -617,7 +605,7 @@ export default function Career() {
     },
     {
       id:15,
-      title: "Kenan Software Developer",
+      title: "Kenan Software",
       type:" Full-time/Contract",
       point:[
         {name:"Solve various technical problems in the project in a collaborative manner under specified timeline with minimal guidance and review"},
@@ -633,7 +621,7 @@ export default function Career() {
     },
     {
       id:16,
-      title: "Software Engineer ",
+      title: "C",
       type:" Full-time/Contract",
       point:[
         {name:"Proficient in C language and Loves programming"},

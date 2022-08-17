@@ -342,6 +342,24 @@ export default function Career() {
       role:"Manager",
 
     },
+    {
+      id:16,
+      title: "CAD",
+      type:" Full-time/Contract",
+      point:[
+        {name:"Solution Development, Solution Implementation, Rollout and Application Support using Proficy Plant Apps"},
+        {name:"Experience on performance monitor Tools"},
+        {name:"Experience on PA Database and PA Table Structure including customization using SQL Stored Procedures. Should know Coding best practices"},
+        {name:"Proficy-3rd Party Tool Integration, Proficy SDK, .Net and Visual Basic"},
+        {name:"Should be flexible at work timings/work in shifts"},
+        {name:"Database: SQL Server"},
+   
+
+
+      ],
+      role:"Developer",
+
+    },
     
    
   ];
@@ -650,24 +668,7 @@ export default function Career() {
       role:"Developer",
 
     },
-    {
-      id:17,
-      title: "CAD",
-      type:" Full-time/Contract",
-      point:[
-        {name:"Solution Development, Solution Implementation, Rollout and Application Support using Proficy Plant Apps"},
-        {name:"Experience on performance monitor Tools"},
-        {name:"Experience on PA Database and PA Table Structure including customization using SQL Stored Procedures. Should know Coding best practices"},
-        {name:"Proficy-3rd Party Tool Integration, Proficy SDK, .Net and Visual Basic"},
-        {name:"Should be flexible at work timings/work in shifts"},
-        {name:"Database: SQL Server"},
-   
-
-
-      ],
-      role:"Developer",
-
-    },
+    
   ];
 
   return (

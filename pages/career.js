@@ -12,6 +12,36 @@ export default function Career() {
 
   const careerdata = [
     {
+      id: 0,
+      title: "Inside Sales",
+      type: " Full-time/Contract",
+      point: [
+        { name: "This role would be part of the B2B sales function for our India and US, Europe, ME, SEA and ANZ. He/she would drive the new customer acquisition, customer relationship management, Operations & reporting" },
+        {
+          name: " Communicating with customers, making outbound calls to potential customers, and following up on leads",
+        },
+        { name: " Understanding customers' needs and identifying sales opportunities" },
+        { name: "Answering potential customers' questions and sending additional information per email" },
+        {
+          name: " Keeping up with product and service information and updatesS",
+        },
+        {
+          name: "Creating and maintaining a database of current and potential customers",
+          name: " Explaining and demonstrating features of services",
+          name: " Staying informed about competing services",
+          name: " Upselling products and services",
+          name: " Researching and qualifying new leads",
+          name: " Closing sales and achieving sales targets",
+          name: "Proactively identifying cross-selling/up-selling opportunities with the existing customers",
+          name: " Identifying references through the existing customer base to increase the sales pipeline",
+          name: " Experience in data mining process and Email Marketing is mandate",
+          name: "  Outbound Call, Digital Marketing and Knowledge in using any of the CRM tool is an advantage",
+          name: "  Experience Level 1 to 4 Years",
+        },
+      ],
+      role: "Sales Representative",
+    },
+    {
       id: 1,
       title: "Java Stack",
 
@@ -38,7 +68,7 @@ export default function Career() {
     },
     {
       id: 2,
-      title: "Handoop",
+      title: "Hadoop",
       type: " Full-time/Contract",
       point: [
         { name: "Data management" },
@@ -157,7 +187,7 @@ export default function Career() {
     },
     {
       id: 8,
-      title: "Azure  ",
+      title: "Azure",
       type: " Full-time/Contract",
       point: [
         { name: "Years of Experience 5 to 10 Years" },
@@ -178,7 +208,7 @@ export default function Career() {
     
     {
       id: 9,
-      title: "Fullstack ",
+      title: "Fullstack",
       type: " Full-time/Contract",
       point: [
         {
@@ -238,7 +268,7 @@ export default function Career() {
     },
      {
       id:12,
-      title: "VMware VDI, Horizon View ",
+      title: "VMware VDI, Horizon View",
       type:" Full-time/Contract",
       point:[
         {name:"Configure, manage and maintain the VMware, VMware horizon view and windows server infrastructure"},
@@ -296,7 +326,7 @@ export default function Career() {
     },
     {
       id:15,
-      title: "Corporate Treasury ",
+      title: "Corporate Treasury",
       type:" Full-time/Contract",
       point:[
         {name:"The candidate will be expected to lead"},
@@ -312,24 +342,7 @@ export default function Career() {
       role:"Manager",
 
     },
-    {
-      id:16,
-      title: "CAD",
-      type:" Full-time/Contract",
-      point:[
-        {name:"Solution Development, Solution Implementation, Rollout and Application Support using Proficy Plant Apps"},
-        {name:"Experience on performance monitor Tools"},
-        {name:"Experience on PA Database and PA Table Structure including customization using SQL Stored Procedures. Should know Coding best practices"},
-        {name:"Proficy-3rd Party Tool Integration, Proficy SDK, .Net and Visual Basic"},
-        {name:"Should be flexible at work timings/work in shifts"},
-        {name:"Database: SQL Server"},
-   
-
-
-      ],
-      role:"Developer",
-
-    },
+    
    
   ];
  
@@ -341,6 +354,7 @@ export default function Career() {
  
  
   const careerdata1 = [
+    
     {
       id: 1,
       title: "SAP BODS ",
@@ -409,7 +423,7 @@ export default function Career() {
     },
     {
       id: 4,
-      title: "SAP SuccessFactors ",
+      title: "SAP SuccessFactors",
       type: " Full-time/Contract",
       point: [
         { name: "+5 Year experience in complex SuccessFactors / SAP HR implementations" },
@@ -567,7 +581,7 @@ export default function Career() {
     },
     {
       id:13,
-      title: "PHP ",
+      title: "PHP",
       type:" Full-time/Contract",
       point:[
         {name:"Role Software Engineer/Senior Software Engineer PHP/Cake PHP"},
@@ -586,7 +600,7 @@ export default function Career() {
     },
     {
       id:14,
-      title: "Python ",
+      title: "Python",
       type:" Full-time/Contract",
       point:[
         {name:"Write effective, scalable code"},
@@ -630,6 +644,24 @@ export default function Career() {
         {name:"Support our customers in a professional and friendly manner even under suffering unfair treatment"},
         {name:"Can work under pressure. Need to work on weekend, holidays and even overnight if the project is urgent"},
     
+
+
+      ],
+      role:"Developer",
+
+    },
+    {
+      id:17,
+      title: "CAD",
+      type:" Full-time/Contract",
+      point:[
+        {name:"Solution Development, Solution Implementation, Rollout and Application Support using Proficy Plant Apps"},
+        {name:"Experience on performance monitor Tools"},
+        {name:"Experience on PA Database and PA Table Structure including customization using SQL Stored Procedures. Should know Coding best practices"},
+        {name:"Proficy-3rd Party Tool Integration, Proficy SDK, .Net and Visual Basic"},
+        {name:"Should be flexible at work timings/work in shifts"},
+        {name:"Database: SQL Server"},
+   
 
 
       ],

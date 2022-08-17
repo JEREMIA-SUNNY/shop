@@ -7,6 +7,43 @@ import { useState } from "react";
 function Careercard({ id, title, description, type, role, point }) {
   const [isExpanded, setExpanded] = useState(false);
   const [isExpanded1, setExpanded1] = useState(false);
+  const opt=[
+    "Inside sales",
+    "Java Stack",
+                    "Hadoop",
+                 "React JS",
+                   "Snowflake",
+                    "Teradata",
+                  "Data Sciences",
+                    "Azure Data Bricks/ADF ",
+                    "SAP BODS ",
+                    "SAP BW",
+                  "SAP BW/4 HANA",
+                 "SAP SuccessFactors",
+                   "Salesforce",
+                   "Oracle/OIS/Finance",
+                    "Salesforce trainer",
+                   "Azure",
+                   "BDM/CSM",
+                    "Fullstack",
+                    "Windows Admin",
+                    "Network Data",
+                   "IBM Storage SME (SAN)",
+                   "Ericsson Network  Integration",
+                   "OS Monitoring",
+                  "VMware VDI, Horizon View",
+                    "ASP.NET MVC",
+                    "IFS EAM",
+                    "CSM(Customer Success Manager)",
+                    "Python",
+                    "PHP",
+                     "DFT",
+                    "Kenan Software",
+                    "Corporate Treasury",
+                   "C",
+                   "CAD",
+
+  ]
   const { getCollapseProps, getToggleProps } = useCollapse({
     isExpanded,
     easing: "cubic-bezier(0.37, 0, 0.63, 1)",
@@ -169,38 +206,55 @@ function Careercard({ id, title, description, type, role, point }) {
                 <label className="block">
                   <span className="text-black text-sm">Select Technology</span>
                   <select className=" block w-full border border-blue  text-sm  h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
-                    <option>Java Stack</option>
-                    <option>Hadoop</option>
-                    <option>React JS </option>
-                    <option>Snowflake </option>
-                    <option>Teradata </option>
-                    <option>Data Sciences </option>
-                    <option>Azure Data Bricks/ADF </option>
-                    <option>SAP BODS </option>
-                    <option>SAP BW</option>
-                    <option>SAP BW/4 HANA</option>
-                    <option>SAP SuccessFactors </option>
-                    <option>Salesforce</option>
-                    <option>Oracle/OIS/Finance</option>
-                    <option>Salesforce trainer</option>
-                    <option>Azure</option>
-                    <option>BDM/CSM</option>
-                    <option>Fullstack Developer</option>
-                    <option>Windows Admin</option>
-                    <option>Network Data</option>
-                    <option>IBM Storage SME (SAN) </option>
-                    <option>Network engineer-Ericsson Integration</option>
-                    <option>OS Monitoring</option>
-                    <option>VMware VDI, Horizon View Architect</option>
-                    <option>ASP.NET MVC</option>
-                    <option>IFS EAM CONSULTANTS</option>
-                    <option> CSM(Customer Success Manager)</option>
-                    <option>Python Developer</option>
-                    <option>Dft Engineer</option>
-                    <option>Kenan Software Developer</option>
-                    <option>Corporate Treasury Advisory</option>
-                    <option>Software Engineer</option>
-                    <option>CAD Engineers</option>
+                   
+                   
+                   {opt.map((item, index) => {
+                   
+                   if(title===item){
+                    return (
+                      <option key={index} value={item} selected>{item}</option>
+                    );
+                   }
+                    else{
+                   
+                   
+                   return(
+                      <option key={index} value={item}>{item}</option>
+                    )}
+
+                   })}
+                    // {/* <option>Java Stack</option>
+                    // <option>Hadoop</option>
+                    // <option selected="selected">React JS </option>
+                    // <option>Snowflake </option>
+                    // <option>Teradata </option>
+                    // <option>Data Sciences </option>
+                    // <option>Azure Data Bricks/ADF </option>
+                    // <option>SAP BODS </option>
+                    // <option>SAP BW</option>
+                    // <option>SAP BW/4 HANA</option>
+                    // <option>SAP SuccessFactors </option>
+                    // <option>Salesforce</option>
+                    // <option>Oracle/OIS/Finance</option>
+                    // <option>Salesforce trainer</option>
+                    // <option>Azure</option>
+                    // <option>BDM/CSM</option>
+                    // <option>Fullstack Developer</option>
+                    // <option>Windows Admin</option>
+                    // <option>Network Data</option>
+                    // <option>IBM Storage SME (SAN) </option>
+                    // <option>Network engineer-Ericsson Integration</option>
+                    // <option>OS Monitoring</option>
+                    // <option>VMware VDI, Horizon View Architect</option>
+                    // <option>ASP.NET MVC</option>
+                    // <option>IFS EAM CONSULTANTS</option>
+                    // <option> CSM(Customer Success Manager)</option>
+                    // <option>Python Developer</option>
+                    // <option>Dft Engineer</option>
+                    // <option>Kenan Software Developer</option>
+                    // <option>Corporate Treasury Advisory</option>
+                    // <option>Software Engineer</option>
+                    // <option>CAD Engineers</option> */}
                   </select>
                 </label>
               </div>

@@ -11,7 +11,7 @@ function About() {
     },
     {
       name: "Swati Sharma",
-      image: "/about/defualt.jpeg",
+      image: "/about/swathi.jpg",
       role: "Manager(Talent Acquisition)",
 
       description:

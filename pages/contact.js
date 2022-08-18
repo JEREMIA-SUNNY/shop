@@ -169,7 +169,7 @@ export default function Contact() {
                         className=" block w-full  border border-green  h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                       >
                         <option>Knowledge As A Service</option>
-                        <option>Tale nt As A Service </option>
+                        <option>Talent As A Service </option>
                         <option>Consulting/IT Services.</option>
 
                         <option>Others</option>

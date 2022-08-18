@@ -115,17 +115,17 @@ function Careercard({ id, title, description, type, role, point }) {
       {isExpanded1 && (
         <div
           onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-          className={`fixed flex justify-center items-center bg-opacity-80 z-50 top-0   left-0 w-screen h-screen bg-black`}
+          className={`fixed flex justify-center items-center bg-opacity-80  z-50 top-0     left-0 w-screen h-screen bg-black`}
         >
           <div
             className={`
          
-             " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
+             " w-full lg:w-fit   lg:h-[90%]  h-full  flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
       `}
           >
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-              className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
+              className="lg:w-[500px] h-full p-5 md:py-10 md:px-10  bg-white flex flex-col   overflow-auto w-full  "
             >
               <div
                 onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}

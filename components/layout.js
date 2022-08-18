@@ -336,25 +336,25 @@ export default function Layout({ children }) {
             <Link href="/about">
               <a>About</a>
             </Link>
-            <Link href="/services">
+            <Link href="/solutions/knowledge">
               <a>Solutions</a>
             </Link>
-            <Link href="/products">
+            <Link href="/capabilities">
               <a>Capabilities</a>
             </Link>
-            <Link href="/team">
+            <Link href="/education">
               <a>Education</a>
             </Link>
           </div>
 
           <div className="text-sm flex flex-col  lg:p-0  text-center">
-            <Link href="/strengths">
+            <Link href="/career">
               <a>Careers</a>
             </Link>
-            <Link href="/facilities">
+            <Link href="/blog/blogs">
               <a>Blogs</a>
             </Link>
-            <Link href="/customers">
+            <Link href="/contact">
               <a>Contact Us</a>
             </Link>
           </div>

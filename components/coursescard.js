@@ -96,12 +96,12 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
           <div
             className={`
            
-               " w-full lg:w-fit lg:h-fit h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
+               " w-full lg:w-fit lg:h-[90%] h-full   flex flex-row lg:flex-col justify-center bg-gray bg-opacity-100"
         `}
           >
             <div
               onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-              className="lg:w-[500px] p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
+              className="lg:w-[500px] h-full p-5 md:py-10 md:px-10  bg-white flex flex-col  overflow-auto w-full  "
             >
               <div
                 onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
@@ -219,7 +219,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 </label>
               </div>
               <div className=" flex mt-3 justify-center">
-                <button className="text-white bg-green border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
+                <button  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)} className="text-white bg-green border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
                   Submit
                 </button>
               </div>

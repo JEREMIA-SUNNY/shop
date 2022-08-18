@@ -10,41 +10,43 @@ export default function Contact() {
   const [visible, setVisible] = useState(false);
 
   const sendMessage = async (e) => {
-    e.preventDefault();
-    console.log("working");
-
-    console.log("name", name);
-    console.log("email", email);
-    console.log("phone", phone);
-    console.log("interest", interest);
-    console.log("info", info);
-
-    if (!name || !email || !phone || !info) {
-      return;
-    }
-
-    const response = await fetch(
-      "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
-      {
-        method: "POST",
-        headers: {},
-        body: JSON.stringify({ name, email, phone, info, interest }),
+    try {
+      e.preventDefault();
+      if (
+        !name.trim() ||
+        !email.trim() ||
+        !phone.trim() ||
+        !info.trim() ||
+        !interest.trim()
+      ) {
+        alert("Please Double Check All Fields!");
+        return;
       }
-    );
 
-    console.log("response", response);
-
-    if (response.status === 200) {
-      setName("");
-      setEmail("");
-      setPhone("");
-      setInterest("");
-      setInfo("");
-      setMessage(
-        "Your message is sent. We'll get back to you at the earliest!"
+      const response = await fetch(
+        "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
+        {
+          method: "POST",
+          headers: {},
+          body: JSON.stringify({ name, email, phone, interest, info }),
+        }
       );
-    } else {
-      console.log(JSON.stringify(response));
+
+      if (response.status === 200) {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setInterest("");
+        setInfo("");
+        setMessage(
+          "Your message is sent. We'll get back to you at the earliest!"
+        );
+      } else {
+        alert("Error Submitting Form!");
+      }
+    } catch (e) {
+      alert("Something went wrong");
+     
     }
   };
 
@@ -63,9 +65,6 @@ export default function Contact() {
   const changeInterest = (e) => {
     setInterest(e.target.value);
   };
-  if (name && email && phone && info && interest) {
-    console.log("iam visible");
-  }
 
   return (
     <>
@@ -76,7 +75,7 @@ export default function Contact() {
           </h1>
 
           <div className="flex flex-col-reverse md:flex-row justify-between items-start rounded pt-8 ">
-            <d  iv className="md:w-2/5 md:mt-0 mt-10 w-full">
+            <d iv className="md:w-2/5 md:mt-0 mt-10 w-full">
               <p className="text-2xl font-semibold  md:ml-4">
                 SFJ BUSINESS SOLUTIONS
               </p>
@@ -128,7 +127,7 @@ export default function Contact() {
             <div className="md:w-1/2 w-full">
               <div className="md:pl-12 md:pt-0 pt-12">
                 <h2 className="text-2xl text-black ">Write to us</h2>
-                <form className="mt-8" onSubmit={sendMessage}>
+                <div className="mt-8">
                   <div className="lg:grid flex flex-col justify-center lg:grid-cols-2 gap-6">
                     <label className="block">
                       <span className="text-black">Name</span>
@@ -153,7 +152,7 @@ export default function Contact() {
                     <label className="block">
                       <span className="text-black">Phone</span>
                       <input
-                        type="tel"
+                        type="number"
                         className=" block  rounded-sm w-full lg:h-[47px] border border-green focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
                         value={phone}
@@ -170,7 +169,7 @@ export default function Contact() {
                         className=" block w-full  border border-green  h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                       >
                         <option>Knowledge As A Service</option>
-                        <option>Talent As A Service </option>
+                        <option>Tale nt As A Service </option>
                         <option>Consulting/IT Services.</option>
 
                         <option>Others</option>
@@ -192,18 +191,25 @@ export default function Contact() {
                         {message}
                       </p>
                     ) : (
-                      <button
-                        className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
-                          name && email && phone && info && interest
-                            ? "opacity-100"
-                            : "opacity-25"
-                        }`}
-                      >
-                        SEND
-                      </button>
+                      name &&
+                      email &&
+                      phone &&
+                      info &&
+                      interest && (
+                        <button
+                          onClick={sendMessage}
+                          className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
+                            name && email && phone && info && interest
+                              ? "opacity-100"
+                              : "opacity-25"
+                          }`}
+                        >
+                          SEND
+                        </button>
+                      )
                     )}
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

@@ -88,6 +88,8 @@ function Careercard({ id, title, description, type, role, point }) {
         setPhone("");
         setInterest("");
         setInfo("");
+        setLocation("");
+        setLinkedin("");
         setMessage(
           "Your message is sent. We'll get back to you at the earliest!"
         );

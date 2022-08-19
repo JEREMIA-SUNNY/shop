@@ -62,6 +62,8 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
         setPhone("");
         setInterest("");
         setInfo("");
+        setLocation("");
+        setLinkedin("");
         setMessage(
           "Your message is sent. We'll get back to you at the earliest!"
         );

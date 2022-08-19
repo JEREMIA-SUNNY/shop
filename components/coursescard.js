@@ -27,7 +27,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
 
   const [phone, setPhone] = useState("");
   const [location, setLocation] = useState("");
-  const [interest, setInterest] = useState("Testing");
+  const [interest, setInterest] = useState(title);
   const [info, setInfo] = useState("");
   const [linkedin, setLinkedin] = useState("");
 
@@ -50,10 +50,10 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
       }
       console.log(name, email, phone, info, interest, location, linkedin);
 
-      const response = await fetch("", {
+      const response = await fetch("https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/", {
         method: "POST",
         headers: {},
-        body: JSON.stringify({ name, email, phone, interest, info }),
+        body: JSON.stringify({ type: "course", name, email, phone, interest, info, location, linkedin }),
       });
 
       if (response.status === 200) {
@@ -283,7 +283,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 {" "}
                 <label className="block">
                   <span className="text-black text-sm">Select Course</span>
-                  <select className=" block w-full border border-green text-sm h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
+                  <select onChange={changeInterest} className=" block w-full border border-green text-sm h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
 
 
 
@@ -291,14 +291,14 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                    
                    if(title===item){
                     return (
-                      <option key={index}   onChange={changeInterest} value={item} selected>{item}</option>
+                      <option key={index}  value={item} selected>{item}</option>
                     );
                    }
                     else{
                    
                    
                    return(
-                      <option key={index}   onChange={changeInterest} value={item}>{item}</option>
+                      <option key={index} value={item}>{item}</option>
                     )}
 
                    })}

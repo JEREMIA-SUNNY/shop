@@ -50,16 +50,16 @@ function Careercard({ id, title, description, type, role, point }) {
   });
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
   const [phone, setPhone] = useState("");
   const [location, setLocation] = useState("");
-  const [interest, setInterest] = useState("Java Stack");
+  const [interest, setInterest] = useState(title);
   const [info, setInfo] = useState("");
   const [linkedin, setLinkedin] = useState("");
 
   const [message, setMessage] = useState(false);
 
   const sendMessage = async (e) => {
+    console.log(name, email, phone, location, interest, info, linkedin)
     try {
       e.preventDefault();
       if (
@@ -76,10 +76,10 @@ function Careercard({ id, title, description, type, role, point }) {
         return;
       }
       
-      const response = await fetch("", {
+      const response = await fetch("https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/", {
         method: "POST",
         headers: {},
-        body: JSON.stringify({ name, email, phone, interest, info }),
+        body: JSON.stringify({ type: "career", name, email, phone, interest, info, location, linkedin }),
       });
 
       if (response.status === 200) {
@@ -108,7 +108,6 @@ function Careercard({ id, title, description, type, role, point }) {
     setEmail(e.target.value);
   };
   const changePhone = (e) => {
-    
     setPhone(e.target.value);
   };
   const changeLocation = (e) => {
@@ -306,13 +305,13 @@ function Careercard({ id, title, description, type, role, point }) {
                 {" "}
                 <label className="block">
                   <span className="text-black text-sm">Select Technology</span>
-                  <select className=" block w-full border border-blue  text-sm  h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
+                  <select onChange={changeInterest} className=" block w-full border border-blue  text-sm  h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
                     {opt.map((item, index) => {
                       if (title === item) {
                         return (
                           <option
                             key={index}
-                            onChange={changeInterest}
+                            // onChange={changeInterest}
                             value={item}
                             selected
                           >
@@ -323,7 +322,7 @@ function Careercard({ id, title, description, type, role, point }) {
                         return (
                           <option
                             key={index}
-                            onChange={changeInterest}
+                            // onChange={changeInterest}
                             value={item}
                           >
                             {item}

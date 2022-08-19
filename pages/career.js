@@ -364,13 +364,6 @@ export default function Career() {
    
   ];
  
- 
- 
- 
- 
- 
- 
- 
   const careerdata1 = [
     
     {

@@ -10,6 +10,7 @@ export default function Contact() {
   const [visible, setVisible] = useState(false);
 
   const sendMessage = async (e) => {
+    console.log(name, email, phone, interest, info, message)
     try {
       e.preventDefault();
       if (
@@ -23,14 +24,11 @@ export default function Contact() {
         return;
       }
 
-      const response = await fetch(
-        "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
-        {
+      const response = await fetch("https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/", {
           method: "POST",
           headers: {},
-          body: JSON.stringify({ name, email, phone, interest, info }),
-        }
-      );
+          body: JSON.stringify({ type: "contact", name, email, phone, interest, info }),
+        });
 
       if (response.status === 200) {
         setName("");
@@ -46,7 +44,6 @@ export default function Contact() {
       }
     } catch (e) {
       alert("Something went wrong");
-     
     }
   };
 

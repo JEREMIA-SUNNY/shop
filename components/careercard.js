@@ -1,4 +1,4 @@
-import { BsPlusLg } from "react-icons/bs";
+import { BsLinkedin, BsPlusLg } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
 
 import useCollapse from "react-collapsed";
@@ -7,48 +7,120 @@ import { useState } from "react";
 function Careercard({ id, title, description, type, role, point }) {
   const [isExpanded, setExpanded] = useState(false);
   const [isExpanded1, setExpanded1] = useState(false);
-  const opt=[
+  const opt = [
     "Inside sales",
     "Java Stack",
-                    "Hadoop",
-                 "React JS",
-                   "Snowflake",
-                    "Teradata",
-                  "Data Sciences",
-                    "Azure Data Bricks/ADF ",
-                    "SAP BODS ",
-                    "SAP BW",
-                  "SAP BW/4 HANA",
-                 "SAP SuccessFactors",
-                   "Salesforce",
-                   "Oracle/OIS/Finance",
-                    "Salesforce trainer",
-                   "Azure",
-                   "BDM/CSM",
-                    "Fullstack",
-                    "Windows Admin",
-                    "Network Data",
-                   "IBM Storage SME (SAN)",
-                   "Ericsson Network  Integration",
-                   "OS Monitoring",
-                  "VMware VDI, Horizon View",
-                    "ASP.NET MVC",
-                    "IFS EAM",
-                    "CSM(Customer Success Manager)",
-                    "Python",
-                    "PHP",
-                     "DFT",
-                    "Kenan Software",
-                    "Corporate Treasury",
-                   "C",
-                   "CAD",
-
-  ]
+    "Hadoop",
+    "React JS",
+    "Snowflake",
+    "Teradata",
+    "Data Sciences",
+    "Azure Data Bricks/ADF ",
+    "SAP BODS ",
+    "SAP BW",
+    "SAP BW/4 HANA",
+    "SAP SuccessFactors",
+    "Salesforce",
+    "Oracle/OIS/Finance",
+    "Salesforce trainer",
+    "Azure",
+    "BDM/CSM",
+    "Fullstack",
+    "Windows Admin",
+    "Network Data",
+    "IBM Storage SME (SAN)",
+    "Ericsson Network  Integration",
+    "OS Monitoring",
+    "VMware VDI, Horizon View",
+    "ASP.NET MVC",
+    "IFS EAM",
+    "CSM(Customer Success Manager)",
+    "Python",
+    "PHP",
+    "DFT",
+    "Kenan Software",
+    "Corporate Treasury",
+    "C",
+    "CAD",
+  ];
   const { getCollapseProps, getToggleProps } = useCollapse({
     isExpanded,
     easing: "cubic-bezier(0.37, 0, 0.63, 1)",
     duration: 600,
   });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const [phone, setPhone] = useState("");
+  const [location, setLocation] = useState("");
+  const [interest, setInterest] = useState("Java Stack");
+  const [info, setInfo] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+
+  const [message, setMessage] = useState(false);
+
+  const sendMessage = async (e) => {
+    try {
+      e.preventDefault();
+      if (
+        !name.trim() ||
+        !email.trim() ||
+        !phone.trim() ||
+        !info.trim() ||
+        !interest.trim() ||
+        !location.trim() ||
+        !linkedin.trim()
+      ) {
+        alert("Please Double Check All Fields!");
+       
+        return;
+      }
+      
+      const response = await fetch("", {
+        method: "POST",
+        headers: {},
+        body: JSON.stringify({ name, email, phone, interest, info }),
+      });
+
+      if (response.status === 200) {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setInterest("");
+        setInfo("");
+        setMessage(
+          "Your message is sent. We'll get back to you at the earliest!"
+        );
+      } else {
+        alert("Error Submitting Form!");
+      }
+    } catch (e) {
+      alert("Something went wrong");
+    }
+  };
+
+  const changeName = (e) => {
+    setName(e.target.value);
+  };
+  const changeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const changePhone = (e) => {
+    
+    setPhone(e.target.value);
+  };
+  const changeLocation = (e) => {
+    setLocation(e.target.value);
+  };
+  const changeInfo = (e) => {
+    setInfo(e.target.value);
+  };
+  const changeLinkedin = (e) => {
+    setLinkedin(e.target.value);
+  };
+  const changeInterest = (e) => {
+    setInterest(e.target.value);
+  };
 
   return (
     <>
@@ -129,7 +201,7 @@ function Careercard({ id, title, description, type, role, point }) {
             >
               <div
                 onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-                className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce md:block hidden w-full"
+                className="hover:cursor-pointer text-xl text-end font-extrabold text-blue  animate-bounce  w-full"
               >
                 X
               </div>
@@ -144,6 +216,8 @@ function Careercard({ id, title, description, type, role, point }) {
                   Name
                 </label>
                 <input
+                  value={name}
+                  onChange={changeName}
                   type="text"
                   id="name"
                   name="name"
@@ -155,6 +229,8 @@ function Careercard({ id, title, description, type, role, point }) {
                   Email
                 </label>
                 <input
+                  value={email}
+                  onChange={changeEmail}
                   type="email"
                   id="email"
                   name="email"
@@ -169,7 +245,10 @@ function Careercard({ id, title, description, type, role, point }) {
                   Mobile
                 </label>
                 <input
-                  type="text"
+                  type="number"
+                  placeholder=""
+                  value={phone}
+                  onChange={changePhone}
                   id="mobile"
                   name="mobile"
                   className="w-full bg-white rounded border border-blue focus:border-indigo-500 focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -177,12 +256,14 @@ function Careercard({ id, title, description, type, role, point }) {
               </div>
               <div className="relative mb-2">
                 <label
-                  htmlFor="mobile"
+                  htmlFor="location"
                   className="leading-7 text-sm text-black"
                 >
-                 Location
+                  Location
                 </label>
                 <input
+                  value={location}
+                  onChange={changeLocation}
                   type="text"
                   id="Location"
                   name="Location"
@@ -198,6 +279,8 @@ function Careercard({ id, title, description, type, role, point }) {
                   Message
                 </label>
                 <textarea
+                  value={info}
+                  onChange={changeInfo}
                   id="message"
                   name="message"
                   className="w-full bg-white rounded border border-blue focus:border-indigo-500 focus:ring-2 focus:ring-blue h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -208,6 +291,8 @@ function Careercard({ id, title, description, type, role, point }) {
                   Linkedin Profile URL
                 </label>
                 <input
+                  value={linkedin}
+                  onChange={changeLinkedin}
                   type="email"
                   id="email"
                   name="email"
@@ -220,43 +305,68 @@ function Careercard({ id, title, description, type, role, point }) {
                 <label className="block">
                   <span className="text-black text-sm">Select Technology</span>
                   <select className=" block w-full border border-blue  text-sm  h-[47px] rounded-sm  focus:border-blue focus:ring focus:ring-blue focus:ring-opacity-50">
-                   
-                   
-                   {opt.map((item, index) => {
-                   
-                   if(title===item){
-                    return (
-                      <option key={index} value={item} selected>{item}</option>
-                    );
-                   }
-                    else{
-                   
-                   
-                   return(
-                      <option key={index} value={item}>{item}</option>
-                    )}
-
-                   })}
-                  
+                    {opt.map((item, index) => {
+                      if (title === item) {
+                        return (
+                          <option
+                            key={index}
+                            onChange={changeInterest}
+                            value={item}
+                            selected
+                          >
+                            {item}
+                          </option>
+                        );
+                      } else {
+                        return (
+                          <option
+                            key={index}
+                            onChange={changeInterest}
+                            value={item}
+                          >
+                            {item}
+                          </option>
+                        );
+                      }
+                    })}
                   </select>
                 </label>
               </div>
-              <div className=" flex mt-3 justify-center">
+              {/* <div className=" flex mt-3 justify-center">
                 <button
-                  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
+                  onClick={sendMessage}
+                  // onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
                   className="text-white bg-blue border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg"
                 >
                   Submit
                 </button>
-              </div>
-              {/* <div className=" flex justify-center">
-                <button
-                  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-                  className="text-white md:hidden block py-2 px-6 bg-slate-700  mt-5"
-                >
-                  close
-                </button>
               </div> */}
+              <div className="w-full flex justify-center items-center">
+                {message ? (
+                  <p className="text-green text-md font-semibold pt-6 ">
+                    {message}
+                  </p>
+                ) : (
+                  name &&
+                  email &&
+                  phone &&
+                  info &&
+                  interest &&
+                  location &&
+                  linkedin && (
+                    <button
+                      onClick={sendMessage}
+                      className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
+                        name && email && phone && info && interest
+                          ? "opacity-100"
+                          : "opacity-25"
+                      }`}
+                    >
+                      SEND
+                    </button>
+                  )
+                )}
+              </div>
             </div>
           </div>
         </div>

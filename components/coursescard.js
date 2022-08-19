@@ -22,7 +22,79 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
     "ServiceNow",
     "Siebel",
   ];
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
+  const [phone, setPhone] = useState("");
+  const [location, setLocation] = useState("");
+  const [interest, setInterest] = useState("Testing");
+  const [info, setInfo] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+
+  const [message, setMessage] = useState(false);
+
+  const sendMessage = async (e) => {
+    try {
+      e.preventDefault();
+      if (
+        !name.trim() ||
+        !email.trim() ||
+        !phone.trim() ||
+        !info.trim() ||
+        !interest.trim() ||
+        !location.trim() ||
+        !linkedin.trim()
+      ) {
+        alert("Please Double Check All Fields!");
+        return;
+      }
+      console.log(name, email, phone, info, interest, location, linkedin);
+
+      const response = await fetch("", {
+        method: "POST",
+        headers: {},
+        body: JSON.stringify({ name, email, phone, interest, info }),
+      });
+
+      if (response.status === 200) {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setInterest("");
+        setInfo("");
+        setMessage(
+          "Your message is sent. We'll get back to you at the earliest!"
+        );
+      } else {
+        alert("Error Submitting Form!");
+      }
+    } catch (e) {
+      alert("Something went wrong");
+    }
+  };
+
+  const changeName = (e) => {
+    setName(e.target.value);
+  };
+  const changeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const changePhone = (e) => {
+    
+    setPhone(e.target.value);
+  };
+  const changeLocation = (e) => {
+    setLocation(e.target.value);
+  };
+  const changeInfo = (e) => {
+    setInfo(e.target.value);
+  };
+  const changeLinkedin = (e) => {
+    setLinkedin(e.target.value);
+  };
+  const changeInterest = (e) => {
+    setInterest(e.target.value);
+  };
   return (
     <>
       <div key={id} className="w-full  flex   flex-col">
@@ -120,6 +192,8 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Name
                 </label>
                 <input
+                  value={name}
+                  onChange={changeName}
                   type="text"
                   id="name"
                   name="name"
@@ -131,6 +205,8 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Email
                 </label>
                 <input
+                 value={email}
+                 onChange={changeEmail}
                   type="email"
                   id="email"
                   name="email"
@@ -145,7 +221,10 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Mobile
                 </label>
                 <input
-                  type="text"
+              type="number"
+              placeholder=""
+              value={phone}
+              onChange={changePhone}
                   id="mobile"
                   name="mobile"
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -153,12 +232,14 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
               </div>
               <div className="relative mb-2">
                 <label
-                  htmlFor="mobile"
+                  htmlFor="location"
                   className="leading-7 text-sm text-black"
                 >
                   Location
                 </label>
                 <input
+                 value={location}
+                 onChange={changeLocation}
                   type="text"
                   id="Location"
                   name="Location"
@@ -174,6 +255,8 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Message
                 </label>
                 <textarea
+                 value={info}
+                 onChange={changeInfo}
                   id="message"
                   name="message"
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -185,6 +268,8 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Linkedin Profile URL
                 </label>
                 <input
+                value={linkedin}
+                onChange={changeLinkedin}
                   type="email"
                   id="email"
                   name="email"
@@ -204,33 +289,46 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                    
                    if(title===item){
                     return (
-                      <option key={index} value={item} selected>{item}</option>
+                      <option key={index}   onChange={changeInterest} value={item} selected>{item}</option>
                     );
                    }
                     else{
                    
                    
                    return(
-                      <option key={index} value={item}>{item}</option>
+                      <option key={index}   onChange={changeInterest} value={item}>{item}</option>
                     )}
 
                    })}
                   </select>
                 </label>
               </div>
-              <div className=" flex mt-3 justify-center">
-                <button  onClick={() => setExpanded1((prevExpanded) => !prevExpanded)} className="text-white bg-green border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
-                  Submit
-                </button>
+              <div className="w-full flex justify-center items-center">
+                {message ? (
+                  <p className="text-green text-md font-semibold pt-6 ">
+                    {message}
+                  </p>
+                ) : (
+                  name &&
+                  email &&
+                  phone &&
+                  info &&
+                  interest &&
+                  location &&
+                  linkedin && (
+                    <button
+                      onClick={sendMessage}
+                      className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
+                        name && email && phone && info && interest
+                          ? "opacity-100"
+                          : "opacity-25"
+                      }`}
+                    >
+                      SEND
+                    </button>
+                  )
+                )}
               </div>
-              {/* <div className=" flex justify-center">
-              <button
-                onClick={() => setExpanded1((prevExpanded) => !prevExpanded)}
-                className="text-white md:hidden block py-2 px-6 bg-slate-700  mt-5"
-              >
-                close
-              </button>
-              </div> */}
             </div>
           </div>
         </div>

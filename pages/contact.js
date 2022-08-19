@@ -4,7 +4,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [interest, setInterest] = useState("Contract Manufacturing");
+  const [interest, setInterest] = useState("Knowledge As A Service");
   const [info, setInfo] = useState("");
   const [message, setMessage] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -75,7 +75,7 @@ export default function Contact() {
           </h1>
 
           <div className="flex flex-col-reverse md:flex-row justify-between items-start rounded pt-8 ">
-            <d iv className="md:w-2/5 md:mt-0 mt-10 w-full">
+            <div className="md:w-2/5 md:mt-0 mt-10 w-full">
               <p className="text-2xl font-semibold  md:ml-4">
                 SFJ BUSINESS SOLUTIONS
               </p>
@@ -123,7 +123,7 @@ export default function Contact() {
                   <p>Singapore – 188367</p>
                 </div>
               </div>
-            </d>
+            </div>
             <div className="md:w-1/2 w-full">
               <div className="md:pl-12 md:pt-0 pt-12">
                 <h2 className="text-2xl text-black ">Write to us</h2>

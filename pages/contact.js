@@ -1,67 +1,63 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [interest, setInterest] = useState("Knowledge As A Service");
-  const [info, setInfo] = useState("");
-  const [message, setMessage] = useState(false);
-  const [visible, setVisible] = useState(false);
-
-  const sendMessage = async (e) => {
-    console.log(name, email, phone, interest, info, message)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    watch
+  } = useForm({
+    mode:"onChange",
+    
+  });
+ const [message,setMessage]=useState(false)
+ const isButtonVisble=watch("name") && watch("email") && watch("phone") && watch("interest") && watch("info")
+ 
+ 
+ 
+  const submit = handleSubmit(async (data) => {
+    const { name, email, phone, interest, info } = data;
     try {
-      e.preventDefault();
-      if (
-        !name.trim() ||
-        !email.trim() ||
-        !phone.trim() ||
-        !info.trim() ||
-        !interest.trim()
-      ) {
-        alert("Please Double Check All Fields!");
-        return;
-      }
-
-      const response = await fetch("https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/", {
+      const response = await fetch(
+        "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws",
+        
+        {
           method: "POST",
           headers: {},
-          body: JSON.stringify({ type: "contact", name, email, phone, interest, info }),
-        });
+          body: JSON.stringify({
+            type: "contact",
+            name,
+            email,
+            phone,
+            interest,
+            info,
+          }),
+        }
+      );
+      if (response.status===200) {
+          reset({
+            name:"",
+            phone:"",
+            email:"",
+            interest:"",
+            info:"",
+            
+          }
 
-      if (response.status === 200) {
-        setName("");
-        setEmail("");
-        setPhone("");
-        setInterest("");
-        setInfo("");
-        setMessage(
-          "Your message is sent. We'll get back to you at the earliest!"
-        );
-      } else {
-        alert("Error Submitting Form!");
+          )
+          
+          setMessage(true)
       }
-    } catch (e) {
-      alert("Something went wrong");
+      else{
+        throw Error("Error while sending message")
+      }
+    } catch (error) {
+      alert("Some thing went wrong");
     }
-  };
 
-  const changeName = (e) => {
-    setName(e.target.value);
-  };
-  const changeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const changePhone = (e) => {
-    setPhone(e.target.value);
-  };
-  const changeInfo = (e) => {
-    setInfo(e.target.value);
-  };
-  const changeInterest = (e) => {
-    setInterest(e.target.value);
-  };
+  });
 
   return (
     <>
@@ -125,36 +121,65 @@ export default function Contact() {
               <div className="md:pl-12 md:pt-0 pt-12">
                 <h2 className="text-2xl text-black ">Write to us</h2>
                 <div className="mt-8">
-                  <div className="lg:grid flex flex-col justify-center lg:grid-cols-2 gap-6">
-                    <label className="block">
+                  <div className="lg:grid flex flex-col justify-center lg:grid-cols-2 gap-x-6 gap-y-3">
+                    <div className="flex flex-col">
                       <span className="text-black">Name</span>
                       <input
                         type="text"
-                        className="block  w-full lg:h-[47px] rounded-sm  border border-green  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className="block  w-full lg:h-[50px] rounded-sm  border border-green  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
-                        value={name}
-                        onChange={changeName}
+                        {...register("name", {
+                          required: true,
+                        })}
                       />
-                    </label>
+
+                      <label
+                        className={`text-red-600   text-xs py-1 ${
+                          errors.name ? "visible" : "invisible"
+                        }`}
+                      >
+                        This field is required
+                      </label>
+                    </div>
                     <label className="block">
                       <span className="text-black">Email</span>
                       <input
                         type="email"
-                        className=" block w-full rounded-sm border border-green  lg:h-[47px]  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block w-full rounded-sm border border-green  lg:h-[50px]  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
-                        value={email}
-                        onChange={changeEmail}
+                        {...register("email", {
+                          required: true,
+                          pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                        })}
                       />
+                      <label
+                        className={`text-red-600   text-xs py-1 ${
+                          errors.email ? "visible" : "invisible"
+                        }`}
+                      >
+                       {errors.email?.type=="required"?"This field is required":"Enter a valid email address"}
+                      </label>
                     </label>
                     <label className="block">
                       <span className="text-black">Phone</span>
                       <input
                         type="number"
-                        className=" block  rounded-sm w-full lg:h-[47px] border border-green focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        className=" block  rounded-sm w-full lg:h-[50px] border border-green focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                         placeholder=""
-                        value={phone}
-                        onChange={changePhone}
+                        {...register("phone", {
+                          required: true,
+                          minLength: 10,
+                        })}
                       />
+                      <label
+                        className={`text-red-600   text-xs py-1 ${
+                          errors.phone ? "visible" : "invisible"
+                        }`}
+                      >
+                        {errors.phone?.type == "required"
+                          ? "This field required"
+                          : "Please enter a valid phone number"}
+                      </label>
                     </label>
 
                     <label className="block">
@@ -162,8 +187,10 @@ export default function Contact() {
                         What are you looking for?
                       </span>
                       <select
-                        onChange={changeInterest}
-                        className=" block w-full  border border-green  h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                        {...register("interest", {
+                          required: true,
+                        })}
+                        className=" block w-full  border border-green  h-[50px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
                       >
                         <option>Knowledge As A Service</option>
                         <option>Talent As A Service </option>
@@ -171,6 +198,13 @@ export default function Contact() {
 
                         <option>Others</option>
                       </select>
+                      <label
+                        className={`text-red-600   text-xs py-1 ${
+                          errors.interest ? "visible" : "invisible"
+                        }`}
+                      >
+                        This field is required
+                      </label>
                     </label>
                   </div>
                   <label className="block mt-6">
@@ -178,32 +212,30 @@ export default function Contact() {
                     <textarea
                       className="mt-1 block w-full border border-green  lg:h-28 rounded-sm  focus:border-green-700 focus:ring focus:ring-green focus:ring-opacity-50"
                       rows="3"
-                      value={info}
-                      onChange={changeInfo}
+                      {...register("info", {
+                        required: true,
+                      })}
                     ></textarea>
+                    <label
+                      className={`text-red-600   text-xs py-1 ${
+                        errors.info ? "visible" : "invisible"
+                      }`}
+                    >
+                      This field is required
+                    </label>
                   </label>
                   <div className="w-full flex justify-center items-center">
                     {message ? (
                       <p className="text-green text-md font-semibold pt-6 ">
-                        {message}
+                        Your message is sent. We'll get back to you at the earliest
                       </p>
                     ) : (
-                      name &&
-                      email &&
-                      phone &&
-                      info &&
-                      interest && (
-                        <button
-                          onClick={sendMessage}
-                          className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
-                            name && email && phone && info && interest
-                              ? "opacity-100"
-                              : "opacity-25"
-                          }`}
-                        >
-                          SEND
-                        </button>
-                      )
+                      <button
+                        onClick={submit}
+                       disabled={!isButtonVisble} className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${isButtonVisble ? "opacity-100":"opacity-50 "}`}
+                      >
+                        SEND
+                      </button>
                     )}
                   </div>
                 </div>

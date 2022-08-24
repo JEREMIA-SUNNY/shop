@@ -227,7 +227,7 @@ export default function Contact() {
                   <div className="w-full flex justify-center items-center">
                     {message ? (
                       <p className="text-green text-md font-semibold pt-6 ">
-                        Your message is sent. We'll get back to you at the earliest
+                        {`Your message is sent. We'll get back to you at the earliest`}
                       </p>
                     ) : (
                       <button

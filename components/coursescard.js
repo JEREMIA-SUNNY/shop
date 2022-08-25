@@ -23,13 +23,25 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
     "ServiceNow",
     "Siebel",
   ];
-  const { register, handleSubmit,  formState: { errors },reset,watch } = useForm({ mode: "onChange" });
-  const [message,setMessage]=useState(false)
-  const isButtonVisble=watch("name") && watch("email") && watch("phone") && watch("interest") && watch("info")
-  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    watch,
+  } = useForm({ mode: "onChange" });
+  const [message, setMessage] = useState(false);
+  const isButtonVisble =
+    watch("name") &&
+    watch("email") &&
+    watch("phone") &&
+    watch("interest") &&
+    watch("info") &&
+    watch("location") &&
+    watch("linkedin");
 
-  const submit = handleSubmit(async(data) => {
-    const { name, email, phone, interest, info,location,linkedin,} = data;
+  const submit = handleSubmit(async (data) => {
+    const { name, email, phone, interest, info, location, linkedin } = data;
     try {
       const response = await fetch(
         "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
@@ -49,35 +61,35 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
         }
       );
 
-      if (response.status===200) {
+      if (response.status === 200) {
         reset({
-          name:"",
-          phone:"",
-          email:"",
-          interest:"",
-          info:"",
-          linkedin:"",
-          location:"",
-        })
+          name: "",
+          phone: "",
+          email: "",
+          interest: "",
+          info: "",
+          linkedin: "",
+          location: "",
+        });
         setMessage(true);
       } else {
-        throw Error("Error while sending message")
+        throw Error("Error while sending message");
       }
     } catch (error) {
       alert("Something went wrong");
-     console.log(error)
+      console.log(error);
     }
-
   });
   return (
     <>
       <div key={id} className="w-full  flex   flex-col">
-        <div   {...getToggleProps({
-              onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-            })} className="bg-green shadow-sm w-full  rounded flex  p-4 h-full items-center">
-          <div
-          
-          >
+        <div
+          {...getToggleProps({
+            onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+          })}
+          className="bg-green shadow-sm w-full  rounded flex  p-4 h-full items-center"
+        >
+          <div>
             {isExpanded ? (
               <BiMinus size={15} className=" text-white w- h-6 mr-4" />
             ) : (
@@ -166,40 +178,43 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Name
                 </label>
                 <input
-                 
                   type="text"
                   id="name"
                   name="name"
-                  {...register("name",{
-                    required:true,
+                  {...register("name", {
+                    required: true,
                   })}
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                /> 
+                />
                 <label
-                className={`text-red-600   text-xs py-1 ${
-                  errors.name ? "visible" : "invisible"
-                }`}
-              >
-                This field is required
-              </label>
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.name ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
               <div className="relative ">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Email
                 </label>
                 <input
-               
                   type="email"
-                  {...register("email",{required:true, pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})}
+                  {...register("email", {
+                    required: true,
+                    pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                  })}
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
                 <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.email ? "visible" : "invisible"
-                        }`}
-                      >
-                       {errors.email?.type=="required"?"This field is required":"Enter a valid email address"}
-                      </label>
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.email ? "visible" : "invisible"
+                  }`}
+                >
+                  {errors.email?.type == "required"
+                    ? "This field is required"
+                    : "Enter a valid email address"}
+                </label>
               </div>
               <div className="relative ">
                 <label
@@ -211,21 +226,23 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 <input
                   type="text"
                   placeholder=""
-                  {...register("phone",{required:true,minLength: 9,
-                  pattern:/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/
+                  {...register("phone", {
+                    required: true,
+                    minLength: 9,
+                    pattern:
+                      /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
                   })}
-                 
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
-                 <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.phone ? "visible" : "invisible"
-                        }`}
-                      >
-                        {errors.phone?.type == "required"
-                          ? "This field is required"
-                          : "Please enter a valid phone number"}
-                      </label>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.phone ? "visible" : "invisible"
+                  }`}
+                >
+                  {errors.phone?.type == "required"
+                    ? "This field is required"
+                    : "Please enter a valid phone number"}
+                </label>
               </div>
               <div className="relative ">
                 <label
@@ -235,32 +252,38 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Location
                 </label>
                 <input
-                
                   type="text"
-                  {...register("location",{required:true})}
+                  {...register("location", { required: true })}
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
-                  <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.location ? "visible" : "invisible"
-                        }`}
-                      >
-                        This field is required
-                      </label>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.location ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
 
-              <div className="relative mb-2">
+              <div className="relative ">
                 <label
                   htmlFor="message"
                   className="leading-7 text-sm text-black"
                 >
                   Message
                 </label>
+
                 <textarea
-                  {...register("info",{required:true})}
-                 
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  {...register("info", { required: true })}
                 ></textarea>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.info ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
 
               <div className="relative ">
@@ -268,29 +291,27 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   Linkedin Profile URL
                 </label>
                 <input
-                
                   type="text"
-                  {...register("linkedin",{required:true})}
+                  {...register("linkedin", { required: true })}
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
-                  <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.linkedin ? "visible" : "invisible"
-                        }`}
-                      >
-                        This field is required
-                      </label>
+
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.linkedin ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
 
               <div className="relative ">
-               
                 <label className="block">
                   <span className="text-black text-sm">Select Course</span>
                   <select
-                  
-                   defaultValue={title} 
-                   className=" block w-full border border-green text-sm h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
-                   {...register("interest",{required:true})}
+                    defaultValue={title}
+                    className=" block w-full border border-green text-sm h-[47px] rounded-sm  focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"
+                    {...register("interest", { required: true })}
                   >
                     {opt.map((item, index) => {
                       return (
@@ -302,21 +323,23 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   </select>
                 </label>
                 <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.interest ? "visible" : "invisible"
-                        }`}
-                      >
-                        This field is required
-                      </label>
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.interest ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
               <div className="w-full flex justify-center items-center">
-                { message ? (
+                {message ? (
                   <p className="text-green text-md font-semibold pt-6 ">{`Your message is sent. We'll get back to you at the earliest`}</p>
                 ) : (
                   <button
                     onClick={submit}
                     disabled={!isButtonVisble}
-                    className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${isButtonVisble ? "opacity-100":"opacity-50 "}
+                    className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${
+                      isButtonVisble ? "opacity-100" : "opacity-50 "
+                    }
                       
                       `}
                   >

@@ -61,6 +61,8 @@ function Careercard({ id, title, description, type, role, point }) {
     watch("email") &&
     watch("phone") &&
     watch("interest") &&
+    watch("location") &&
+    watch("linkedin") &&
     watch("info");
 
   const submit = handleSubmit(async (data) => {
@@ -202,10 +204,12 @@ function Careercard({ id, title, description, type, role, point }) {
                   type="text"
                   id="name"
                   name="name"
+                 
+                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   {...register("name", {
                     required: true,
                   })}
-                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -221,11 +225,13 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
                 <input
                   type="email"
+                 
+                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                
                   {...register("email", {
                     required: true,
                     pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                   })}
-                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -247,13 +253,15 @@ function Careercard({ id, title, description, type, role, point }) {
                 <input
                   type="text"
                   placeholder=""
+                 
+                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                
                   {...register("phone", {
                     required: true,
                     minLength: 10,
                     pattern:
                       /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
                   })}
-                  className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -274,9 +282,10 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
                 <input
                   type="text"
-                  {...register("location", { required: true })}
+                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
+                  {...register("location", { required: true })}
+               />
                 <label
                   className={`text-red-600   text-xs py-1 ${
                     errors.location ? "visible" : "invisible"
@@ -294,9 +303,17 @@ function Careercard({ id, title, description, type, role, point }) {
                   Message
                 </label>
                 <textarea
-                  {...register("info", { required: true })}
+                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                ></textarea>
+                  {...register("info", { required: true })}
+               ></textarea>
+                 <label
+                        className={`text-red-600   text-xs py-1 ${
+                          errors.info ? "visible" : "invisible"
+                        }`}
+                      >
+                        This field is required
+                      </label>
               </div>
 
               <div className="relative ">
@@ -305,8 +322,9 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
                 <input
                   type="text"
-                  {...register("linkedin", { required: true })}
+                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  {...register("linkedin", { required: true })}
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -348,6 +366,7 @@ function Careercard({ id, title, description, type, role, point }) {
                       
                       `}
                   >
+                    
                     SEND
                   </button>
                 )}

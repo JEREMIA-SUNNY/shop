@@ -379,11 +379,11 @@ export default function Layout({ children }) {
             </div>
           
          
-            <div className="col-span-2 p-4 lg:p-0 pl-6 mr-6 ">
-              <p className="font-semibold text-sm pb-2 text-black text-center">
+            <div className="  lg:p-0 pl-6 mr-6 mb-2 ">
+              <p className="font-semibold text-sm pb-2 text-black text-left">
                 FIND US ON
               </p>
-              <div className="grid-cols-2  gap-2 inline-grid  ">
+              <div className="grid-cols-2 gap-2 inline-grid  ">
                 <a
                   className="hover:scale-105 transition-all"
                   href="https://www.facebook.com/SFJBusinesssolution/"

@@ -3,7 +3,7 @@ import Link from "next/link";
 function Capabilities() {
   return (
     <>
-      <div className="w-full  h-72 relative ">
+      <div className="w-full   h-72 relative ">
         <Image
           layout="fill"
           alt="ser"
@@ -22,44 +22,8 @@ function Capabilities() {
         className="pt-12 pb-10 text-zinc-900 bg-coustom1"
         id="capabilities"
       >
-        <div className="md:container p-4 mx-auto" id="Consulting">
+        <div className="md:container p-4 mx-auto" >
           <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-x-20 gap-4 md:pt- pt-4">
-            <div className="w-full h-[50px] lg:col-span-2  col-span-1 "></div>
-            <div className="w-auto h-48 lg:h-auto relative">
-              <Image
-                layout="fill"
-                className="absolute h-full w-full object-cover"
-                alt=""
-                src="/capabi/consulting.png"
-              />
-            </div>
-
-            <div className="w-auto">
-              <h2 className="text-xl ">Consulting</h2>
-              <p className="prose pt-8">
-                Business leaders are investing in next generation digital
-                technologies to their strategic advantage, optimizing business
-                operations and driving new products and services. We have more
-                than a decade of experience in working with Fortune 500
-                companies, small and mid-sized enterprises in digital
-                transformations focused on revenue optimization, cost reduction,
-                process enhancements, while ensuring business continuity for our
-                clients. Our consultants possess a deep expertise in BFSI,
-                Manufacturing, Healthcare, Retail, Logistics, and other domains.
-                SFJ is a partner of Automation Anywhere, Microsoft and is a
-                trusted partner in defining your IT strategy and achieving your
-                business goals.
-              </p>
-
-              <p className="prose lg:mb-0 mb-5 pt-8">
-                <Link href="/contact">
-                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
-                    Get in touch
-                  </a>
-                </Link>{" "}
-                to know more.
-              </p>
-            </div>
             <div
               className="w-full md:block hidden h-[100px] lg:col-span-2  col-span-1 "
               id="Analytics"
@@ -99,20 +63,50 @@ function Capabilities() {
                 src="/capabi/analytics.png"
               />
             </div>
+           
             <div
-              className="w-full md:block hidden  h-[100px] lg:col-span-2  col-span-1 "
-              id="Mobility"
+              className="w-full md:block hidden h-[100px] lg:col-span-2  col-span-1 "
+              id="Consulting"
             ></div>
-
             <div className="w-auto h-48 lg:h-auto relative">
               <Image
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/mobility.png"
+                src="/capabi/consulting.png"
               />
             </div>
+            
+            <div className="w-auto">
+              <h2 className="text-xl ">Consulting</h2>
+              <p className="prose pt-8">
+                Business leaders are investing in next generation digital 
+                technologies to their strategic advantage, optimizing business
+                operations and driving new products and services. We have more
+                than a decade of experience in working with Fortune 500
+                companies, small and mid-sized enterprises in digital
+                transformations focused on revenue optimization, cost reduction,
+                process enhancements, while ensuring business continuity for our
+                clients. Our consultants possess a deep expertise in BFSI,
+                Manufacturing, Healthcare, Retail, Logistics, and other domains.
+                SFJ is a partner of Automation Anywhere, Microsoft and is a
+                trusted partner in defining your IT strategy and achieving your
+                business goals.
+              </p>
 
+              <p className="prose lg:mb-0 mb-5 pt-8">
+                <Link href="/contact">
+                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
+                    Get in touch
+                  </a>
+                </Link>{" "}
+                to know more.
+              </p>
+            </div>
+            <div
+              className="w-full md:block hidden  h-[100px] lg:col-span-2  col-span-1 "
+              id="Mobility"
+            ></div>
             <div className="w-auto">
               <h2 className="text-xl ">Mobility</h2>
               <p className="prose pt-8">
@@ -137,27 +131,43 @@ function Capabilities() {
                 to know more.
               </p>
             </div>
+            <div className="w-auto h-48 lg:h-auto relative">
+              <Image
+                layout="fill"
+                className="absolute h-full w-full object-cover"
+                alt=""
+                src="/capabi/mobility.png"
+              />
+            </div>
 
             <div
               className="w-full md:block hidden  h-[100px] lg:col-span-2  col-span-1 "
               id="Outsourcing"
             ></div>
 
+            <div className="w-auto h-48 lg:h-auto relative">
+              <Image
+                layout="fill"
+                className="absolute h-full w-full object-cover"
+                alt=""
+                src="/capabi/outsourcing.png"
+              />
+            </div>
             <div className="w-auto">
               <h2 className="text-xl ">Outsourcing</h2>
               <p className="prose pt-8">
                 In this age of technology disruption, organizations are
-                constantly riddled with the challenge of wheels on-the-go to remain competitive. This requires a clear vision and
-                strategy for agility and scale. SFJ has an exceptional track
-                record in managed IT services, and a customer retention ratio of
-                over 90% over the past decade is a testimony to the
-                disproportionate value we added to our customers businesses. We
-                offer application development, maintenance and support services
-                to help stabilize and scale your business operations. Through
-                our just-in-time and cost-effective sourcing, skilling, staffing
-                strategies, we have helped several organizations achieve their
-                objectives with minimal disruptions to ongoing business
-                operations.
+                constantly riddled with the challenge of wheels on-the-go to
+                remain competitive. This requires a clear vision and strategy
+                for agility and scale. SFJ has an exceptional track record in
+                managed IT services, and a customer retention ratio of over 90%
+                over the past decade is a testimony to the disproportionate
+                value we added to our customers businesses. We offer application
+                development, maintenance and support services to help stabilize
+                and scale your business operations. Through our just-in-time and
+                cost-effective sourcing, skilling, staffing strategies, we have
+                helped several organizations achieve their objectives with
+                minimal disruptions to ongoing business operations.
               </p>
 
               <p className="prose lg:mb-0 mb-5 pt-8">
@@ -169,12 +179,42 @@ function Capabilities() {
                 to know more.
               </p>
             </div>
-            <div className="w-auto h-48 lg:h-auto relative">
+
+            <div
+              className="w-full h-[100px] md:block hidden  lg:col-span-2  col-span-1 "
+              id="Staffing"
+            ></div>
+
+            <div className="w-auto">
+              <h2 className="text-xl ">Staffing</h2>
+              <p className="prose pt-8">
+                People are the key ingredient to the success of any project or
+                initiative. Getting people on-boarded on-time within the budget
+                is always a challenge. This is where our expertise can help you.
+                We have a strong network of skilled professionals who can be
+                staffed quickly across multiple roles, and many of our customers
+                have realized enhanced productivity, reduced staffing and
+                recruitment costs by partnering with us. We deploy talent with
+                not just the right skills, but also the right attitude and
+                experience needed for your projects. We also specialize in
+                deploying SAP, Oracle professionals and senior executive hiring.
+              </p>
+
+              <p className="prose lg:mb-0 mb-5 pt-8">
+                <Link href="/contact">
+                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
+                    Get in touch
+                  </a>
+                </Link>{" "}
+                to know more.
+              </p>
+            </div>
+            <div className="w-auto h-48 md:h-auto relative">
               <Image
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/outsourcing.png"
+                src="/capabi/staffing.png"
               />
             </div>
             <div
@@ -215,43 +255,6 @@ function Capabilities() {
                 </Link>{" "}
                 to know more.
               </p>
-            </div>
-            <div
-              className="w-full h-[100px] md:block hidden  lg:col-span-2  col-span-1 "
-              id="Staffing"
-            ></div>
-
-            <div className="w-auto">
-              <h2 className="text-xl ">Staffing</h2>
-              <p className="prose pt-8">
-                People are the key ingredient to the success of any project or
-                initiative. Getting people on-boarded on-time within the budget
-                is always a challenge. This is where our expertise can help you.
-                We have a strong network of skilled professionals who can be
-                staffed quickly across multiple roles, and many of our customers
-                have realized enhanced productivity, reduced staffing and
-                recruitment costs by partnering with us. We deploy talent with
-                not just the right skills, but also the right attitude and
-                experience needed for your projects. We also specialize in
-                deploying SAP, Oracle professionals and senior executive hiring.
-              </p>
-
-              <p className="prose lg:mb-0 mb-5 pt-8">
-                <Link href="/contact">
-                  <a className="active:text-red font-bold underline hover:text-orange decoration-emerald-600 text-emerald-600">
-                    Get in touch
-                  </a>
-                </Link>{" "}
-                to know more.
-              </p>
-            </div>
-            <div className="w-auto h-48 md:h-auto relative">
-              <Image
-                layout="fill"
-                className="absolute h-full w-full object-cover"
-                alt=""
-                src="/capabi/staffing.png"
-              />
             </div>
           </div>
         </div>

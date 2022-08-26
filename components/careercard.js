@@ -196,6 +196,8 @@ function Careercard({ id, title, description, type, role, point }) {
 
               <div className="w-full h-[2px] border border-blue mb-5 bg-blue"></div>
 
+             
+             
               <div className="relative">
                 <label htmlFor="name" className="leading-7 text-sm text-black">
                   Name
@@ -204,12 +206,10 @@ function Careercard({ id, title, description, type, role, point }) {
                   type="text"
                   id="name"
                   name="name"
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   {...register("name", {
                     required: true,
                   })}
-                
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -219,15 +219,16 @@ function Careercard({ id, title, description, type, role, point }) {
                   This field is required
                 </label>
               </div>
+              
+              
+              
               <div className="relative ">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Email
                 </label>
                 <input
                   type="email"
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                
                   {...register("email", {
                     required: true,
                     pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
@@ -243,6 +244,9 @@ function Careercard({ id, title, description, type, role, point }) {
                     : "Enter a valid email address"}
                 </label>
               </div>
+             
+             
+             
               <div className="relative ">
                 <label
                   htmlFor="mobile"
@@ -253,9 +257,7 @@ function Careercard({ id, title, description, type, role, point }) {
                 <input
                   type="text"
                   placeholder=""
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                
                   {...register("phone", {
                     required: true,
                     minLength: 10,
@@ -273,6 +275,9 @@ function Careercard({ id, title, description, type, role, point }) {
                     : "Please enter a valid phone number"}
                 </label>
               </div>
+             
+             
+             
               <div className="relative ">
                 <label
                   htmlFor="location"
@@ -282,10 +287,9 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
                 <input
                   type="text"
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   {...register("location", { required: true })}
-               />
+                />
                 <label
                   className={`text-red-600   text-xs py-1 ${
                     errors.location ? "visible" : "invisible"
@@ -303,17 +307,16 @@ function Careercard({ id, title, description, type, role, point }) {
                   Message
                 </label>
                 <textarea
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   {...register("info", { required: true })}
-               ></textarea>
-                 <label
-                        className={`text-red-600   text-xs py-1 ${
-                          errors.info ? "visible" : "invisible"
-                        }`}
-                      >
-                        This field is required
-                      </label>
+                ></textarea>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.info ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
 
               <div className="relative ">
@@ -322,7 +325,6 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
                 <input
                   type="text"
-                 
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   {...register("linkedin", { required: true })}
                 />
@@ -352,7 +354,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   </select>
                 </label>
               </div>
-              
+
               <div className="w-full flex justify-center items-center">
                 {message ? (
                   <p className="text-blue text-md font-semibold pt-6 ">{`Your message is sent. We'll get back to you at the earliest`}</p>
@@ -366,7 +368,6 @@ function Careercard({ id, title, description, type, role, point }) {
                       
                       `}
                   >
-                    
                     SEND
                   </button>
                 )}

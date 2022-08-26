@@ -73,6 +73,7 @@ export default function Contact() {
                 SFJ BUSINESS SOLUTIONS
               </p>
               <div className="grid gap-5 grid-cols-2 ">
+             
                 <div className="text-base pt-8 text-black md:ml-4">
                   <p className="font-semibold">
                     SFJ Business Solutions Pvt. Ltd.
@@ -106,6 +107,7 @@ export default function Contact() {
                   <p>Tel : +971 43 425125</p>
                   <p>Fax : +971 43 425126</p>
                 </div>
+                
 
                 <div className="text-base pt-8 text-black md:ml-4">
                   <p className="font-semibold">
@@ -115,6 +117,16 @@ export default function Contact() {
                   <p>Parklane Shopping Mall,</p>
                   <p>Singapore – 188367</p>
                 </div>
+                <div className="text-base pt-8 text-black md:ml-4">
+                  <p className="font-semibold">
+                  SFJ business solutions LLC
+                  </p>
+                 
+                  <p>2055, limestone RD  STE 200-C,</p>
+                  <p> Wilmington,</p>
+                  <p>DE 19808, USA</p>
+                </div>
+                
               </div>
             </div>
             <div className="md:w-1/2 w-full">

@@ -5,7 +5,7 @@ function About() {
     {
       name: "Nisha Menon",
       image: "/about/nisha.png",
-      role: "DELIVERY MANAGER",
+      role: "Delivery Manager",
       description:
         "https://www.linkedin.com/in/nisha-menon-2a328924/",
     },
@@ -20,7 +20,7 @@ function About() {
     {
       name: "Rakhi Dujrayan",
       image: "/about/rakhi.png",
-      role: "senior business developer manager",
+      role: "Senior Business Development Manager",
       description:
         "https://www.linkedin.com/in/rakhi-dujrayan-69192273/",
     },
@@ -226,11 +226,11 @@ function About() {
                       layout="fill"
                     />
                   </div>
-                  <h1 className="mt-4 text-2xl  text-black capitalize font-bold ">
+                  <h1 className="mt-4  text-2xl  text-black capitalize font-bold ">
                     {name}
                   </h1>
                   <div className="flex flex-col gap-5 justify-center">
-                    <p className=" text-black mt-2 capitalize text-center  ">
+                    <p className=" text-black  h-[60px] mt-2 capitalize text-center  ">
                       {role}
                     </p>
                     {/* <h1 className="md:w-[255px] h-[2px]  bg-blue mb-5"></h1> */}

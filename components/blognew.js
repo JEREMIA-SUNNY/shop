@@ -204,7 +204,8 @@ export default function Testimonials() {
               autoplay={true}
               pagination={{ clickable: true }}
               loop={true}
-              speed={1500}
+              speed={1600}
+              effect=""
             >
               <SwiperSlide>
                 <p className="text-center text-3xl  capitalize lg:text-4xl text-black  mb-10 ">Blogs</p>

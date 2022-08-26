@@ -29,7 +29,7 @@ function About() {
       image: "/about/yatin.jpg",
       role: "Manager – Key Accounts",
       description:
-        "https://www.linkedin.com/in/yatin-anand-958919161/",
+        "https://www.linkedin.com/in/peter-tc",
     },
     
     

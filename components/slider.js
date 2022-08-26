@@ -45,7 +45,7 @@ export default function Slider() {
           navigation={false}
           autoplay={true}
           loop={true}
-          speed={500}
+          speed={1300}
           pagination={{ clickable: true }}
 
           // onSlideChange={() => console.log('slide change')}

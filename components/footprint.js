@@ -107,7 +107,7 @@ function Footprint() {
             // }}
             autoplay={true}
             loop={true}
-            speed={800}
+            speed={1400}
           >
             <SwiperSlide>
               <div className="flex gap-5 justify-center m">

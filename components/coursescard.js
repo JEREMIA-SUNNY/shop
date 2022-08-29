@@ -38,10 +38,10 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
     watch("interest") &&
     watch("info") &&
     watch("location") &&
-    watch("linkedin");
+    watch("experience");
 
   const submit = handleSubmit(async (data) => {
-    const { name, email, phone, interest, info, location, linkedin } = data;
+    const { name, email, phone, interest, info, location, experience } = data;
     try {
       const response = await fetch(
         "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
@@ -56,7 +56,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
             interest,
             info,
             location,
-            linkedin,
+            experience ,
           }),
         }
       );
@@ -68,7 +68,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
           email: "",
           interest: "",
           info: "",
-          linkedin: "",
+          experience: "",
           location: "",
         });
         setMessage(true);
@@ -267,41 +267,59 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
 
               <div className="relative ">
                 <label
-                  htmlFor="message"
+                  htmlFor="Experience"
                   className="leading-7 text-sm text-black"
                 >
-                  Message
+                  Experience
                 </label>
-
-                <textarea
-                  className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  {...register("info", { required: true })}
-                ></textarea>
+                <input
+                  type="text"
+                  className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  {...register("experience", {
+                    required: true,
+                    minLength: 1,
+                    pattern: /[1-4]/g,
+                  })}
+                />
                 <label
                   className={`text-red-600   text-xs py-1 ${
-                    errors.info ? "visible" : "invisible"
+                    errors.experience ? "visible" : "invisible"
                   }`}
                 >
-                  This field is required
+                  This field is required, accept numeric values only
                 </label>
               </div>
 
               <div className="relative ">
-                <label htmlFor="email" className="leading-7 text-sm text-black">
-                  Linkedin Profile URL
+                <label
+                  htmlFor="resume"
+                  className="leading-7 text-sm text-black"
+                >
+                  Your resume (docx/pdf)
                 </label>
                 <input
-                  type="text"
-                  {...register("linkedin", { required: true })}
+                  type="file"
+                  accept="application/pdf,application/vnd"
+                  {...register("resume", {
+                    required: true,
+                    validate: {
+                      lessThan10MB: (files) =>
+                        files[0]?.size / 1024 / 1024 < 2 || "Max 2mb",
+                      acceptedFormats: (files) =>
+                        ["application/vnd", "application/pdf"].includes(
+                          files[0]?.type
+                        ) || "Only docx, pdf",
+                    },
+                  })}
                   className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
 
                 <label
-                  className={`text-red-600   text-xs py-1 ${
-                    errors.linkedin ? "visible" : "invisible"
-                  }`}
+                  className={`text-red-600  text-xs py-1  
+                  ${errors.resume ? "visible" : "invisible"}
+                  `}
                 >
-                  This field is required
+                  <span>{errors.resume?.message || "FILE 2MB"}</span>
                 </label>
               </div>
 
@@ -330,6 +348,28 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   This field is required
                 </label>
               </div>
+
+              <div className="relative ">
+                <label
+                  htmlFor="message"
+                  className="leading-7 text-sm text-black"
+                >
+                  Message
+                </label>
+
+                <textarea
+                  className="w-full bg-white rounded border border-green focus:border-green focus:ring-2 focus:ring-green h-11 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  {...register("info", { required: true })}
+                ></textarea>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.info ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
+              </div>
+
               <div className="w-full flex justify-center items-center">
                 {message ? (
                   <p className="text-green text-md font-semibold pt-6 ">{`Your message is sent. We'll get back to you at the earliest`}</p>

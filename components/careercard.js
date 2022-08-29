@@ -62,11 +62,11 @@ function Careercard({ id, title, description, type, role, point }) {
     watch("phone") &&
     watch("interest") &&
     watch("location") &&
-    watch("linkedin") &&
+    watch("experience") &&
     watch("info");
 
   const submit = handleSubmit(async (data) => {
-    const { name, email, phone, interest, info, location,experience } = data;
+    const { name, email, phone, interest, info, location, experience } = data;
     try {
       const response = await fetch(
         "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
@@ -196,8 +196,6 @@ function Careercard({ id, title, description, type, role, point }) {
 
               <div className="w-full h-[2px] border border-blue mb-5 bg-blue"></div>
 
-             
-             
               <div className="relative">
                 <label htmlFor="name" className="leading-7 text-sm text-black">
                   Name
@@ -219,9 +217,7 @@ function Careercard({ id, title, description, type, role, point }) {
                   This field is required
                 </label>
               </div>
-              
-              
-              
+
               <div className="relative ">
                 <label htmlFor="email" className="leading-7 text-sm text-black">
                   Email
@@ -244,9 +240,7 @@ function Careercard({ id, title, description, type, role, point }) {
                     : "Enter a valid email address"}
                 </label>
               </div>
-             
-             
-             
+
               <div className="relative ">
                 <label
                   htmlFor="mobile"
@@ -275,9 +269,7 @@ function Careercard({ id, title, description, type, role, point }) {
                     : "Please enter a valid phone number"}
                 </label>
               </div>
-             
-             
-             
+
               <div className="relative ">
                 <label
                   htmlFor="location"
@@ -298,19 +290,23 @@ function Careercard({ id, title, description, type, role, point }) {
                   This field is required
                 </label>
               </div>
+              
+              
               <div className="relative ">
                 <label
                   htmlFor="Experience"
                   className="leading-7 text-sm text-black"
                 >
-                 Experience
+                  Experience (Years)
                 </label>
                 <input
                   type="text"
                   className="w-full bg-white rounded border border-blue focus:border-blue focus:ring-2 focus:ring-blue text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  {...register("experience", { required: true, minLength: 1,
-                    pattern:
-                    /[1-4]/g, })}
+                  {...register("experience", {
+                    required: true,
+                    minLength: 1,
+                    pattern: /[1-4]/g,
+                  })}
                 />
                 <label
                   className={`text-red-600   text-xs py-1 ${
@@ -329,7 +325,7 @@ function Careercard({ id, title, description, type, role, point }) {
                 >
                   Your resume (docx/pdf)
                 </label>
-                
+
                 <input
                   type="file"
                   accept="application/pdf,application/vnd"
@@ -355,6 +351,8 @@ function Careercard({ id, title, description, type, role, point }) {
                   <span>{errors.resume?.message || "FILE 2MB"}</span>
                 </label>
               </div>
+             
+             
               <div className="relative ">
                 <label className="block">
                   <span className="text-black text-sm">Select Technology</span>
@@ -372,7 +370,16 @@ function Careercard({ id, title, description, type, role, point }) {
                     })}
                   </select>
                 </label>
+                <label
+                  className={`text-red-600   text-xs py-1 ${
+                    errors.interest ? "visible" : "invisible"
+                  }`}
+                >
+                  This field is required
+                </label>
               </div>
+              
+              
               <div className="relative ">
                 <label
                   htmlFor="message"
@@ -393,6 +400,7 @@ function Careercard({ id, title, description, type, role, point }) {
                 </label>
               </div>
 
+              
               <div className="w-full flex justify-center items-center">
                 {message ? (
                   <p className="text-blue text-md font-semibold pt-6 ">{`Your message is sent. We'll get back to you at the earliest`}</p>

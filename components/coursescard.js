@@ -270,7 +270,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                   htmlFor="Experience"
                   className="leading-7 text-sm text-black"
                 >
-                  Experience
+                  Experience (Years)
                 </label>
                 <input
                   type="text"

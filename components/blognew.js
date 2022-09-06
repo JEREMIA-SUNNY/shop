@@ -169,8 +169,8 @@ export default function Testimonials() {
 
   return (
     <>
-      <section className="text-black bg-coustom1 body-font md:pt-14 md:pb-10 pt-7 pb-5">
-        <div className="container px-5  mx-auto">
+      <section className="text-black md:container  mx-auto  body-font md:pt-14 md:pb-10 ">
+        <div className="">
           
 
           
@@ -209,12 +209,12 @@ export default function Testimonials() {
             >
               <SwiperSlide>
                 <p className="text-center text-3xl  capitalize lg:text-4xl text-black  mb-10 ">Blogs</p>
-              <div className="flex  flex-wrap gap-1 mb-4 ">
+              <div className="flex  flex-wrap gap-8 mb-4 ">
                 {blog2.map(({ name, logo, id, desc,link,sorc,auth }) => {
                   return (
                     <div
                       key={id}
-                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75 px-8   rounded-lg overflow-hidden text-center relative"
+                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75   rounded-lg overflow-hidden text-center relative"
                     >
                       <div>
                         <div className=" w-full transition duration-150 ease-out hover:ease-in hover:opacity-50">
@@ -253,13 +253,13 @@ export default function Testimonials() {
 
 
               <SwiperSlide>
-              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-7 ">Blogs</p>
+              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-10 ">Blogs</p>
               <div className="flex  flex-wrap gap-1 ">
                 {blog.map(({ name, logo, id, desc,link,auth,sorc }) => {
                   return (
                     <div
                       key={id}
-                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75 px-8   rounded-lg overflow-hidden text-center relative"
+                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75    rounded-lg overflow-hidden text-center relative"
                     >
                       <div>
                         <div className=" w-full transition duration-150 ease-out hover:ease-in hover:opacity-50">
@@ -297,13 +297,13 @@ export default function Testimonials() {
 
 
               <SwiperSlide>
-              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-7">Blogs</p>
+              <p className="text-3xl  capitalize lg:text-4xl text-black  text-center mb-10">Blogs</p>
               <div className="flex  flex-wrap gap-1 ">
               {blog1.map(({ name, logo, id, desc,link,auth,sorc }) => {
                   return (
                     <div
                       key={id}
-                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75 px-8   rounded-lg overflow-hidden text-center relative"
+                      className="w-fit flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75    rounded-lg overflow-hidden text-center relative"
                     >
                       <div>
                         <div className=" w-full transition duration-150 ease-out hover:ease-in hover:opacity-50">

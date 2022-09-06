@@ -88,9 +88,31 @@ function Talent() {
                 layout="fill"
                 objectFit="cover"
                 alt="ser"
-                src="/solutions/network2.png"
+                src="/solutions/rpo.png"
               />
             </div>
+
+            <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
+              <h1 className="text-3xl mb-4  text-gray-900">RPO & MSP</h1>
+              <p className="mb-4 leading-relaxed">
+              Recruitment Process Outsourcing (RPO) is a full or partial transfer of the permanent recruitment process to an external provider who sources, screens, selects and onboards talent. RPOs hire for internal positions within the organization and act as an extension of the HR function, adhering to internal policies, processes, and culture. Operations can be ramped up or down based on a need basis.
+              </p>
+              <p className="mb-8 leading-relaxed">
+              Managed Services Provision (MSP) refers to the management of sourcing and administration of temporary positions through contract employees by an external provider, using a network of firms focused on finding contingent labour. MSP typically helps in forecasting labour needs and ensure delivery, and is responsible for payroll management.
+              </p>
+              <p className="mb-4">
+                <Link href="/contact">
+                  <a className="active:text-red font-bold underline decoration-green hover:text-orange text-green">
+                    Get in touch
+                  </a>
+                </Link>
+                &nbsp;to know more.
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div className="container mx-auto lg:gap-16  flex px-5 py-14 md:items-start items-center md:flex-row flex-col ">
+           
 
             <div className="lg:flex-grow md:w-1/2  flex  flex-col  text-left  md:mb-0  ">
               <h1 className="text-3xl mb-4  text-gray-900">Strong Network</h1>
@@ -110,6 +132,15 @@ function Talent() {
                 </Link>
                 &nbsp;to know more.
               </p>
+            </div>
+            <div className="h-80 w-full lg:w-1/2 flex items-start  relative">
+              <Image
+                className=""
+                layout="fill"
+                objectFit="cover"
+                alt="ser"
+                src="/solutions/network2.png"
+              />
             </div>
           </div>
           <hr />

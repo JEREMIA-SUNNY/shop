@@ -191,7 +191,10 @@ export default function Layout({ children }) {
               {menu.map(({ name, path, sub }, index) => {
                 if (name === "Careers")
                   return (
-                    <div key={index} className="group relative cursor-pointer inline-flex ">
+                    <div
+                      key={index}
+                      className="group relative cursor-pointer inline-flex "
+                    >
                       <a
                         href="https://sfjbs.talentrecruit.com/"
                         rel="noreferrer"
@@ -223,7 +226,10 @@ export default function Layout({ children }) {
                   );
                 else {
                   return (
-                    <div key={index} className="group cursor-pointer relative inline-flex ">
+                    <div
+                      key={index}
+                      className="group cursor-pointer relative inline-flex "
+                    >
                       <Link href={path}>
                         <div
                           className={`${
@@ -397,9 +403,13 @@ export default function Layout({ children }) {
             </Link>
           </div>
           <div className="text-xs  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center">
-            <Link href="https://sfjbs.talentrecruit.com/">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://sfjbs.talentrecruit.com/"
+            >
               <a>Careers</a>
-            </Link>
+            </a>
             <Link href="/blog/blogs">
               <a>Blogs</a>
             </Link>

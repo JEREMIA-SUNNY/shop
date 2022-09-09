@@ -290,7 +290,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 </label>
               </div>
 
-              <div className="relative ">
+              {/* <div className="relative ">
                 <label
                   htmlFor="resume"
                   className="leading-7 text-sm text-black"
@@ -321,7 +321,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
                 >
                   <span>{errors.resume?.message || "FILE 2MB"}</span>
                 </label>
-              </div>
+              </div> */}
 
               <div className="relative ">
                 <label className="block">

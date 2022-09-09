@@ -35,7 +35,7 @@ function Talent() {
               professionals and senior executive hiring.{" "}
               <span className="mb-5">
                 Click&nbsp;
-                <Link href="/career">
+                <Link href="https://sfjbs.talentrecruit.com/">
                   <a className="active:text-red underline font-bold decoration-green hover:text-orange text-green">
                     here
                   </a>

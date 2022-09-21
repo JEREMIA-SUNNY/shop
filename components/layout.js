@@ -71,6 +71,10 @@ export default function Layout({ children }) {
       path: "",
     },
     {
+      name: " Life@SFJ",
+      path: "/life",
+    },
+    {
       name: "Blogs",
       path: "/blog/blogs",
     },
@@ -124,6 +128,10 @@ export default function Layout({ children }) {
     {
       name2: "Careers",
       path2: "https://sfjbs.talentrecruit.com/",
+    },
+    {
+      name2: " Life@SFJ",
+      path2: "/life",
     },
     {
       name2: "Blogs",
@@ -183,7 +191,7 @@ export default function Layout({ children }) {
             </Link>
             <div className="lg:pl-2 lg:flex  text-center  py-3 flex-col justify-center ">
               <span className="text-sm font-bold text-black capitalize">
-                {` LET'S TRANSFORM.`}
+                {` LET'S TRANSFORM`}
               </span>
             </div>
 
@@ -296,7 +304,7 @@ export default function Layout({ children }) {
                               setView(false);
                             }}
                           >
-                            <Link href={path2}>{name2}</Link>
+                            <Link href={path2}><a>{name2}</a></Link>
                           </div>
                         )}
                         <div className="bg-white right-[102%]  group-focus:visible invisible  shadow-md absolute z-[1000] flex flex-col">
@@ -410,6 +418,9 @@ export default function Layout({ children }) {
             >
               <a>Careers</a>
             </a>
+            <Link href="/life">
+              <a>Life@SFJ</a>
+            </Link>
             <Link href="/blog/blogs">
               <a>Blogs</a>
             </Link>

@@ -33,10 +33,10 @@ export default function Life() {
             <li className='mt-4'>Equipped with facilities to manufacture up to 6-7 metric tons of produce every day ranging in batch sizes of 300Kgs, 600Kgs, 2000Kgs, 3000Kgs, 4000Kgs.</li>
           </ul> */}
 
-          <div className="grid md:grid-cols-4 grid-cols-2 md:gap-9 gap-4 pt-6">
+          <div className="grid md:grid-cols-4 grid-cols-1 md:gap-9 gap-4 pt-6">
             {stuff.map(({ image, text }, index) => (
               <div key={index} className="flex flex-col justify-center items-start rounded-sm">
-                <div className="w-full h-52 bg-zinc-100 shadow-sm relative">
+                <div className="w-full h-96 md:w-[324px] md:h-72 bg-zinc-100 shadow-sm relative">
                   <Image layout='fill' alt="" src={image} className="absolute inset-0 object-cover" />
                 </div>
                 {/* <p className="prose-sm pt-4 text-zinc-700 leading-6">{text}</p> */}

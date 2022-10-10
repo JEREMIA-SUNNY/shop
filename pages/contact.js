@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
                 <div className="text-base pt-8 text-black md:ml-4">
                   <p className="font-semibold">
-                  SFJ business solutions LLC
+                  SFJ Business Solutions LLC
                   </p>
                  
                   <p>2055, limestone RD  STE 200-C,</p>

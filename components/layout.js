@@ -390,7 +390,7 @@ export default function Layout({ children }) {
             <p>Singapore – 188367</p>
           </div>
           <div className="text-xs p-4 lg:p-0 pl-6  text-left">
-            <p className="font-semibold">SFJ business solutions LLC.</p>
+            <p className="font-semibold">SFJ Business Solutions LLC.</p>
             <p>2055, limestone RD STE 200-C,</p>
             <p> Wilmington,</p>
             <p>DE 19808, USA</p>

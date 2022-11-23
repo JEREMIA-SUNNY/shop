@@ -9,7 +9,7 @@ function Talent() {
             layout="fill"
             alt="ser"
             className="brightness-75"
-            src="/ouroffering/talent1.png"
+            src="/ouroffering/talent1.jpg"
             objectFit="cover "
           />
           <div className="w-full    h-full  flex  justify-center">
@@ -75,7 +75,7 @@ function Talent() {
                 layout="fill"
                 objectFit="cover"
                 alt="ser"
-                src="/solutions/flexible.png"
+                src="/solutions/flexible.jpg"
               />
             </div>
           </div>

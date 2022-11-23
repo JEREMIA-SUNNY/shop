@@ -9,7 +9,7 @@ function Knowledge() {
             layout="fill"
             alt="ser"
             className="brightness-50"
-            src="/ouroffering/knowledge1.png"
+            src="/ouroffering/knowledge1.jpg"
             objectFit="cover "
           />
           <div className="w-full    h-full  flex  justify-center">

@@ -8,7 +8,7 @@ function Itservices() {
           <Image
             layout="fill"
             alt="ser"
-            src="/ouroffering/it1.png"
+            src="/ouroffering/it1.jpg"
             objectFit="cover "
           />
           <div className="w-full    h-full  flex  justify-center">
@@ -53,7 +53,7 @@ function Itservices() {
                 layout="fill"
                 objectFit="cover"
                 alt="ser"
-                src="/solutions/flexible.png"
+                src="/solutions/flexible.jpg"
               />
             </div>
           </div>

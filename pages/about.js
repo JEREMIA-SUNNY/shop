@@ -128,7 +128,7 @@ function About() {
                       layout="fill"
                       objectFit="cover"
                       alt=""
-                      src="/aboutus/passion.png"
+                      src="/aboutus/passion.jpg"
                     />
                   </div>
                   <div className="absolute inset-0 "></div>
@@ -156,7 +156,7 @@ function About() {
                       layout="fill"
                       objectFit="cover"
                       alt=""
-                      src="/aboutus/expertise.png"
+                      src="/aboutus/expertise.jpg"
                     />
                   </div>
                   <div className="absolute inset-0 "></div>
@@ -184,7 +184,7 @@ function About() {
                       layout="fill"
                       objectFit="cover"
                       alt=""
-                      src="/aboutus/empathy.png"
+                      src="/aboutus/empathy.jpg"
                     />
                   </div>
                   <div className="absolute inset-0 "></div>

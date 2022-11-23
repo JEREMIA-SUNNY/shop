@@ -221,21 +221,21 @@ export default function Home() {
       id: 1,
       name1: " Knowledge  ",
       name2: "As A Service",
-      images: "/ouroffering/knowledge1.png",
+      images: "/ouroffering/knowledge1.jpg",
       links: "/solutions/knowledge",
     },
     {
       id: 2,
       name1: "Talent ",
       name2: "As A Service",
-      images: "/ouroffering/talent1.png",
+      images: "/ouroffering/talent1.jpg",
       links: "/solutions/staffing",
     },
     {
       id: 3,
       name1: "IT  ",
       name2: "Services",
-      images: "/ouroffering/it1.png",
+      images: "/ouroffering/it1.jpg",
       links: "/solutions/itservices",
     },
   ];
@@ -289,7 +289,7 @@ export default function Home() {
       <section
         className="text-black bg-green body-font  overflow-hidden lg:py-12"
         style={{
-          backgroundImage: `url(${"whywork.png"})`,
+          backgroundImage: `url(${"whywork.jpg"})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

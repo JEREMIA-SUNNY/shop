@@ -7,7 +7,7 @@ function Capabilities() {
         <Image
           layout="fill"
           alt="ser"
-          src="/capabi/capablities.png"
+          src="/capabi/capablities.jpg"
           objectFit="cover "
         />
         <div className="w-full    h-full  flex  justify-center">
@@ -60,7 +60,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/analytics.png"
+                src="/capabi/analytics.jpg"
               />
             </div>
            
@@ -73,7 +73,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/consulting.png"
+                src="/capabi/consulting.jpg"
               />
             </div>
             
@@ -136,7 +136,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/mobility.png"
+                src="/capabi/mobility.jpg"
               />
             </div>
 
@@ -150,7 +150,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/outsourcing.png"
+                src="/capabi/outsourcing.jpg"
               />
             </div>
             <div className="w-auto">
@@ -214,7 +214,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/staffing.png"
+                src="/capabi/staffing.jpg"
               />
             </div>
             <div
@@ -227,7 +227,7 @@ function Capabilities() {
                 layout="fill"
                 className="absolute h-full w-full object-cover"
                 alt=""
-                src="/capabi/upskilling.png"
+                src="/capabi/upskilling.jpg"
               />
             </div>
             <div className="w-auto">

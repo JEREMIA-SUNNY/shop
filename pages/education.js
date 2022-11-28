@@ -30,12 +30,12 @@ function Education() {
         { name: "Introduction to c# and oops using c#.Net" },
         { name: " Window forms using c#.Net " },
         { name: "ADO.NET-Data access from SQL" },
-      
+
         { name: "Collections and Assemblies" },
         { name: "ASP.NET" },
         { name: "Web server controls" },
-       
-        {name:"LINQ, Web Architecture"}
+
+        { name: "LINQ, Web Architecture" },
       ],
       dur: " 1-3 months",
     },
@@ -71,7 +71,7 @@ function Education() {
         { name: "Network and Spend Management" },
         { name: "Business Technology Platform (data and analytics)" },
       ],
-     
+
       dur: " 1-3 months",
     },
     {
@@ -85,9 +85,8 @@ function Education() {
         { name: "Components" },
         { name: "Vue Reactivity" },
         { name: "Vue Router" },
-        
       ],
-     
+
       dur: " 3 to 5 Days",
     },
     {
@@ -101,9 +100,8 @@ function Education() {
         { name: "Doing the Work" },
         { name: "Keeping the Team On Track" },
         { name: "Keeping the Business In Mind" },
-        
       ],
-     
+
       dur: " 3 to 5 Days",
     },
     {
@@ -117,9 +115,8 @@ function Education() {
         { name: "The scrum flow" },
         { name: "The Scrum team" },
         { name: "Projects Simulations description" },
-        
       ],
-     
+
       dur: " 3 to 5 Days",
     },
     {
@@ -130,13 +127,19 @@ function Education() {
       point: [
         { name: "Introduction to blockchain" },
         { name: "Building block of blockchain" },
-        { name: "Type of Blockchain Public, Private, Permissioned, Permission less, etc. Comparison of below blockchain platforms." },
+        {
+          name: "Type of Blockchain Public, Private, Permissioned, Permission less, etc. Comparison of below blockchain platforms.",
+        },
         { name: "Type of decentralized storage" },
-        { name: "Build a Blockchain from grounds up with Ethereum Smart Contracts" },
-        { name: "Digital currency, Tokens market cap in fiat, bitcoin and how valuation done- Cyber security, Fraud detection" },
+        {
+          name: "Build a Blockchain from grounds up with Ethereum Smart Contracts",
+        },
+        {
+          name: "Digital currency, Tokens market cap in fiat, bitcoin and how valuation done- Cyber security, Fraud detection",
+        },
         { name: "Bootstrapping a Hyper ledger Network" },
       ],
-     
+
       dur: " 4 Days",
     },
     {
@@ -149,9 +152,8 @@ function Education() {
         { name: "Types of machine learning and Applications" },
         { name: "Deep Learning, Frameworks and Use cases" },
         { name: "Use cases of AI & ML in Auditing" },
-       
       ],
-     
+
       dur: " 40 hours (5 Days)",
     },
     {
@@ -163,10 +165,8 @@ function Education() {
         { name: "What is Meta" },
         { name: "Who is creating the Meta" },
         { name: "Meta Verticals" },
-       
-       
       ],
-     
+
       dur: " 8 Hours/ 1 Day",
     },
     {
@@ -188,12 +188,8 @@ function Education() {
         { name: "Multi Threading & Race Condition" },
         { name: "Packages and Functions" },
         { name: "Web scraping with Python" },
-        
-
-       
-       
       ],
-     
+
       dur: " 42 Hours training and 50 Hours projects and exercises",
     },
   ];
@@ -214,7 +210,6 @@ function Education() {
         { name: "Deploy ASP.NET core web api to Azure app service" },
         { name: "Adding API to Azure API management" },
       ],
-      
     },
     {
       id: 2,
@@ -263,8 +258,6 @@ function Education() {
         { name: "Siebel eScripting/Business Services" },
         { name: "Siebel EAI Objects/Integration" },
         { name: "Siebel Open UI" },
-       
-     
       ],
       Levels: "Beginner",
       dur: "3 to 5 Days",
@@ -280,7 +273,6 @@ function Education() {
         { name: "The Automation challenge" },
         { name: "Email Automation" },
         { name: "UI Path Orchestrator" },
-     
       ],
       Levels: "Beginner",
       dur: " 3 to 5 Days",
@@ -295,12 +287,11 @@ function Education() {
         { name: "Hadoop with Ping" },
         { name: "Hadoop with Spark" },
         { name: "Data store wit Hadoop" },
-        
-     
       ],
       Levels: "Beginner",
       dur: " 3 to 5 Days",
-    }, {
+    },
+    {
       id: 7,
       title: "Cyber Security",
       mode: "Hybrid (Online + Offline)",
@@ -311,8 +302,6 @@ function Education() {
         { name: "Security Operations" },
         { name: "Offensive Security" },
         { name: "Systems Security" },
-        
-     
       ],
       Levels: "Beginner",
       dur: " 3 to 5 Days",
@@ -329,9 +318,6 @@ function Education() {
         { name: "SQL Programming" },
         { name: "Finance & Risk Analytics" },
         { name: "Web & Social Media Analytics" },
-       
-        
-     
       ],
       Levels: "Beginner",
       dur: " 3 to 5 Days",
@@ -347,10 +333,6 @@ function Education() {
         { name: "What Is Mechanics of Web 3.0" },
         { name: "What Is Semantic Web – The Concept Behind Web 3.0" },
         { name: "What Comes After Web" },
-       
-       
-        
-     
       ],
       Levels: "Beginner",
       dur: "8 Hours/ 1 Day",
@@ -365,11 +347,6 @@ function Education() {
         { name: "Linux & windows Administration" },
         { name: "Shell Scripting" },
         { name: "Docker" },
-       
-       
-       
-        
-     
       ],
       Levels: "Beginner",
       dur: "3 to 5 Days",
@@ -412,7 +389,7 @@ function Education() {
         <div className=" container px-5 py-4 mx-auto">
           <div className="text-center mb-14">
             <h1 className="sm:text-3xl text-2xl  text-center title-font text-black mb-4">
-            Featured Courses
+              Featured Courses
             </h1>
           </div>
           <div className="flex  lg:flex-row flex-col  w-full mb-8  gap-7 flex-wrap ">
@@ -432,7 +409,7 @@ function Education() {
             </div>
             <div className=" flex gap-4 flex-col flex-1">
               {careerdata1.map(
-                ({ id, description, title, mode, Levels, point,dur }) => {
+                ({ id, description, title, mode, Levels, point, dur }) => {
                   return (
                     <CoursesCard
                       key={`${id}-${title}`}

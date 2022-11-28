@@ -323,7 +323,7 @@ function Education() {
       mode: "Hybrid (Online + Offline)",
       point: [
         { name: "Introduction to Data Science" },
-        { name: "Marketing &amp; CRM" },
+        { name: "Marketing & CRM" },
         { name: "Statistical Methods for Decision Making" },
         { name: "Business Finance" },
         { name: "SQL Programming" },

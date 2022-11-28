@@ -148,7 +148,7 @@ function Education() {
         { name: "Introduction to artificial intelligence" },
         { name: "Types of machine learning and Applications" },
         { name: "Deep Learning, Frameworks and Use cases" },
-        { name: "Use cases of AI &amp; ML in Auditing" },
+        { name: "Use cases of AI & ML in Auditing" },
        
       ],
      
@@ -185,7 +185,7 @@ function Education() {
         { name: "Matplotlib for data visualization" },
 
         { name: "Pandas for data analysis and machine learning" },
-        { name: "Multi Threading &amp; Race Condition" },
+        { name: "Multi Threading & Race Condition" },
         { name: "Packages and Functions" },
         { name: "Web scraping with Python" },
         
@@ -327,7 +327,7 @@ function Education() {
         { name: "Statistical Methods for Decision Making" },
         { name: "Business Finance" },
         { name: "SQL Programming" },
-        { name: "Finance &amp; Risk Analytics" },
+        { name: "Finance & Risk Analytics" },
         { name: "Web &amp; Social Media Analytics" },
        
         
@@ -360,9 +360,9 @@ function Education() {
       title: "Devops",
       mode: "Hybrid (Online + Offline)",
       point: [
-        { name: "Software Engineering &amp; SDL" },
+        { name: "Software Engineering & SDL" },
         { name: "What is DevOps?0" },
-        { name: "Linux &amp; windows Administration" },
+        { name: "Linux & windows Administration" },
         { name: "Shell Scripting" },
         { name: "Docker" },
        

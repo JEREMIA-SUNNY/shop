@@ -328,7 +328,7 @@ function Education() {
         { name: "Business Finance" },
         { name: "SQL Programming" },
         { name: "Finance & Risk Analytics" },
-        { name: "Web &amp; Social Media Analytics" },
+        { name: "Web & Social Media Analytics" },
        
         
      

@@ -57,7 +57,7 @@ function CoursesCard({ id, title, dur, mode, levels, point }) {
     const { name, email, phone, interest, info, location, experience } = data;
     try {
       const response = await fetch(
-        "https://bmx35e32jaxiqyqr46j3ow2nda0xrcdo.lambda-url.ap-south-1.on.aws/",
+        "",
         {
           method: "POST",
           headers: {},

@@ -5,9 +5,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head >
-        <title>SFJ Business Solutions</title>
-        <meta name="description" content="Official website for SFJ Business Solutions" />
-        <link rel="icon" href="/ICONW.png " />
+        <title>A good Picks</title>
+        <meta name="description" content="Official website for A good Pick" />
+        <link rel="icon" href="" />
       </Head>
       <Component {...pageProps} />
     </Layout>

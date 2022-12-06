@@ -72,29 +72,52 @@ function Personal() {
               {slides.map((item, id) => {
                 return (
                   <SplideSlide key={id} className="">
-                    <div className="">
+                     <div className="">
                       {" "}
                       <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
                         <div className="relative w-full h-48 p-2">
                           <img
                             src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                            className="object-cover w-full h-full rounded-2xl"
+                            className="object-cover relative w-full h-full rounded-xl"
                             alt="Plan"
                           />
-                        </div>
-                        <div className="flex flex-col justify-between flex-grow p-8 ">
-                          <div>
-                            <div className="text-lg font-semibold">Basic</div>
-                            <p className="text-sm text-gray-900">
-                              Sed ut perspiciatis unde omnis iste natus error
-                              sit voluptatem doloremque.
-                            </p>
-                            <div className="mt-1 mb-4 mr-1 text-xl font-bold ">
-                              $12
-                            </div>
+                          <div className="absolute top-2 left-0 rounded-sm bg-blue-800 text-xs p-1 text-white w-fit h-fit">
+                            New Launch
+                          </div>
+                          <div className="absolute bottom-2 left-2 bg-black text-xs w-[40px] text-center rounded-md p-1 text-white  h-fit">
+                            4.4
+                          </div>
+                          <div className="absolute bottom-2 right-2 bg-red-600 text-xs w-fit text-center rounded-md p-1 text-white  h-fit">
+                            Score 8.8
                           </div>
                         </div>
-                        <div className="flex mb-12 justify-center">
+                        <div className="flex flex-col justify-between flex-grow p-4 ">
+                          <div>
+                            <div className="opacity-50">
+                              <p>Brand Name-dryGroceries</p>
+                            </div>
+                            <div className="text-lg  font-semibold">
+                              Product name
+                            </div>
+
+                            <div className="mt-1  flex gap-12 mr-1 text-xl font-bold ">
+                              <p className="line-through opacity-25">Rs 2100</p>{" "}
+                              <p>Rs:200</p>
+                            </div>
+                          </div>
+                          <div className="flex justify-center mt-5 gap-2">
+                            <button className="bg-gray-700 w-[100px] text-white  rounded-md">
+                              450
+                            </button>
+                            <button className="bg-white border-2 border-black w-[100px] text-black rounded-md">
+                              650
+                            </button>
+                            <button className="bg-white border-2 border-black w-[100px] text-black  rounded-md">
+                              200
+                            </button>
+                          </div>
+                        </div>
+                        <div className="flex mb-5 justify-center">
                           <button className="w-fit border text-white rounded-md bg-red-600 p-2">
                             Add to Cart
                           </button>

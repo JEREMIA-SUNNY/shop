@@ -108,7 +108,7 @@ export async function getStaticProps() {
 const gql = String.raw;
 const productQuery = gql`
   query products {
-    products(first: 5) {
+    products(first: 100) {
       edges {
         node {
           title

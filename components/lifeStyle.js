@@ -1,139 +1,60 @@
+import Head from "next/head";
 import React from "react";
-import "react-multi-carousel/lib/styles.css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 
-function LifeStyle() {
-  const slides = [
-    {
-      text1: "Bringing agility and scale with the right strategy",
-
-      image: "/carosel/strategy.jpg",
-      id: "slide1",
-    },
-    {
-      text1: "Nurturing and empowering a future-ready workforce",
-
-      image: "/carosel/nurture.jpg",
-      id: "slide2",
-    },
-    {
-      text1: "Mobilizing the right talent for your business needs",
-
-      image: "/carosel/mobilize.jpg",
-      id: "slide3",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-  ];
+export default function LifeStyle() {
   return (
     <>
-      <section className="bg-blue-50">
-        <div className="md:container md:mx-auto">
-          <div className=" py-10 mb-5 container ">
-            <div className="flex   justify-between">
-              <p className="w-fit p-2  text-4xl">Life Style</p>
-              <button className="h-[40px] mt-4 px-4 border rounded-md border-black bg-white">
-                See all Products
-              </button>{" "}
-            </div>
-            <div className=""></div>
-          </div>
-          <div className="pb-12">
-            <Splide
-              options={{
-                perPage: 4,
-                gap: "20px",
-                padding: "20px",
-              }}
-              aria-label="My Favorite Images"
-            >
-              {slides.map((item, id) => {
-                return (
-                  <SplideSlide key={id} className="">
-                    <div className="">
-                      {" "}
-                      <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                        <div className="relative w-full h-48 p-2">
-                          <img
-                            src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                            className="object-cover relative w-full h-full rounded-xl"
-                            alt="Plan"
-                          />
-                          <div className="absolute top-2 left-0 rounded-sm bg-blue-800 text-xs p-1 text-white w-fit h-fit">
-                            New Launch
-                          </div>
-                          <div className="absolute bottom-2 left-2 bg-black text-xs w-[40px] text-center rounded-md p-1 text-white  h-fit">
-                            4.4
-                          </div>
-                          <div className="absolute bottom-2 right-2 bg-red-600 text-xs w-fit text-center rounded-md p-1 text-white  h-fit">
-                            Score 8.8
-                          </div>
-                        </div>
-                        <div className="flex flex-col justify-between flex-grow p-4 ">
-                          <div>
-                            <div className="opacity-50">
-                              <p>Brand Name-dryGroceries</p>
-                            </div>
-                            <div className="text-lg  font-semibold">
-                              Product name
-                            </div>
-
-                            <div className="mt-1  flex gap-12 mr-1 text-xl font-bold ">
-                              <p className="line-through opacity-25">Rs 2100</p>{" "}
-                              <p>Rs:200</p>
-                            </div>
-                          </div>
-                          <div className="flex justify-center mt-5 gap-2">
-                            <button className="bg-gray-700 w-[100px] text-white  rounded-md">
-                              450
-                            </button>
-                            <button className="bg-white border-2 border-black w-[100px] text-black rounded-md">
-                              650
-                            </button>
-                            <button className="bg-white border-2 border-black w-[100px] text-black  rounded-md">
-                              200
-                            </button>
-                          </div>
-                        </div>
-                        <div className="flex mb-5 justify-center">
-                          <button className="w-fit border text-white rounded-md bg-red-600 p-2">
-                            Add to Cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </SplideSlide>
-                );
-              })}
-            </Splide>
-          </div>
+      <Head>
+        <link
+          href="https://fonts.cdnfonts.com/css/bubble-rainbow"
+          rel="stylesheet"
+        />
+      </Head>
+      <div className="py-10">
+        <p className="text-black text-3xl  text-center">
+          Conscious Products that dont break your monthly budget
+        </p>
+        <p className="text-black mt-2 text-center">
+          {" "}
+          we dont charge any sale commisions to our vendor they pass on to
+          discout
+        </p>
+        <div className="flex justify-center mt-5">
+          <button className="bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
+            SHOP NOW
+          </button>
         </div>
-      </section>
+      </div>
+      <div>
+        {/* <svg
+          width="100%"
+          height="100%"
+          id="svg"
+          viewBox="0 0 1440 400"
+          xmlns="http://www.w3.org/2000/svg"
+          className="transition duration-300 ease-in-out delay-150"
+        >
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 75.42912371134021,201.78902798232696 150.85824742268042,203.5780559646539 201,197 C 251.14175257731958,190.4219440353461 275.99613402061857,175.47680412371133 336,177 C 396.00386597938143,178.52319587628867 491.15721649484533,196.51472754050076 566,193 C 640.8427835051547,189.48527245949924 695.3750000000001,164.4642857142857 740,170 C 784.6249999999999,175.5357142857143 819.3427835051544,211.6281296023564 870,213 C 920.6572164948456,214.3718703976436 987.2538659793815,181.02319587628864 1049,171 C 1110.7461340206185,160.97680412371136 1167.6417525773195,174.27908689248898 1232,183 C 1296.3582474226805,191.72091310751102 1368.1791237113403,195.8604565537555 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            strokeWidth="0"
+            fill="#fdf8f2"
+            fillOpacity="1"
+            className="transition-all duration-300 ease-in-out delay-150 path-0"
+          ></path>
+        </svg> */}
+        <svg 
+         width="100%"
+         height="250px"
+         preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#FDF8F2"
+            fillOpacity="1"
+            d="M0,288L30,282.7C60,277,120,267,180,229.3C240,192,300,128,360,133.3C420,139,480,213,540,250.7C600,288,660,288,720,272C780,256,840,224,900,224C960,224,1020,256,1080,229.3C1140,203,1200,117,1260,96C1320,75,1380,117,1410,138.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
     </>
   );
 }
-
-export default LifeStyle;

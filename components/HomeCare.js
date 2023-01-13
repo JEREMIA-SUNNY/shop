@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
 import { useState } from "react";
-function DryGroceries({ products }) {
+function HomeCare({ products }) {
   console.log("this is inside", products);
   const [swiperRef, setSwiperRef] = useState(0);
   const prevHandler = () => {
@@ -19,49 +19,27 @@ function DryGroceries({ products }) {
   };
   return (
     <>
-      <section className="h-[600px]">
-        <div className="">
-          {/* <img className="w-screen" src="/blue1.png" alt="" /> */}
-
-          <svg
-            width="100%"
-            height="150px"
-            preserveAspectRatio="none"
-            id="svg"
-            viewBox="0 0 1440 400"
-            xmlns="http://www.w3.org/2000/svg"
-            className="transition duration-300 ease-in-out delay-150"
-          >
-            <path
-              d="M 0,400 C 0,400 0,200 0,200 C 51.456850413121245,164.20530275003082 102.91370082624249,128.41060550006165 164,135 C 225.0862991737575,141.58939449993835 295.8020471081514,190.56288074978417 348,214 C 400.1979528918486,237.43711925021583 433.8781107411519,235.33787150080158 485,230 C 536.1218892588481,224.66212849919842 604.6855099272412,216.08563324700947 662,222 C 719.3144900727588,227.91436675299053 765.379849549883,248.3195955111605 807,244 C 848.620150450117,239.6804044888395 885.7950918732272,210.63598470834873 933,191 C 980.2049081267728,171.36401529165127 1037.439782957208,161.13646565544457 1091,166 C 1144.560217042792,170.86353434455543 1194.4457762979405,190.818152669873 1252,199 C 1309.5542237020595,207.181847330127 1374.7771118510298,203.59092366506349 1440,200 C 1440,200 1440,400 1440,400 Z"
-              stroke="none"
-              strokeWidth="0"
-              fill="#13456a"
-              fillOpacity="1"
-              className="transition-all duration-300 ease-in-out delay-150 path-0"
-            ></path>
-          </svg>
-        </div>
-        <div className="bg-[#13456a]">
+      <section className="relative ">
+        <div className="bg-[#F3F6F9]">
           <div className="md:container  md:mx-auto">
-            <div className=" py-10 mb-5 flex justify-between container ">
+            <div className="flex justify-between py-10 mb-5 container ">
               <div className="flex   justify-between">
-                <p className="w-fit p-2 text-white  text-4xl">Dry Groceries</p>
+                <p className="w-fit p-2 text-black  text-4xl">Home Care</p>
               </div>
               <div className="flex gap-1 mt-5 mr-6">
                 <div>
                   <button onClick={prevHandler}>
-                    <img src="/icons/prev.png" alt="" />
+                    <img src="/icons/prevblack.png" alt="" />
                   </button>
                 </div>
                 <div>
                   <button onClick={nextHandler}>
-                    <img src="/icons/nextblack.png" alt="" />
+                    <img src="/icons/next.png" alt="" />
                   </button>
                 </div>
               </div>
             </div>
-            <div className="pb-12  ">
+            <div className="pb-12">
               <Swiper
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}
@@ -135,15 +113,36 @@ function DryGroceries({ products }) {
               </Swiper>
             </div>
             <div className="flex justify-center bg-[#13456aa]">
-              <button className="h-[40px] mt-4  mb-10 px-4 border rounded-3xl border-black bg-white">
+              <button className="h-[40px] mt-4  px-4 border rounded-3xl border-black bg-white">
                 See all Products
               </button>{" "}
             </div>
           </div>
+        </div>
+        <div>
+          <svg
+            preserveAspectRatio="none"
+            width="100%"
+            height="150px"
+            id="svg"
+            viewBox="0 0 1440 400"
+            xmlns="http://www.w3.org/2000/svg"
+            className="transition duration-300 ease-in-out delay-150"
+          >
+            <path
+              d="M 0,400 C 0,400 0,200 0,200 C 41.823051669991315,189.02013863348628 83.64610333998263,178.04027726697254 112,168 C 140.35389666001737,157.95972273302746 155.23863831006082,148.85902956559607 189,156 C 222.76136168993918,163.14097043440393 275.3993434197741,186.5236044706431 315,186 C 354.6006565802259,185.4763955293569 381.1639880108429,161.04655255183152 413,156 C 444.8360119891571,150.95344744816848 481.9447045368544,165.2901853220308 514,171 C 546.0552954631456,176.7098146779692 573.0571938417396,173.79270616004536 608,179 C 642.9428061582604,184.20729383995464 685.8265200961869,197.53899003778767 717,210 C 748.1734799038131,222.46100996221233 767.6367257735128,234.05133368880385 805,241 C 842.3632742264872,247.94866631119615 897.6265768097618,250.25567520699704 935,242 C 972.3734231902382,233.74432479300296 991.8569669874394,214.925965483208 1023,204 C 1054.1430330125606,193.074034516792 1096.9455552404802,190.04046286017106 1136,208 C 1175.0544447595198,225.95953713982894 1210.3608120506399,264.91218307610774 1242,270 C 1273.6391879493601,275.08781692389226 1301.6111965569598,246.3108048353978 1334,229 C 1366.3888034430402,211.6891951646022 1403.19440172152,205.8445975823011 1440,200 C 1440,200 1440,400 1440,400 Z"
+              stroke="none"
+              strokeWidth="0"
+              fill="#F3F6F9"
+              fillOpacity="1"
+              className="transition-all duration-300 ease-in-out delay-150 path-0"
+              transform="rotate(-180 720 200)"
+            ></path>
+          </svg>
         </div>
       </section>
     </>
   );
 }
 
-export default DryGroceries;
+export default HomeCare;

@@ -1,179 +1,54 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { BsPlusLg } from "react-icons/bs";
+import { BiMinus } from "react-icons/bi";
+import useCollapse from "react-collapsed";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+function CoursesCard({ id, title, desc }) {
+  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded1, setExpanded1] = useState(false);
+  const { getCollapseProps, getToggleProps } = useCollapse({
+    isExpanded,
+    easing: "cubic-bezier(0.37, 0, 0.63, 1)",
+    duration: 600,
+  });
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
-function Ourbrand() {
   return (
     <>
-      {/* <Swiper
-        slidesPerView={1}
-        spaceBetween={50}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="w-[100%] flex justify-center items-center h-[100%]"
-      >
-        <SwiperSlide className="flex justify-center"><div className=" flex justify-center">
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Basic</div>
-                      <p className="text-sm text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem doloremque.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $12
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Basic</div>
-                      <p className="text-sm text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem doloremque.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $12
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Basic</div>
-                      <p className="text-sm text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem doloremque.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $12
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Basic</div>
-                      <p className="text-sm text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem doloremque.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $12
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3183181/pexels-photo-3183181.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Advanced</div>
-                      <p className="text-sm text-gray-900">
-                        A flower in my garden, a mystery in my panties. Heart
-                        attack never was so close.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $38
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                  <div className="relative w-full h-48">
-                    <img
-                      src="https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      className="object-cover w-full h-full rounded-t"
-                      alt="Plan"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                    <div>
-                      <div className="text-lg font-semibold">Pro</div>
-                      <p className="text-sm text-gray-900">
-                        We never had the chance to. Maybe it was the eleven
-                        months he spent in the womb.
-                      </p>
-                      <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                        $78
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>sfdsf</div>
-              </div></SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 2</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 3</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 4</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 5</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 6</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 7</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 8</SwiperSlide>
-        <SwiperSlide className="flex justify-center">Slide 9</SwiperSlide>
-      </Swiper> */}
-
-
-
-      <section className="splide" aria-label="Custom Arrows Example">
-        <div className="splide__arrows">
-          <button className="splide__arrow splide__arrow--prev border">Prev</button>
-          <button className="splide__arrow splide__arrow--next">Next</button>
+      <div key={id} className="w-full flex  border-t border-b flex-col">
+        <div
+          {...getToggleProps({
+            onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+          })}
+          className="bg-blue  w-full  rounded flex justify-between  p-4 h-full items-center"
+        >
+          <span className="text-black flex text-center font-bold ">{title}</span>
+          <div>
+            {isExpanded ? (
+              <BiMinus size={15} className=" text-black w- h-6 mr-4" />
+            ) : (
+              <BsPlusLg size={15} className=" text-black w- h-6 mr-4" />
+            )}
+          </div>
         </div>
-
-        <div className="splide__track">
-          <ul className="splide__list">
-            <li className="splide__slide"></li>
-            <li className="splide__slide">Slide 02</li>
-            <li className="splide__slide">Slide 03</li>
-          </ul>
+        <div>
+          <section {...getCollapseProps()}>
+            <div className="flex">
+              <div className="w-full">
+                <div className="h-full p-4  pt-5 pb-5 rounded-lg border text-center ">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolores, cupiditate ea dignissimos nobis tempore ut quam
+                  voluptate suscipit sapiente non fugiat culpa corporis
+                  quisquam, iure laudantium! Quae quia officia explicabo,
+                  possimus non adipisci eveniet blanditiis iste laboriosam,
+                  animi, dicta placeat enim aut voluptatibus. Ipsa accusamus
+                  neque et laudantium adipisci iste!
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </>
   );
 }
-export default Ourbrand;
+export default CoursesCard;

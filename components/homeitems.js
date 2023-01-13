@@ -1,140 +1,145 @@
 import React from "react";
-import "react-multi-carousel/lib/styles.css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import Link from "next/link";
+import { useState } from "react";
 
-function HomeItems() {
-  const slides = [
-    {
-      text1: "Bringing agility and scale with the right strategy",
+function HomeItem({ products }) {
+  const [swiperRef, setSwiperRef] = useState(0);
+  const prevHandler = () => {
+    swiperRef.slidePrev();
+  };
 
-      image: "/carosel/strategy.jpg",
-      id: "slide1",
-    },
-    {
-      text1: "Nurturing and empowering a future-ready workforce",
-
-      image: "/carosel/nurture.jpg",
-      id: "slide2",
-    },
-    {
-      text1: "Mobilizing the right talent for your business needs",
-
-      image: "/carosel/mobilize.jpg",
-      id: "slide3",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-    {
-      text1: "A thought leader and trusted partner for over a decade",
-
-      image: "/carosel/thought.jpg",
-      id: "slide4",
-    },
-  ];
-
+  const nextHandler = () => {
+    swiperRef.slideNext();
+  };
+  console.log("this is inside", products);
   return (
     <>
-      <section className="bg-blue-50">
-        <div className="md:container md:mx-auto">
-          <div className=" py-10 mb-5 container ">
-            <div className="flex   justify-between">
-              <p className="w-fit p-2  text-4xl">Home</p>
-              <button className="h-[40px] mt-4 px-4 border rounded-md border-black bg-white">
+      <section className="  bg-[#F3F6F9]">
+        <div className="">
+          <div className="md:container relative -top pt-96 md:mx-auto">
+            <div className="flex justify-between md:mx-auto  md:container ">
+              <div className="flex   justify-between">
+                <p className="w-fit p-2 ml-5 mb-10 text-black  text-4xl">
+                  Personal Care
+                </p>
+              </div>
+              <div className="flex gap-1 mt-5 mr-6">
+                <div>
+                  <button onClick={prevHandler}>
+                    <img src="/icons/prevblack.png" alt="" />
+                  </button>
+                </div>
+                <div>
+                  <button onClick={nextHandler}>
+                    <img src="/icons/next.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="pb-12  ">
+              <Swiper
+                onSwiper={(swiper) => setSwiperRef(swiper)}
+                modules={[Pagination, Autoplay, Navigation]}
+                slidesPerView={1}
+                spaceBetween={20}
+                slidesPerGroup={1}
+                breakpoints={{
+                  769: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 20,
+
+                    speed: 800,
+
+                    pagination: {},
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                    speed: 800,
+                    pagination: {},
+                  },
+                }}
+                // pagination={{ clickable: true }}
+                effect=""
+              >
+                {products.edges.map((items, id) => {
+                  const product = items;
+                  return (
+                    <SwiperSlide key={id} className="">
+                      <div className="shadow-lg mb-5 ">
+                        {" "}
+                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-lg shadow-sm hover:shadow">
+                          <div className="relative w-full h-fit p-2">
+                            <img
+                              src={
+                                product.node.images.edges[0].node.transformedSrc
+                              }
+                              className="object-cover  w-full h-80 rounded-2xl"
+                              alt="Plan"
+                            />
+                            <div className="flex justify-center">
+                              <button className="w-[100px] shadow-2xl bg-white text-black absolute top-[90%] rounded-3xl = p-2">
+                                <Link href={`/products/${product.node.handle}`}>
+                                  Buy
+                                </Link>
+                              </button>
+                            </div>
+                          </div>
+                          <div className="flex flex-col justify-between  p-1 ">
+                            <div>
+                              <div className="text-xs text-center mt-4 font-semibold">
+                                {" "}
+                                {product.node.title}
+                              </div>
+                              <p className="text-sm text-center text-gray-900">
+                                Extra long product name
+                              </p>
+                              <div className="mt-1 text-center mb-4 mr-1 text-xl font-bold ">
+                                Rs{" "}
+                                {product.node.priceRange.minVariantPrice.amount}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+            <div className="flex justify-center">
+              <button className="h-[40px] mt-4  px-4 border rounded-3xl border-black bg-white">
                 See all Products
               </button>{" "}
             </div>
-            <div className=""></div>
-          </div>
-          <div className="pb-12">
-            <Splide
-              options={{
-                perPage: 4,
-                gap: "20px",
-                padding: "20px",
-              }}
-              aria-label="My Favorite Images"
-            >
-              {slides.map((item, id) => {
-                return (
-                  <SplideSlide key={id} className="">
-                    <div className="">
-                      {" "}
-                      <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
-                        <div className="relative w-full h-48 p-2">
-                          <img
-                            src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                            className="object-cover relative w-full h-full rounded-xl"
-                            alt="Plan"
-                          />
-                          <div className="absolute top-2 left-0 rounded-sm bg-blue-800 text-xs p-1 text-white w-fit h-fit">
-                            New Launch
-                          </div>
-                          <div className="absolute bottom-2 left-2 bg-black text-xs w-[40px] text-center rounded-md p-1 text-white  h-fit">
-                            4.4
-                          </div>
-                          <div className="absolute bottom-2 right-2 bg-red-600 text-xs w-fit text-center rounded-md p-1 text-white  h-fit">
-                            Score 8.8
-                          </div>
-                        </div>
-                        <div className="flex flex-col justify-between flex-grow p-4 ">
-                          <div>
-                            <div className="opacity-50">
-                              <p>Brand Name-dryGroceries</p>
-                            </div>
-                            <div className="text-lg  font-semibold">
-                              Product name
-                            </div>
-
-                            <div className="mt-1  flex gap-12 mr-1 text-xl font-bold ">
-                              <p className="line-through opacity-25">Rs 2100</p>{" "}
-                              <p>Rs:200</p>
-                            </div>
-                          </div>
-                          <div className="flex justify-center mt-5 gap-2">
-                            <button className="bg-gray-700 w-[100px] text-white  rounded-md">
-                              450
-                            </button>
-                            <button className="bg-white border-2 border-black w-[100px] text-black rounded-md">
-                              650
-                            </button>
-                            <button className="bg-white border-2 border-black w-[100px] text-black  rounded-md">
-                              200
-                            </button>
-                          </div>
-                        </div>
-                        <div className="flex mb-5 justify-center">
-                          <button className="w-fit border text-white rounded-md bg-red-600 p-2">
-                            Add to Cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </SplideSlide>
-                );
-              })}
-            </Splide>
           </div>
         </div>
       </section>
+      <div>
+        <svg
+          preserveAspectRatio="none"
+          width="100%"
+          height="150px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#F3F6F9"
+            fillOpacity="1"
+            d="M0,160L30,160C60,160,120,160,180,144C240,128,300,96,360,74.7C420,53,480,43,540,53.3C600,64,660,96,720,117.3C780,139,840,149,900,128C960,107,1020,53,1080,74.7C1140,96,1200,192,1260,197.3C1320,203,1380,117,1410,74.7L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
     </>
   );
 }
 
-export default HomeItems;
+export default HomeItem;

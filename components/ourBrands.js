@@ -1,73 +1,33 @@
 import React from "react";
 
-function OurBrands() {
+export default function ourBrands() {
   return (
     <>
-      <div className="">
-        <p className="text-center text-4xl pt-12 mb-4 font-semibold text-black">
-         Our Brand
-        </p>
-        <div className="flex pb-20 justify-center md:container mx-auto">
-          <button className="p-8  rounded  w-64 ">
-            <div className="flex justify-center items-center text-black">
-              {" "}
-              <img
-                src="/brand/organic.jpg"
-                className="w-[100px] h-[100px]"
-                alt=""
-              />
-            </div>
-            
-          </button>
+      <div className="flex justify-center">
+        <div>
+          <div className="flex justify-center">
+            <img src="/brandlogo.png" className="h-[250px] w-[250px]" alt="" />
+          </div>
 
-          <button className="p-8  rounded  w-64 ">
-            <div className="flex justify-center items-center text-black">
-              {" "}
-              <img
-                src="/brand/cotton.jpg"
-                className="w-[100px] h-[100px]"
-                alt=""
-              />
-            </div>
-            
-          </button>
-          <button className="p-8  rounded  w-64 ">
-            <div className="flex justify-center items-center text-black">
-              {" "}
-              <img
-                src="/brand/richer.png"
-                className="w-[100px] h-[100px]"
-                alt=""
-              />
-            </div>
-            
-          </button>
-          <button className="p-8  rounded  w-64 ">
-            <div className="flex justify-center items-center text-black">
-              {" "}
-              <img
-                src="/brand/nature.png"
-                className="w-[200px] h-[100px]"
-                alt=""
-              />
-            </div>
-            
-          </button>
-          <button className="p-8  rounded  w-64 ">
-            <div className="flex justify-center items-center text-black">
-              {" "}
-              <img
-                src="/brand/organic.jpg"
-                className="w-[100px] h-[100px]"
-                alt=""
-              />
-            </div>
-            
-          </button>
+          <p
+            style={{
+              fontFamily: "Gloria Hallelujah",
+            }}
+            className="text-5xl font-bold"
+          >
+            Become A Vendor
+          </p>
+          <p className="mt-5 text-[#647887]">
+            Your Product Have Beautiful Story And It Deserve To Be Told
+          </p>
+          <div className="mt-5 flex justify-center ">
+            <button className="bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
+              List Now
+            </button>
+          </div>
         </div>
       </div>
+      
     </>
   );
 }
-
-export default OurBrands;

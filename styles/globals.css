@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
 
 html,
 body {
@@ -20,8 +20,38 @@ a {
   box-sizing: border-box;
   outline: 0;
 }
-@layer utilities{
-  bg1{
+
+@layer utilities {
+  bg1 {
     background-color: #0064b7;
   }
 }
+
+.swiper-pagination-progressbar,
+.swiper-pagination-progressbar-fill {
+  background-color: red;
+  position: relative;
+}
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical
+  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  bottom: 0;
+  position: relative;
+}
+.swiper-pagination-progressbar,
+.swiper-pagination-progressbar-fill {
+  background-color: red;
+}
+.swiper-button-next {
+  background-image: url(/next.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+

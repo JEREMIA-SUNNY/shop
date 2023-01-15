@@ -74,9 +74,9 @@ function HomeItem({ products }) {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg mb-5 ">
+                      <div className="shadow-lg rounded-3xl mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-lg shadow-sm hover:shadow">
+                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
                             <img
                               src={

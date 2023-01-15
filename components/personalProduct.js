@@ -6,21 +6,42 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-export default function personalProduct({ products }) {
+import { useState } from "react";
+export default function PersonalProduct({ products }) {
+  const [swiperRef, setSwiperRef] = useState(0);
+  const prevHandler = () => {
+    swiperRef.slidePrev();
+  };
+
+  const nextHandler = () => {
+    swiperRef.slideNext();
+  };
   // console.log(products, "ON PERSOL");
   return (
     <>
       <section className="h-[300px]">
         <div className="relative -top-96">
-          <div className=" mb-5 container mx-auto">
+          <div className=" mb-5 flex justify-between container mx-auto">
             <div className="flex   justify-between">
               <p className="w-fit p-2 text-white text-4xl">Personal Care</p>
             </div>
-            <div className=""></div>
+            <div className="flex gap-1 mt-5 mr-6">
+              <div>
+                <button onClick={prevHandler}>
+                  <img src="/icons/prev.png" alt="" />
+                </button>
+              </div>
+              <div>
+                <button onClick={nextHandler}>
+                  <img src="/icons/nextblack.png" alt="" />
+                </button>
+              </div>
+            </div>
           </div>
           <div className="md:container   md:mx-auto">
             <div className="  ">
               <Swiper
+                onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay]}
                 slidesPerView={1}
                 spaceBetween={20}
@@ -30,8 +51,7 @@ export default function personalProduct({ products }) {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
                     spaceBetween: 20,
-                    Autoplay: true,
-                    loop: true,
+
                     speed: 800,
 
                     pagination: {},
@@ -40,26 +60,23 @@ export default function personalProduct({ products }) {
                     slidesPerView: 4,
                     slidesPerGroup: 3,
                     spaceBetween: 20,
-                    Autoplay: true,
-                    loop: true,
+
                     speed: 800,
 
                     pagination: {},
                   },
                 }}
-                autoplay={true}
                 // pagination={{ clickable: true }}
-                loop={true}
-                speed={1600}
+
                 effect=""
               >
                 {products.edges.map((items, id) => {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg mb-5 ">
+                      <div className="shadow-lg rounded-3xl mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-lg shadow-sm hover:shadow">
+                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
                             <img
                               src={

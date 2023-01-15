@@ -43,7 +43,7 @@ export default function homePageOne() {
           </div>
         </div>
         <div className="flex md:container relative md:mx-auto ">
-          <div className="flex  ml-16  mt-10 gap-10">
+          <div className="flex flex-col md:flex-row ml-16  mt-10 gap-10">
             <div className="flex ">
               <div className="flex ">
                 <img src="/sec1/1.png" className="object-contain " alt="" />

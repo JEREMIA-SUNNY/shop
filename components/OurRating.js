@@ -7,7 +7,7 @@ function Ygoodpick() {
         <p className="text-center font-[BubbleRainbow] text-4xl  font-semibold text-black">
           Our Rating System
         </p>
-        <div className="flex justify-center  gap-5 items-center md:container mx-auto mb-5">
+        <div className="flex justify-center flex-col md:flex-row  gap-5 items-center md:container mx-auto mb-5">
           <div className="rounded mt-5  w-fit ">
             <div className="flex justify-center flex-col items-center">
               {" "}

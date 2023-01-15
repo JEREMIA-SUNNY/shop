@@ -18,6 +18,14 @@ function HandleProduct({ product, allProducts }) {
     easing: "cubic-bezier(0.37, 0, 0.63, 1)",
     duration: 600,
   });
+  const [swiperRef, setSwiperRef] = useState(0);
+  const prevHandler = () => {
+    swiperRef.slidePrev();
+  };
+
+  const nextHandler = () => {
+    swiperRef.slideNext();
+  };
   const blog = [
     {
       id: 1,
@@ -35,6 +43,8 @@ function HandleProduct({ product, allProducts }) {
       title: "Direction To use",
       desc: " loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl",
     },
+   
+   
   ];
   const point = [1, 2, 3, 5];
   return (
@@ -202,57 +212,9 @@ function HandleProduct({ product, allProducts }) {
                  */}
 
               <div className="mt-5">
-                {blog.map(({ id, title, desc }) => {
+                {blog.map(({ id, title, desc },index) => {
                   return (
-                    <OurBrand key={id} title={title} desc={desc} id={id} />
-                    // <div
-                    //   key={id}
-                    //   className="w-full mt-10 flex  border-t border-b flex-col"
-                    // >
-                    //   <div
-                    //     {...getToggleProps({
-                    //       onClick: () =>
-                    //         setExpanded((prevExpanded) => !prevExpanded),
-                    //     })}
-                    //     className="bg-blue  w-full  rounded flex justify-between  p-4 h-full items-center"
-                    //   >
-                    //     <span className="text-black flex text-center font-bold ">
-                    //       About
-                    //     </span>
-                    //     <div>
-                    //       {isExpanded ? (
-                    //         <BiMinus
-                    //           size={15}
-                    //           className=" text-black w- h-6 mr-4"
-                    //         />
-                    //       ) : (
-                    //         <BsPlusLg
-                    //           size={15}
-                    //           className=" text-black w- h-6 mr-4"
-                    //         />
-                    //       )}
-                    //     </div>
-                    //   </div>
-                    //   <div>
-                    //     <section {...getCollapseProps()}>
-                    //       <div className="flex">
-                    //         <div className="w-full">
-                    //           <div className="h-full p-4  pt-5 pb-5 rounded-lg border text-center ">
-                    //             Lorem ipsum dolor sit amet, consectetur
-                    //             adipisicing elit. Dolores, cupiditate ea
-                    //             dignissimos nobis tempore ut quam voluptate
-                    //             suscipit sapiente non fugiat culpa corporis
-                    //             quisquam, iure laudantium! Quae quia officia
-                    //             explicabo, possimus non adipisci eveniet
-                    //             blanditiis iste laboriosam, animi, dicta placeat
-                    //             enim aut voluptatibus. Ipsa accusamus neque et
-                    //             laudantium adipisci iste!
-                    //           </div>
-                    //         </div>
-                    //       </div>
-                    //     </section>
-                    //   </div>
-                    // </div>
+                    <OurBrand key={index} title={title} desc={desc} id={id} />
                   );
                 })}
               </div>
@@ -296,8 +258,7 @@ function HandleProduct({ product, allProducts }) {
                   slidesPerView: 1,
                   slidesPerGroup: 1,
                   spaceBetween: 20,
-                  Autoplay: true,
-                  loop: true,
+
                   speed: 800,
 
                   pagination: {},
@@ -306,17 +267,12 @@ function HandleProduct({ product, allProducts }) {
                   slidesPerView: 1,
                   slidesPerGroup: 1,
                   spaceBetween: 20,
-                  Autoplay: true,
-                  loop: true,
+
                   speed: 800,
                   pagination: {},
                 },
               }}
               autoplay={true}
-              pagination={{ clickable: true }}
-              loop={true}
-              speed={1600}
-              effect=""
             >
               <SwiperSlide>
                 <div className="md:container md:mx-auto">
@@ -356,14 +312,26 @@ function HandleProduct({ product, allProducts }) {
 
         {/* swiper of rewviewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */}
         <div className="bg-[#13456a]">
-          <div className=" py-10 mb-14 container mx-auto ">
+          <div className=" flex justify-between py-10 mb-2 container mx-auto ">
             <div className="flex   justify-between">
               <p className="w-fit p-2 text-white  text-4xl">Customer Reviews</p>
             </div>
-            <div className=""></div>
+            <div className="flex gap-1  mr-6">
+              <div>
+                <button onClick={prevHandler}>
+                  <img src="/icons/prev.png" alt="" />
+                </button>
+              </div>
+              <div>
+                <button onClick={nextHandler}>
+                  <img src="/icons/nextblack.png" alt="" />
+                </button>
+              </div>
+            </div>
           </div>
-          <div className=" mx-auto md:container pt-10 pb-10">
+          <div className=" mx-auto md:container  pb-10">
             <Swiper
+              onSwiper={(swiper) => setSwiperRef(swiper)}
               modules={[Pagination, Autoplay]}
               slidesPerView={1}
               spaceBetween={20}
@@ -373,8 +341,7 @@ function HandleProduct({ product, allProducts }) {
                   slidesPerView: 1,
                   slidesPerGroup: 1,
                   spaceBetween: 20,
-                  Autoplay: true,
-                  loop: true,
+
                   speed: 800,
 
                   pagination: {},
@@ -383,24 +350,19 @@ function HandleProduct({ product, allProducts }) {
                   slidesPerView: 3,
                   slidesPerGroup: 3,
                   spaceBetween: 20,
-                  Autoplay: true,
-                  loop: true,
+
                   speed: 800,
 
                   pagination: {},
                 },
               }}
-              autoplay={true}
-              pagination={{ clickable: true }}
-              loop={true}
-              speed={1600}
               effect=""
             >
               <div className="">
-                {blog.map(({ link, id, img, Levels, dur, mode, title }) => {
+                {point.map(({ link, id, img, Levels, dur, mode, title }) => {
                   return (
                     <SwiperSlide key={id}>
-                      <div className="min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1 py-4 justify-between  px-8   rounded-lg overflow-hidden text-center relative">
+                      <div className="min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1  justify-between  px-8   rounded-lg overflow-hidden text-center relative">
                         <div className="p-5">
                           <p className="mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipisicing

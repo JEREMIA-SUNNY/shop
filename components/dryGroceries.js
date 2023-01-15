@@ -69,9 +69,17 @@ function DryGroceries({ products }) {
                 spaceBetween={20}
                 slidesPerGroup={1}
                 breakpoints={{
+                  350: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+
+                    speed: 800,
+
+                    pagination: {},
+                  },
                   769: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
                     spaceBetween: 20,
 
                     speed: 800,
@@ -93,9 +101,9 @@ function DryGroceries({ products }) {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg mb-5 ">
+                      <div className="shadow-lg rounded-3xl mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-lg shadow-sm hover:shadow">
+                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
                             <img
                               src={

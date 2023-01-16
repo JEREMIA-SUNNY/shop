@@ -64,9 +64,9 @@ export default function Educations() {
 
   return (
     <>
-      <section className="text-black  bg-[#FDF8F2]   body-font   ">
+      <section className="text-title  bg-[#FDF8F2]   body-font   ">
         <div className="pt-4 flex mb-5 justify-between mx-auto md:container">
-          <p className="text-2xl  mb-5">Meet The Maker</p>
+          <p className="text-4xl text-[#23313B]  mb-5">Meet The Maker</p>
 
           <div className="flex gap-1  mr-6">
             <div>
@@ -115,10 +115,10 @@ export default function Educations() {
                 return (
                   <SwiperSlide key={id}>
                     <div className="min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1 py-4 justify-between bg-opacity-75 px-8   rounded-lg overflow-hidden text-center relative">
-                      <div className="border w-full transition duration-150 ease-out hover:ease-in hover:opacity-50">
+                      <div className=" w-full ">
                         <img
                           src="/maker/coffee1.jpg"
-                          className=" w-full max-h-[300px]"
+                          className=" w-full object-cover max-h-[300px]"
                           alt=""
                         />
                       </div>

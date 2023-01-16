@@ -19,7 +19,7 @@ function DryGroceries({ products }) {
   };
   return (
     <>
-      <section className="h-[600px]">
+      <section className=" h-[600px]">
         <div className="">
           {/* <img className="w-screen" src="/blue1.png" alt="" /> */}
 
@@ -101,21 +101,57 @@ function DryGroceries({ products }) {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg rounded-3xl mb-5 ">
+                      <div className=" p-2 rounded-3xl md:mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
+                        <div className="flex flex-col  transition duration-300 h-72 md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
+                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
+                              <div className="flex gap-2 justify-center ">
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/1.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/2.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/3.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/4.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
                             <img
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-80 rounded-2xl"
+                              className="object-cover  w-full h-40 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-black absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] shadow-2xl bg-white text-[#BD2B23] absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
-                                  Buy
+                                  BUY
                                 </Link>
                               </button>
                             </div>
@@ -129,7 +165,7 @@ function DryGroceries({ products }) {
                               <p className="text-sm text-center text-gray-900">
                                 Extra long product name
                               </p>
-                              <div className="mt-1 text-center mb-4 mr-1 text-xl font-bold ">
+                              <div className="mt-1 text-center font-notosans mb-4 mr-1 text-xl font-bold ">
                                 Rs{" "}
                                 {product.node.priceRange.minVariantPrice.amount}
                               </div>
@@ -143,8 +179,8 @@ function DryGroceries({ products }) {
               </Swiper>
             </div>
             <div className="flex justify-center bg-[#13456aa]">
-              <button className="h-[40px] mt-4  mb-10 px-4 border rounded-3xl border-black bg-white">
-                See all Products
+              <button className="h-[40px] md:mt-4  mb-10 px-4 border rounded-3xl border-black bg-white">
+                VIEW ALL PRODUCTS
               </button>{" "}
             </div>
           </div>

@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { useState } from "react";
+import Link from "next/link";
 export default function PersonalProduct({ products }) {
   const [swiperRef, setSwiperRef] = useState(0);
   const prevHandler = () => {
@@ -86,7 +87,7 @@ export default function PersonalProduct({ products }) {
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-black absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] shadow-2xl bg-white text-title absolute top-[90%] rounded-3xl = p-2">
                                 Buy
                               </button>
                             </div>
@@ -113,26 +114,23 @@ export default function PersonalProduct({ products }) {
                 })}
               </Swiper>
             </div>
-            <div className="flex justify-center bg-[#13456aa]">
-              <button className="h-[40px] mt-4  px-4 border rounded-3xl border-black bg-white">
-                See all Products
-              </button>{" "}
-            </div>
           </div>
         </div>
       </section>
-      <div className="md:container border  md:mx-auto">
-        <div className="flex justify-between">
+      <div className="md:container  md:mx-auto">
+        <div className="flex md:flex-row flex-col justify-between">
           <div>
-            <p>Know the Brand</p>
-            <p>Sun Mud</p>
-            <p>
+            <p className="text-title text-2xl font-semibold">Know the Brand</p>
+            <p className="text-[#23313B] mt-6 text-xl font-semibold">Sun Mud</p>
+            <p className="text-subtext md:w-[700px] mt-5">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-              dolore.
+              dolore. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Tenetur, dolore. Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Tenetur, dolore.
             </p>
           </div>
-          <div className="flex justify-center">
-            <img src="/forest.jpg" className="w-[700px]" alt="" />
+          <div className="flex  justify-center">
+            <img src="/forest.jpg" className="w-[700px] rounded-md" alt="" />
           </div>
         </div>
       </div>

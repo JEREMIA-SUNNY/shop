@@ -13,7 +13,7 @@ export default function ourBrands() {
             style={{
               fontFamily: "Gloria Hallelujah",
             }}
-            className="text-5xl font-bold"
+            className="text-5xl text-center font-bold"
           >
             Become A Vendor
           </p>
@@ -21,7 +21,7 @@ export default function ourBrands() {
             Your Product Have Beautiful Story And It Deserve To Be Told
           </p>
           <div className="mt-5 flex justify-center ">
-            <button className="bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
+            <button className="bg-[#BD2B23] text-white px-12 py-2 rounded-3xl">
               List Now
             </button>
           </div>

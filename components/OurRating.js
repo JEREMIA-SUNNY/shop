@@ -4,7 +4,13 @@ function Ygoodpick() {
   return (
     <>
       <div className="bg-">
-        <p className="text-center font-[BubbleRainbow] text-4xl  font-semibold text-black">
+        <p
+          style={{
+            fontFamily: "Fuzzy Bubbles",
+            fontSize: "60px",
+          }}
+          className="text-center  text-4xl  font-bold text-[#23313B]"
+        >
           Our Rating System
         </p>
         <div className="flex justify-center flex-col md:flex-row  gap-5 items-center md:container mx-auto mb-5">
@@ -62,7 +68,7 @@ function Ygoodpick() {
         </p>
       </div>
       <div className="bg-">
-        <p className="text-center text-4xl pt-12 mb-4 font-semibold text-black">
+        <p className="text-center text-4xl pt-12 mb-4 font-semibold text-[#23313B]">
           What Does Good Means
         </p>
         <div className="flex md:flex-row flex-col justify-center  gap-5 items-center md:container mx-auto mb-5">
@@ -70,7 +76,7 @@ function Ygoodpick() {
             <div className="flex justify-center  items-center">
               {" "}
               <img src="/rating/health.png" className="" alt="" />
-              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-black">
+              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-title">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti, mollitia.
               </button>
@@ -81,7 +87,7 @@ function Ygoodpick() {
             <div className="flex justify-center  items-center">
               {" "}
               <img src="/rating/eco.png" className="" alt="" />
-              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-black">
+              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-title">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti, mollitia.
               </button>
@@ -91,7 +97,7 @@ function Ygoodpick() {
             <div className="flex justify-center  items-center">
               {" "}
               <img src="/rating/social.png" className="" alt="" />
-              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-black">
+              <button className=" w-44 mt-5 text-xs  rounded-3xl p-2 text-title">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti, mollitia.
               </button>
@@ -99,8 +105,8 @@ function Ygoodpick() {
           </div>
         </div>
         <div className="flex mb-14 justify-center">
-          <button className="w-fit bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
-            Find Out Now
+          <button className="w-fit text-sm bg-[#BD2B23] text-white px-8 py-2 rounded-3xl">
+            FIND OUT HOW
           </button>
         </div>
       </div>

@@ -7,22 +7,24 @@ export default function Contact() {
     handleSubmit,
     formState: { errors },
     reset,
-    watch
+    watch,
   } = useForm({
-    mode:"onChange",
-    
+    mode: "onChange",
   });
- const [message,setMessage]=useState(false)
- const isButtonVisble=watch("name") && watch("email") && watch("phone") && watch("interest") && watch("info")
- 
- 
- 
+  const [message, setMessage] = useState(false);
+  const isButtonVisble =
+    watch("name") &&
+    watch("email") &&
+    watch("phone") &&
+    watch("interest") &&
+    watch("info");
+
   const submit = handleSubmit(async (data) => {
     const { name, email, phone, interest, info } = data;
     try {
       const response = await fetch(
         "s",
-        
+
         {
           method: "POST",
           headers: {},
@@ -36,37 +38,28 @@ export default function Contact() {
           }),
         }
       );
-      if (response.status===200) {
-          reset({
-            name:"",
-            phone:"",
-            email:"",
-            interest:"",
-            info:"",
-            
-          }
+      if (response.status === 200) {
+        reset({
+          name: "",
+          phone: "",
+          email: "",
+          interest: "",
+          info: "",
+        });
 
-          )
-          
-          setMessage(true)
-      }
-      else{
-        throw Error("Error while sending message")
+        setMessage(true);
+      } else {
+        throw Error("Error while sending message");
       }
     } catch (error) {
       alert("Some thing went wrong");
     }
-
   });
 
-  return (
-    <>
-      
-    </>
-  );
+  return <></>;
 }
 {
-  /* <button className={`w-32 mt-6 bg-orange text-black font-bold text-xs   p-3 rounded-sm transition-all ${name && email && phone && info && interest?"opacity-100":"opacity-25"}`}>
+  /* <button className={`w-32 mt-6 bg-orange text-title font-bold text-xs   p-3 rounded-sm transition-all ${name && email && phone && info && interest?"opacity-100":"opacity-25"}`}>
 SEND
 </button> */
 }

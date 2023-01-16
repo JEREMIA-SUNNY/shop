@@ -21,12 +21,14 @@ function CoursesCard({ id, title, desc }) {
           })}
           className="bg-blue  w-full  rounded flex justify-between  p-4 h-full items-center"
         >
-          <span className="text-black flex text-center font-bold ">{title}</span>
+          <span className="text-subtext flex text-center font-bold ">
+            {title}
+          </span>
           <div>
             {isExpanded ? (
-              <BiMinus size={15} className=" text-black w- h-6 mr-4" />
+              <BiMinus size={15} className=" text-title w- h-6 mr-4" />
             ) : (
-              <BsPlusLg size={15} className=" text-black w- h-6 mr-4" />
+              <BsPlusLg size={15} className=" text-title w- h-6 mr-4" />
             )}
           </div>
         </div>

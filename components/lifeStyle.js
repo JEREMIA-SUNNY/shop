@@ -4,23 +4,23 @@ import React from "react";
 export default function LifeStyle() {
   return (
     <>
-      <Head>
-        <link
-          href="https://fonts.cdnfonts.com/css/bubble-rainbow"
-          rel="stylesheet"
-        />
-      </Head>
       <div className="py-10">
-        <p className="text-black text-3xl  text-center">
-          Conscious Products that dont break your monthly budget
+        <p
+          style={{
+            fontFamily: "Fuzzy Bubbles",
+            fontSize: "40px",
+          }}
+          className="text-[#23313B]  text-3xl  text-center"
+        >
+          Conscious Products that dont break <br /> your monthly budget
         </p>
-        <p className="text-black mt-2 text-center">
+        <p className="text-[#647887] font-sans mt-4 text-center">
           {" "}
-          we dont charge any sale commisions to our vendor they pass on to
-          discout
+          we dont charge any sale commisions to our vendor <br /> they pass on
+          to discount to you
         </p>
         <div className="flex justify-center mt-5">
-          <button className="bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
+          <button className="bg-[#BD2B23] text-white text-sm px-12 py-2 rounded-3xl">
             SHOP NOW
           </button>
         </div>
@@ -43,11 +43,13 @@ export default function LifeStyle() {
             className="transition-all duration-300 ease-in-out delay-150 path-0"
           ></path>
         </svg> */}
-        <svg 
-         width="100%"
-         height="250px"
-         preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg
+          width="100%"
+          height="250px"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
           <path
             fill="#FDF8F2"
             fillOpacity="1"

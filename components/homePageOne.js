@@ -30,7 +30,7 @@ export default function homePageOne() {
               style={{
                 fontFamily: "Gloria Hallelujah",
               }}
-              className="text-left  font-[Gloria Hallelujah] font-semibold text-5xl ml-20"
+              className="text-left text-[#23313B] font-[Gloria Hallelujah] font-bold text-5xl ml-20"
             >
               Use Your Power To Pick
             </p>
@@ -38,7 +38,7 @@ export default function homePageOne() {
               Healthy products You Can afford and verify
             </p>
             <button className="w-fit ml-20  mb-20 bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
-              Shop Now
+             SHOP NOW
             </button>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function homePageOne() {
             <Splide
               options={{
                 arrows: true,
-                isNavigation:false,
+                isNavigation: false,
                 perPage: 1,
                 // gap: "",
                 // padding: "",

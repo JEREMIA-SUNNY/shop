@@ -59,11 +59,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="text-black md:pt-14 md:pb-10 pt-7 pb-5  bg-white body-font">
+    <section className="text-title md:pt-14 md:pb-10 pt-7 pb-5  bg-white body-font">
       <div className="container px-5  mx-auto">
         <div className="flex gap-4 justify-center mb-10">
           <span className="inline-block w-20 h-[2px] mt-5 rounded-full bg-black"></span>
-          <h1 className="text-3xl capitalize lg:text-4xl text-black  text-center">
+          <h1 className="text-3xl capitalize lg:text-4xl text-title  text-center">
             Testimonials
           </h1>
           <span className="inline-block w-20 h-[2px] rounded-full mt-5 bg-black"></span>
@@ -83,9 +83,7 @@ export default function Testimonials() {
                 loop: true,
                 speed: 800,
 
-                pagination: {
-                 
-                },
+                pagination: {},
               },
               1024: {
                 slidesPerView: 4,
@@ -95,9 +93,7 @@ export default function Testimonials() {
                 loop: true,
                 speed: 800,
 
-                pagination: {
-                 
-                },
+                pagination: {},
               },
             }}
             autoplay={true}
@@ -119,11 +115,10 @@ export default function Testimonials() {
                     </div>
 
                     <div>
-                      <p className="text-black text-center mt-14 ">{text}</p>
+                      <p className="text-title text-center mt-14 ">{text}</p>
                     </div>
                   </div>
                   <div>
-                    
                     <p className="text-center  mt-4">{company}</p>
                     <p className="text-center text-sm">{position}</p>
                   </div>

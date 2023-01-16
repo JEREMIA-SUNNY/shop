@@ -43,8 +43,6 @@ function HandleProduct({ product, allProducts }) {
       title: "Direction To use",
       desc: " loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl",
     },
-   
-   
   ];
   const point = [1, 2, 3, 5];
   return (
@@ -52,7 +50,7 @@ function HandleProduct({ product, allProducts }) {
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-12 mx-auto">
           <div className="lg:w-4/5  md:container md:mx-auto flex flex-wrap">
-            <div className="lg:w-[45%] w-full lg:h-fit h-64">
+            <div className="lg:w-[45%] w-full h-fit ">
               <Swiper
                 pagination={{
                   type: "progressbar",
@@ -98,12 +96,12 @@ function HandleProduct({ product, allProducts }) {
                   <a className="text-gray-500">Games</a>
                 </span>
               </div>
-              <p className="leading-relaxed overflow-hidden text-ellipsis h-32">
+              <p className="leading-relaxed text-subtext overflow-hidden text-ellipsis h-32">
                 {product.description}
               </p>
               <div className="flex flex-col mt-3 border-black ">
                 <div className="flex">
-                  <span className="title-font font-medium text-2xl text-gray-900">
+                  <span className="title-font font-medium text-2xl text-title">
                     {product.priceRange.minVariantPrice.amount}
                   </span>
                 </div>
@@ -112,7 +110,7 @@ function HandleProduct({ product, allProducts }) {
                 <div className="flex gap-5 mt-4  items-center">
                   <span className="border-b w-[100px]  ">1234856</span>
                   <div className="">
-                    <button className="border-2 border-black p-2 text-black rounded-3xl">
+                    <button className="border-2 border-black p-2 text-title rounded-3xl">
                       Check Availability
                     </button>
                   </div>
@@ -180,14 +178,14 @@ function HandleProduct({ product, allProducts }) {
                 </div>
                 {/* item grammmm buttton................................. */}
                 <div className="flex gap-2 py-2">
-                  <button className="border border-black px-5 text-black rounded-md">
+                  <button className="border border-black px-5 text-title rounded-md">
                     {" "}
                     300g
                   </button>
-                  <button className="border border-black  px-5 text-black rounded-md">
+                  <button className="border border-black  px-5 text-title rounded-md">
                     200g
                   </button>
-                  <button className="border border-black  px-5 text-black rounded-md">
+                  <button className="border border-black  px-5 text-title rounded-md">
                     100g
                   </button>
                 </div>
@@ -212,7 +210,7 @@ function HandleProduct({ product, allProducts }) {
                  */}
 
               <div className="mt-5">
-                {blog.map(({ id, title, desc },index) => {
+                {blog.map(({ id, title, desc }, index) => {
                   return (
                     <OurBrand key={index} title={title} desc={desc} id={id} />
                   );
@@ -364,7 +362,7 @@ function HandleProduct({ product, allProducts }) {
                     <SwiperSlide key={id}>
                       <div className="min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1  justify-between  px-8   rounded-lg overflow-hidden text-center relative">
                         <div className="p-5">
-                          <p className="mt-4">
+                          <p className="mt-4 text-subtext text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Nostrum saepe eum blanditiis beatae nam fugit
                             sunt consequatur, at iure qui fuga maxime voluptate

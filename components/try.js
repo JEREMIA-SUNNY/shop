@@ -130,10 +130,10 @@ function Trying() {
                       <button className="bg-gray-700 w-[100px] text-white  rounded-md">
                         450
                       </button>
-                      <button className="bg-white border-2 border-black w-[100px] text-black rounded-md">
+                      <button className="bg-white border-2 border-black w-[100px] text-title rounded-md">
                         650
                       </button>
-                      <button className="bg-white border-2 border-black w-[100px] text-black  rounded-md">
+                      <button className="bg-white border-2 border-black w-[100px] text-title  rounded-md">
                         200
                       </button>
                     </div>

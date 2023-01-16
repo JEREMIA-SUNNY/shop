@@ -16,7 +16,6 @@ import HomePageOne from "../components/homePageOne";
 
 export default function Home({ products }) {
   // console.log(products)
- 
 
   return (
     <>

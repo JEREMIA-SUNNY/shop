@@ -11,11 +11,11 @@ function ourStory() {
           src="/carosel/orange.jpg"
           alt=""
         />
-        <div className="absolute right-0 opacity-40 top-0 bottom-0 bg-white text-black border w-[730px] rounded-l-full"></div>
-        <div className="absolute right-0 top-0 bottom-0 bg-white text-black border w-[700px] rounded-l-full">
+        <div className="absolute right-0 opacity-40 top-0 bottom-0 bg-white text-title border w-[730px] rounded-l-full"></div>
+        <div className="absolute right-0 top-0 bottom-0 bg-white text-title border w-[700px] rounded-l-full">
           <div className="flex justify-center flex-col items-center mt-52">
             <div>
-              <p className="text-black text-left text-4xl font-semibold">
+              <p className="text-title text-left text-4xl font-semibold">
                 Know Our story
                 <br /> &mission
               </p>

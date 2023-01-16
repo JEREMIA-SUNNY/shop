@@ -24,9 +24,9 @@ function HomeCare({ products }) {
           <div className="md:container  md:mx-auto">
             <div className="flex justify-between py-10 mb-5 container ">
               <div className="flex   justify-between">
-                <p className="w-fit p-2 text-black  text-4xl">Home Care</p>
+                <p className="w-fit p-2 text-[#23313B] text-4xl">Home Care</p>
               </div>
-              <div className="flex gap-1 mt-5 mr-6">
+              <div className="flex  gap-1 mt-5 mr-6">
                 <div>
                   <button onClick={prevHandler}>
                     <img src="/icons/prevblack.png" alt="" />
@@ -75,6 +75,43 @@ function HomeCare({ products }) {
                         {" "}
                         <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
+                          <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
+                              <div className="flex gap-2 justify-center ">
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/1.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/2.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/3.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/4.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                           
                             <img
                               src={
                                 product.node.images.edges[0].node.transformedSrc
@@ -83,9 +120,9 @@ function HomeCare({ products }) {
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-black absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] shadow-2xl bg-white text-[#BD2B23] absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
-                                  Buy
+                                  BUY
                                 </Link>
                               </button>
                             </div>
@@ -96,7 +133,7 @@ function HomeCare({ products }) {
                                 {" "}
                                 {product.node.title}
                               </div>
-                              <p className="text-sm text-center text-gray-900">
+                              <p className="text-sm text-center  text-gray-900">
                                 Extra long product name
                               </p>
                               <div className="mt-1 text-center mb-4 mr-1 text-xl font-bold ">
@@ -114,7 +151,7 @@ function HomeCare({ products }) {
             </div>
             <div className="flex justify-center bg-[#13456aa]">
               <button className="h-[40px] mt-4  px-4 border rounded-3xl border-black bg-white">
-                See all Products
+                VIEW ALL PRODUCTS
               </button>{" "}
             </div>
           </div>

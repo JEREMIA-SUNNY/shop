@@ -185,45 +185,27 @@ export default function Layout({ children }) {
             <div className="text-sm p-4 md:p-0 pl-6 ">
               <p className="font-semibold text-white">About</p>
               <p className=" text-white">Our Story</p>
-              <p className=" text-white">Our calcl</p>
-              <p className=" text-white">Verificaion process</p>
+              <p className=" text-white">About Calculator</p>
+              <p className=" text-white">Verification process</p>
               <p className=" text-white">Expert List</p>
             </div>
 
             <div className="text-sm text-white p-4 md:p-0 ">
-              <p className="font-semibold">cms CARE</p>
-              <p className="">+gfhfdgh</p>
-              <p className="">hgfhgfhgfhgfhf</p>
+              <p className="font-semibold">Customer Care</p>
+              <p className="">Raise Ticket For Issue</p>
+              <p className="">Payment Issue</p>
+              <p className="">Shipping Issue</p>
+              <p className="">Refunds</p>
+              <p className="">Return Tracks</p>
             </div>
 
-            <div className="text-sm flex text-white flex-col p-4 pl-6 md:p-0 ">
-              <Link href="/about">
-                <a>fghfgh</a>
-              </Link>
-              <Link href="/services">
-                <a>fhgfhgfh</a>
-              </Link>
-              <Link href="/products">
-                <a>gfhgfh</a>
-              </Link>
-              <Link href="/team">
-                <a>fghfghgfh</a>
-              </Link>
-            </div>
-
-            <div className="text-sm flex text-white flex-col p-4 md:p-0 ">
-              <Link href="/strengths">
-                <a>hgffhgfh</a>
-              </Link>
-              <Link href="/facilities">
-                <a>dgdfgdfg</a>
-              </Link>
-              <Link href="/customers">
-                <a>dgfdfgdfgdfg</a>
-              </Link>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
+            <div className="text-sm text-white p-4 md:p-0 ">
+              <p className="font-semibold">Policies</p>
+              <p className="">Shipping</p>
+              <p className="">Privacy</p>
+              <p className="">Company Details</p>
+              <p className="">Refunds</p>
+              <p className="">Return Tracks</p>
             </div>
 
             <div className="col-span-2 p-4 md:p-0 pl-6 ">
@@ -557,7 +539,7 @@ export default function Layout({ children }) {
 //               </a>
 //             </Link> */}
 //             {/* <div className="lg:pl-2 lg:flex  text-center  py-3 flex-col justify-center ">
-//               <span className="text-sm font-bold text-black capitalize">
+//               <span className="text-sm font-bold text-title capitalize">
 //                 {` LET'S TRANSFORM`}
 //               </span>
 //             </div> */}
@@ -763,7 +745,7 @@ export default function Layout({ children }) {
 //             </div>
 //           </div>
 //           <div className=" md:w-fit w-full  lg:p-0 pl-6 mr-6 mb-2 ">
-//             <p className="font-semibold md:mt-0 mt-5 text-sm pb-2 font-bah  text-black text-center md:text-center">
+//             <p className="font-semibold md:mt-0 mt-5 text-sm pb-2 font-bah  text-title text-center md:text-center">
 //               FIND US ON
 //             </p>
 //             <div className="md:mt-0 mt-5 grid-cols-4 gap-2 flex justify-center lg:inline-grid  ">
@@ -849,7 +831,7 @@ export default function Layout({ children }) {
 //           </div>
 //         </div>
 
-//         <div className="mx-auto  text-center  text-sm text-black font-bah pt-4 lg:pt-8 lg:p-0 p-4 pl-6">
+//         <div className="mx-auto  text-center  text-sm text-title font-bah pt-4 lg:pt-8 lg:p-0 p-4 pl-6">
 //           <p>
 //             Copyright © 2022. All Rights Reserved. Designed by Deedbee Social
 //             Ventures.

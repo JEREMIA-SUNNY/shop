@@ -106,7 +106,7 @@ function Homeslider({ products }) {
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-black absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] shadow-2xl bg-white text-title absolute top-[90%] rounded-3xl = p-2">
                                 Buy
                               </button>
                             </div>

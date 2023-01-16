@@ -74,7 +74,7 @@ export default function homePageOne() {
           </div>
         </div>
         <div className="md:h-[20px]">
-          <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] md:w-[500px] overflow-hidden border justify-center">
+          <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden border justify-center">
             <Splide
               options={{
                 arrows: true,

@@ -13,7 +13,7 @@ export default function Layout({ children }) {
     },
 
     {
-      name: "our product",
+      name: "Dry Groceries",
       path: "/ourproduct",
       // sub: [
       //   { name: "IT Services", path: "/solutions/itservices" },
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
       // ],
     },
     {
-      name: "our brand",
+      name: "Home Care",
       path: "/ourbrand",
 
       // sub: [
@@ -37,11 +37,11 @@ export default function Layout({ children }) {
       // ],
     },
     {
-      name: "Your Concious",
+      name: "Personal Care",
       path: "/concious",
     },
     {
-      name: "About",
+      name: "| We care About Earth",
       path: "/about",
       // sub: [
       //   { name: "Who We Are", path: "/about#WhoWe-Are" },
@@ -50,16 +50,16 @@ export default function Layout({ children }) {
       // ],
     },
 
-    {
-      name: "contact us",
-      path: "/contact",
-    },
+    // {
+    //   name: "contact us",
+    //   path: "/contact",
+    // },
   ];
 
   return (
     <>
       <Head>
-        <title>Madhur Pharma</title>
+        <title>Good Picks</title>
       </Head>
 
       <header className="">
@@ -142,6 +142,7 @@ export default function Layout({ children }) {
           </nav>
 
           <div className="flex gap-5">
+            <img src="/icons/search.gif" className="w-[30px] h-[30px]" alt="" />
             <img src="/icons/store.gif" className="w-[30px] h-[30px]" alt="" />
             <button>Login</button>
           </div>

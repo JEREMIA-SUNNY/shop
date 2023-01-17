@@ -1,6 +1,6 @@
 import React from "react";
 import { storefront } from "../../util";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -222,7 +222,6 @@ function HandleProduct({ product, allProducts }) {
         </div>
       </section>
       <div>
-      
         {/* swiper of mapppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp */}
         <KnowtheStory />
         {/* swiper of rewviewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */}

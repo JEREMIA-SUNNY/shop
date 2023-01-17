@@ -9,7 +9,7 @@ function Ygoodpick() {
             fontFamily: "Fuzzy Bubbles",
             fontSize: "60px",
           }}
-          className="text-center  text-4xl  font-bold text-[#23313B]"
+          className="text-center  text-4xl  font-extrabold text-title "
         >
           Our Rating System
         </p>
@@ -61,7 +61,7 @@ function Ygoodpick() {
             </div>
           </div>
         </div>
-        <p className="text-center mb-10">
+        <p className="text-center font-notosans font-normal mb-10">
           {" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           cumque adipisci voluptatum.

@@ -19,18 +19,17 @@ export default function Home({ products }) {
 
   return (
     <>
-      <section>
+      {/* <section>
         <HomePageOne />
       </section>
-      {/* <Trying/> */}
-      {/* <Discoverourpick /> */}
+    
       <DryGroceries products={products} />
       <HomeItems products={products} />
       <OurRating />
       <HomeCare products={products} />
       <LifeStyle />
       <HomeSlider2 />
-      <OurBrands />
+      <OurBrands /> */}
       {/* <OurStory />
         <Community />  */}
 

@@ -11,12 +11,13 @@ module.exports = {
 
         orange: "#ffb511",
         coustom1: "#f7f5f0",
+        buttonRed: "#BD2B23",
         subtext: "#647887",
         title: "#23313B",
       },
       fontFamily: {
         notosans: "Noto Sans",
-        notosansmediu: "Noto Sans",
+        fuzzyBubbles: "Fuzzy Bubbles",
       },
       screens: {
         "3xl": "104 0px",

@@ -34,7 +34,7 @@ export default function homePageOne() {
             >
               Use Your Power To Pick
             </p>
-            <p className="text-left mt-4 text-slate-500 mb-4 ml-20 ">
+            <p className="text-left mt-4 text-subtext font-notosans font-medium mb-4 ml-20 ">
               Healthy products You Can afford and verify
             </p>
             <button className="w-fit ml-20  mb-20 bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
@@ -43,7 +43,7 @@ export default function homePageOne() {
           </div>
         </div>
         <div className="flex md:container relative md:mx-auto ">
-          <div className="flex flex-col md:flex-row ml-16  mt-10 gap-10">
+          <div className="flex flex-col md:flex-row ml-16 text-subtext font-notosans font-normal   mt-10 gap-10">
             <div className="flex ">
               <div className="flex ">
                 <img src="/sec1/1.png" className="object-contain " alt="" />
@@ -74,7 +74,43 @@ export default function homePageOne() {
           </div>
         </div>
         <div className=" lg:block lg:block flex justify-center rounded-full lg:h-[20px]">
-          <div className="flex  lg:relative lg:-top-[500px] lg:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
+          <div className="flex  lg:relative bg-[#FDF8F2] lg:-top-[500px] lg:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
+            <div className="lg:flex z-[100] hidden absolute bg-white rounded-full px-8 py-5 mt-[70%] ml-[5%] ">
+              <div className="flex gap-2 justify-center ">
+                <div>
+                  {" "}
+                  <img
+                    src="/rating/1.png"
+                    className="w-[30px] h-[30px]"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  {" "}
+                  <img
+                    src="/rating/2.png"
+                    className="w-[30px] h-[30px]"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  {" "}
+                  <img
+                    src="/rating/3.png"
+                    className="w-[30px] h-[30px]"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  {" "}
+                  <img
+                    src="/rating/4.png"
+                    className="w-[30px] h-[30px]"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
             <Swiper
               modules={[Pagination, Autoplay, Navigation]}
               slidesPerView={1}
@@ -108,7 +144,6 @@ export default function homePageOne() {
               }}
               pagination={{ clickable: true }}
               effect=""
-              autoplay={true}
             >
               <SwiperSlide className="">
                 <div className=" rounded-full">

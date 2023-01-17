@@ -1,6 +1,6 @@
 import React from "react";
 import { storefront } from "../util";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -43,15 +43,23 @@ export default function PersonalProduct({ products }) {
             <div className="  ">
               <Swiper
                 onSwiper={(swiper) => setSwiperRef(swiper)}
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, Autoplay, Navigation]}
                 slidesPerView={1}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerGroup={1}
                 breakpoints={{
+                  350: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+
+                    speed: 800,
+
+                    pagination: {},
+                  },
                   769: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 10,
 
                     speed: 800,
 
@@ -60,35 +68,70 @@ export default function PersonalProduct({ products }) {
                   1024: {
                     slidesPerView: 4,
                     slidesPerGroup: 3,
-                    spaceBetween: 20,
-
+                    spaceBetween: 10,
                     speed: 800,
-
                     pagination: {},
                   },
                 }}
                 // pagination={{ clickable: true }}
-
                 effect=""
               >
                 {products.edges.map((items, id) => {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg rounded-3xl mb-5 ">
+                      <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
+                        <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
+                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
+                              <div className="flex gap-2 justify-center ">
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/1.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/2.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/3.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  {" "}
+                                  <img
+                                    src="/rating/4.png"
+                                    className="w-[30px] h-[30px]"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
                             <img
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-80 rounded-2xl"
+                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-title absolute top-[90%] rounded-3xl = p-2">
-                                Buy
+                              <button className="w-[100px] shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
+                                <Link href={`/products/${product.node.handle}`}>
+                                  BUY
+                                </Link>
                               </button>
                             </div>
                           </div>
@@ -101,7 +144,7 @@ export default function PersonalProduct({ products }) {
                               <p className="text-sm text-center text-gray-900">
                                 Extra long product name
                               </p>
-                              <div className="mt-1 text-center mb-4 mr-1 text-xl font-bold ">
+                              <div className="mt-1 text-center font-notosans mb-4 mr-1 text-xl font-bold ">
                                 Rs{" "}
                                 {product.node.priceRange.minVariantPrice.amount}
                               </div>

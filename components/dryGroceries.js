@@ -149,7 +149,7 @@ function DryGroceries({ products }) {
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-[#BD2B23] absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
                                   BUY
                                 </Link>

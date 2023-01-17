@@ -2,9 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Layout({ children }) {
   const { pathname } = useRouter();
+  const [navbr, setNavbr] = useState(false);
+  const [view, setView] = useState(false);
+  const [svgstyle, setSvgStyle] = useState(false);
 
   const menu = [
     {
@@ -112,10 +116,17 @@ export default function Layout({ children }) {
             ))}
           </nav>
 
-          <nav className="block md:hidden mr-2 p-2 relative group">
+          <nav className="flex md:hidden  p-2 relative group">
             <svg
+              onClick={() => {
+                setView((prev) => !prev), setSvgStyle((prev) => !prev);
+              }}
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className={`${
+                svgstyle
+                  ? "h-5 w-5 transform group-hover:-rotate-90 transition duration-150 ease-in-out"
+                  : "h-5 w-5 transform group-hover:-rotate-0 transition duration-150 ease-in-out"
+              }`}
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -126,22 +137,29 @@ export default function Layout({ children }) {
               />
             </svg>
 
-            <div className="bg-transparent w-auto absolute top-6 right-0 flex-col z-50 rounded-sm invisible group-active:visible group-hover:visible transition-all">
-              <div className="pt-4 w-auto">
-                <div className="w-full shadow-md">
-                  {menu.map(({ name, path }, index) => (
-                    <Link key={index} href={path}>
-                      <a className="w-48 hover:font-bold px-4 bg-white inline-flex p-2 normal-case text-md whitespace-nowrap border-b border-t border-zinc-100">
-                        {name}
-                      </a>
-                    </Link>
-                  ))}
+            {view && (
+              <div className="bg-transparent w-auto absolute top-6 flex-col z-50 rounded-sm invisible group-active:visible group-hover:visible transition-all">
+                <div className="pt-4 w-auto">
+                  <div className="w-full shadow-md">
+                    {menu.map(({ name, path }, index) => (
+                      <Link tabIndex={1} key={index} href={path}>
+                        <a
+                          onClick={() => {
+                            setView(false), setSvgStyle(false);
+                          }}
+                          className="w-full hover:font-bold px-4 bg-white inline-flex p-2 normal-case text-md whitespace-nowrap border-b border-t border-zinc-100"
+                        >
+                          {name}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </nav>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 md:mr-0 mr-5">
             <img src="/icons/search.gif" className="w-[30px] h-[30px]" alt="" />
             <img src="/icons/store.gif" className="w-[30px] h-[30px]" alt="" />
             <button>Login</button>

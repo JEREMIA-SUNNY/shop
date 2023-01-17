@@ -13,7 +13,7 @@ function Ygoodpick() {
         >
           Our Rating System
         </p>
-        <div className="flex justify-center flex-col md:flex-row  gap-5 items-center md:container mx-auto mb-5">
+        <div className="md:flex grid grid-cols-2 place-items-center justify-center flex-col md:flex-row  gap-5 items-center md:container mx-auto mb-5">
           <div className="rounded mt-5  w-fit ">
             <div className="flex justify-center flex-col items-center">
               {" "}

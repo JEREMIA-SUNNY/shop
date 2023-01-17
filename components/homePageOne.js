@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -38,7 +38,7 @@ export default function homePageOne() {
               Healthy products You Can afford and verify
             </p>
             <button className="w-fit ml-20  mb-20 bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
-             SHOP NOW
+              SHOP NOW
             </button>
           </div>
         </div>
@@ -73,46 +73,71 @@ export default function homePageOne() {
             </div>
           </div>
         </div>
-        <div className="md:h-[20px]">
-          <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden border justify-center">
-            <Splide
-              options={{
-                arrows: true,
-                isNavigation: false,
-                perPage: 1,
-                // gap: "",
-                // padding: "",
+        <div className=" rounded-full md:h-[20px]">
+          <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
+            <Swiper
+              modules={[Pagination, Autoplay, Navigation]}
+              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerGroup={1}
+              breakpoints={{
+                350: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+
+                  speed: 800,
+
+                  pagination: {},
+                },
+                769: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+
+                  speed: 800,
+
+                  pagination: {},
+                },
+                1024: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+                  speed: 800,
+                  pagination: {},
+                },
               }}
-              aria-label="My Favorite Images"
+              pagination={{ clickable: true }}
+              effect=""
+              autoplay={true}
             >
-              <SplideSlide className="">
-                <div className="border">
+              <SwiperSlide className="">
+                <div className=" rounded-full">
                   <img
-                    className="object-cover w-[] h-[500px]"
+                    className="object-cover rounded-full w-[] h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />
                 </div>
-              </SplideSlide>
-              <SplideSlide className="">
-                <div className="border">
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="">
                   <img
-                    className="object-cover h-[600px]"
+                    className="object-cover rounded-full h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />
                 </div>
-              </SplideSlide>
-              <SplideSlide className="">
-                <div className="border">
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="">
                   <img
-                    className="object-cover h-[600px]"
+                    className="object-cover rounded-full   h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />
                 </div>
-              </SplideSlide>
-            </Splide>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

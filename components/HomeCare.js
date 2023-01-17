@@ -44,13 +44,21 @@ function HomeCare({ products }) {
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}
                 slidesPerView={1}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerGroup={1}
                 breakpoints={{
+                  350: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+
+                    speed: 800,
+
+                    pagination: {},
+                  },
                   769: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 10,
 
                     speed: 800,
 
@@ -59,7 +67,7 @@ function HomeCare({ products }) {
                   1024: {
                     slidesPerView: 4,
                     slidesPerGroup: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                     speed: 800,
                     pagination: {},
                   },
@@ -71,11 +79,11 @@ function HomeCare({ products }) {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className="shadow-lg rounded-3xl mb-5 ">
+                      <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
+                        <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
-                          <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
+                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
                               <div className="flex gap-2 justify-center ">
                                 <div>
                                   {" "}
@@ -111,12 +119,11 @@ function HomeCare({ products }) {
                                 </div>
                               </div>
                             </div>
-                           
                             <img
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-80 rounded-2xl"
+                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
@@ -133,10 +140,10 @@ function HomeCare({ products }) {
                                 {" "}
                                 {product.node.title}
                               </div>
-                              <p className="text-sm text-center  text-gray-900">
+                              <p className="text-sm text-center text-gray-900">
                                 Extra long product name
                               </p>
-                              <div className="mt-1 text-center mb-4 mr-1 text-xl font-bold ">
+                              <div className="mt-1 text-center font-notosans mb-4 mr-1 text-xl font-bold ">
                                 Rs{" "}
                                 {product.node.priceRange.minVariantPrice.amount}
                               </div>

@@ -61,12 +61,12 @@ function DryGroceries({ products }) {
                 </div>
               </div>
             </div>
-            <div className="pb-12  ">
+            <div className="pb-12 md:mt-0 pt-5 ">
               <Swiper
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}
                 slidesPerView={1}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerGroup={1}
                 breakpoints={{
                   350: {
@@ -80,7 +80,7 @@ function DryGroceries({ products }) {
                   769: {
                     slidesPerView: 2,
                     slidesPerGroup: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
 
                     speed: 800,
 
@@ -89,7 +89,7 @@ function DryGroceries({ products }) {
                   1024: {
                     slidesPerView: 4,
                     slidesPerGroup: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                     speed: 800,
                     pagination: {},
                   },
@@ -101,9 +101,9 @@ function DryGroceries({ products }) {
                   const product = items;
                   return (
                     <SwiperSlide key={id} className="">
-                      <div className=" p-2 rounded-3xl md:mb-5 ">
+                      <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-72 md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
+                        <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
                             <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
                               <div className="flex gap-2 justify-center ">
@@ -145,7 +145,7 @@ function DryGroceries({ products }) {
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-40 md:h-80 rounded-2xl"
+                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">

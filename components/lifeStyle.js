@@ -45,7 +45,7 @@ export default function LifeStyle() {
         </svg> */}
         <svg
           width="100%"
-          height="250px"
+          height="150px"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"

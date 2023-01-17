@@ -1,53 +1,79 @@
-import { BsPlusLg } from "react-icons/bs";
-import { BiMinus } from "react-icons/bi";
-import useCollapse from "react-collapsed";
+import React from "react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import Link from "next/link";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 function CoursesCard({ id, title, desc }) {
-  const [isExpanded, setExpanded] = useState(false);
-  const [isExpanded1, setExpanded1] = useState(false);
-  const { getCollapseProps, getToggleProps } = useCollapse({
-    isExpanded,
-    easing: "cubic-bezier(0.37, 0, 0.63, 1)",
-    duration: 600,
-  });
-
   return (
     <>
-      <div key={id} className="w-full flex  border-t border-b flex-col">
-        <div
-          {...getToggleProps({
-            onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-          })}
-          className="bg-blue  w-full  rounded flex justify-between  p-4 h-full items-center"
-        >
-          <span className="text-subtext flex text-center font-bold ">
-            {title}
-          </span>
-          <div>
-            {isExpanded ? (
-              <BiMinus size={15} className=" text-title w- h-6 mr-4" />
-            ) : (
-              <BsPlusLg size={15} className=" text-title w- h-6 mr-4" />
-            )}
-          </div>
-        </div>
-        <div>
-          <section {...getCollapseProps()}>
-            <div className="flex">
-              <div className="w-full">
-                <div className="h-full p-4  pt-5 pb-5 rounded-lg border text-center ">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolores, cupiditate ea dignissimos nobis tempore ut quam
-                  voluptate suscipit sapiente non fugiat culpa corporis
-                  quisquam, iure laudantium! Quae quia officia explicabo,
-                  possimus non adipisci eveniet blanditiis iste laboriosam,
-                  animi, dicta placeat enim aut voluptatibus. Ipsa accusamus
-                  neque et laudantium adipisci iste!
-                </div>
+      <div className="border rounded-full md:h-fit">
+        <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden border justify-center">
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            slidesPerView={1}
+            spaceBetween={10}
+            slidesPerGroup={1}
+            breakpoints={{
+              350: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+
+                speed: 800,
+
+                pagination: {},
+              },
+              769: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 10,
+
+                speed: 800,
+
+                pagination: {},
+              },
+              1024: {
+                slidesPerView: 4,
+                slidesPerGroup: 3,
+                spaceBetween: 10,
+                speed: 800,
+                pagination: {},
+              },
+            }}
+            // pagination={{ clickable: true }}
+            effect=""
+          >
+            <SwiperSlide className="">
+              <div className="border">
+                <img
+                  className="object-cover w-[] h-[500px]"
+                  src="/forest.jpg"
+                  alt=""
+                />
               </div>
-            </div>
-          </section>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="border">
+                <img
+                  className="object-cover h-[600px]"
+                  src="/forest.jpg"
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="border">
+                <img
+                  className="object-cover h-[600px]"
+                  src="/forest.jpg"
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </>

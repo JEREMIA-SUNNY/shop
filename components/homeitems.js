@@ -17,7 +17,7 @@ function HomeItem({ products }) {
   const nextHandler = () => {
     swiperRef.slideNext();
   };
-  console.log("this is inside", products);
+  
   return (
     <>
       <section className="  bg-[#F3F6F9]">
@@ -25,7 +25,7 @@ function HomeItem({ products }) {
           <div className="md:container relative -top pt-60 md:pt-96 md:mx-auto">
             <div className="flex justify-between md:mx-auto  md:container ">
               <div className="flex   justify-between">
-                <p className="w-fit p-2 ml-5 mb-10 text-[#23313B]  text-4xl">
+                <p className="w-fit p-2 md:ml-5 mb-10 text-[#23313B]  text-4xl">
                   Personal Care
                 </p>
               </div>
@@ -47,7 +47,7 @@ function HomeItem({ products }) {
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}
                 slidesPerView={1}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerGroup={1}
                 breakpoints={{
                   350: {
@@ -84,9 +84,9 @@ function HomeItem({ products }) {
                     <SwiperSlide key={id} className="">
                       <div className="shadow-lg rounded-3xl md:mb-5 ">
                         {" "}
-                        <div className="flex flex-col  transition duration-300 h-72 md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
+                        <div className="flex flex-col  transition duration-300 h-82 md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
                           <div className="relative w-full h-fit p-2">
-                          <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
+                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
                               <div className="flex gap-2 justify-center ">
                                 <div>
                                   {" "}

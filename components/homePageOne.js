@@ -73,8 +73,8 @@ export default function homePageOne() {
             </div>
           </div>
         </div>
-        <div className=" rounded-full md:h-[20px]">
-          <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
+        <div className=" lg:block lg:block flex justify-center rounded-full lg:h-[20px]">
+          <div className="flex  lg:relative lg:-top-[500px] lg:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
             <Swiper
               modules={[Pagination, Autoplay, Navigation]}
               slidesPerView={1}
@@ -82,8 +82,8 @@ export default function homePageOne() {
               slidesPerGroup={1}
               breakpoints={{
                 350: {
-                  slidesPerView: 2,
-                  slidesPerGroup: 2,
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
 
                   speed: 800,
 
@@ -113,7 +113,7 @@ export default function homePageOne() {
               <SwiperSlide className="">
                 <div className=" rounded-full">
                   <img
-                    className="object-cover rounded-full w-[] h-[500px]"
+                    className="object-cover rounded-full w-[] h-[400px] md:h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />
@@ -122,7 +122,7 @@ export default function homePageOne() {
               <SwiperSlide className="">
                 <div className="">
                   <img
-                    className="object-cover rounded-full h-[500px]"
+                    className="object-cover rounded-full h-[400px] md:h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />
@@ -131,7 +131,7 @@ export default function homePageOne() {
               <SwiperSlide className="">
                 <div className="">
                   <img
-                    className="object-cover rounded-full   h-[500px]"
+                    className="object-cover rounded-full  h-[400px]  md:h-[500px]"
                     src="/forest.jpg"
                     alt=""
                   />

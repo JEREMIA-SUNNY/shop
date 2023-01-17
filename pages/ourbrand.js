@@ -10,7 +10,7 @@ import { useState } from "react";
 function CoursesCard({ id, title, desc }) {
   return (
     <>
-      <div className="border rounded-full md:h-fit">
+      {/* <div className="border rounded-full md:h-fit">
         <div className="flex md:relative md:-top-[500px] md:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden border justify-center">
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
@@ -75,7 +75,7 @@ function CoursesCard({ id, title, desc }) {
             </SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

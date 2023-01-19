@@ -20,7 +20,7 @@ export default function PersonalProduct({ products }) {
   // console.log(products, "ON PERSOL");
   return (
     <>
-      <section className="h-[300px]">
+      <section className=" h-[100px] md:h-[300px]">
         <div className="relative -top-96">
           <div className=" mb-5 flex justify-between container mx-auto">
             <div className="flex   justify-between">
@@ -163,9 +163,13 @@ export default function PersonalProduct({ products }) {
       <div className="md:container  md:mx-auto">
         <div className="flex md:flex-row flex-col justify-between">
           <div>
-            <p className="text-title text-2xl font-semibold">Know the Brand</p>
-            <p className="text-[#23313B] mt-6 text-xl font-semibold">Sun Mud</p>
-            <p className="text-subtext md:w-[700px] mt-5">
+            <p className="text-title text-center md:text-left text-2xl font-semibold">
+              Know the Brand
+            </p>
+            <p className="text-[#23313B] text-center md:text-left mt-6 text-xl font-semibold">
+              Sun Mud
+            </p>
+            <p className="text-subtext text-center md:text-left md:w-[700px] mt-5">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
               dolore. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Tenetur, dolore. Lorem ipsum dolor, sit amet consectetur

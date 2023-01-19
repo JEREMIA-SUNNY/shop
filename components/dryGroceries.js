@@ -61,7 +61,7 @@ function DryGroceries({ products }) {
                 </div>
               </div>
             </div>
-            <div className="pb-12 md:mt-0 pt-5 ">
+            <div className="pb-12 p-4 md:p-0 md:mt-0 pt-5 ">
               <Swiper
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}

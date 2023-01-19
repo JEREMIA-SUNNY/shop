@@ -17,7 +17,7 @@ function HomeItem({ products }) {
   const nextHandler = () => {
     swiperRef.slideNext();
   };
-  
+
   return (
     <>
       <section className="  bg-[#F3F6F9]">
@@ -42,8 +42,8 @@ function HomeItem({ products }) {
                 </div>
               </div>
             </div>
-            <div className="pb-12  ">
-            <Swiper
+            <div className="pb-12 p-4 md:p-0 md:mt-0 pt-5 ">
+              <Swiper
                 onSwiper={(swiper) => setSwiperRef(swiper)}
                 modules={[Pagination, Autoplay, Navigation]}
                 slidesPerView={1}

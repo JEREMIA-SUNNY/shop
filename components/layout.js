@@ -186,10 +186,10 @@ export default function Layout({ children }) {
           </svg>
         </div>
         <div className="bg-[#122C35]">
-          <div className="grid  grid-cols-2 md:flex md:flex-row  mx-auto md:container justify-between items-start">
-            <div className="col-span-2 pb-4 md:pb-0 ">
+          <div className="grid  grid-cols-2 place-content-center md:flex md:flex-row  mx-auto md:container justify-between items-start">
+            <div className="col-span-2 md:pt-0 pt-8 pb-4 md:pb-0 ">
               <Link href="/">
-                <a className="flex justify-start items-center pl-6 md:pl-0">
+                <a className="flex md:justify-start justify-center items-center pl-6 md:pl-0">
                   <div className="">
                     <img
                       src="/brandlogo.png"
@@ -201,7 +201,7 @@ export default function Layout({ children }) {
               </Link>
             </div>
 
-            <div className="text-sm p-4 md:p-0 pl-6 ">
+            <div className="text-sm  p-4 md:p-0 pl-6 ">
               <p className="font-semibold text-white">About</p>
               <p className=" text-white">Our Story</p>
               <p className=" text-white">About Calculator</p>
@@ -231,7 +231,7 @@ export default function Layout({ children }) {
               <p className="font-semibold text-sm pb-2 text-zinc-500">
                 Find us on
               </p>
-              <div className="grid-cols-5 gap-2 inline-grid ">
+              <div className="grid-cols-5 place-content-center gap-2 inline-grid ">
                 <a
                   className="hover:scale-105 transition-all"
                   // href="https://www.facebook.com/MadhurPharmaAndResearchLaboratories"

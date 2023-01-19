@@ -30,16 +30,18 @@ export default function homePageOne() {
               style={{
                 fontFamily: "Gloria Hallelujah",
               }}
-              className="text-left text-[#23313B] font-[Gloria Hallelujah] font-bold text-5xl ml-20"
+              className="text-left text-[#23313B] font-[Gloria Hallelujah]  font-bold text-5xl ml-4 md:ml-20"
             >
               Use Your Power To Pick
             </p>
-            <p className="text-left mt-4 text-subtext font-notosans font-medium mb-4 ml-20 ">
+            <p className="text-left mt-4 text-subtext font-notosans  font-medium mb-4 ml-2 md:ml-20 ">
               Healthy products You Can afford and verify
             </p>
-            <button className="w-fit ml-20  mb-20 bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
-              SHOP NOW
-            </button>
+            <div className="flex justify-center md:justify-start ">
+              <button className="w-fit md:ml-20  mb-20 bg-[#BD2B23] text-white px-5 py-2 rounded-3xl">
+                SHOP NOW
+              </button>
+            </div>
           </div>
         </div>
         <div className="flex md:container relative md:mx-auto ">
@@ -73,7 +75,7 @@ export default function homePageOne() {
             </div>
           </div>
         </div>
-        <div className=" lg:block lg:block flex justify-center rounded-full lg:h-[20px]">
+        <div className=" lg:block  flex justify-center rounded-full lg:h-[20px]">
           <div className="flex  lg:relative bg-[#FDF8F2] lg:-top-[500px] lg:left-[60%] rounded-full md:h-[500px] w-[400px] h-[400px] md:w-[500px] overflow-hidden justify-center">
             <div className="lg:flex z-[100] hidden absolute bg-white rounded-full px-8 py-5 mt-[70%] ml-[5%] ">
               <div className="flex gap-2 justify-center ">

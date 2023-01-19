@@ -30,6 +30,7 @@ export default function Home({ products }) {
       <LifeStyle />
       <HomeSlider2 />
       <OurBrands />
+
       {/* <OurStory />
         <Community />  */}
 

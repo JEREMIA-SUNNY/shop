@@ -17,7 +17,7 @@ export default function ourBrands() {
           >
             Become A Vendor
           </p>
-          <p className="mt-5 text-[#647887]">
+          <p className="mt-5 p-5 md:p-0 text-subtext">
             Your Product Have Beautiful Story And It Deserve To Be Told
           </p>
           <div className="mt-5 flex justify-center ">
@@ -27,7 +27,6 @@ export default function ourBrands() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

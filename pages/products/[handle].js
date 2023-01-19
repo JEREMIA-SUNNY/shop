@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import OurBrand from "../ourbrand";
+import OurBrand from "../../components/ourbrand";
 import PersonalProduct from "../../components/personalProduct";
 import { useState } from "react";
 import useCollapse from "react-collapsed";
@@ -31,7 +31,7 @@ function HandleProduct({ product, allProducts }) {
     {
       id: 1,
       title: "About",
-      desc: " loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl",
+      desc: " loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhf  fhfhfhfhhhhhhhslkhdhh hfsdkfh lkjdfhjskd fiowes u fhisl l   oremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl loremkdsjfjfjfjfjfjfhfskdalhjfsdfhs;odhfsd;kjfhfhfhfhfhfhhhhhhhslkhdhhhfsdkfhslkjdfhjskdhfiowesufhisl ",
     },
     {
       id: 2,
@@ -48,9 +48,9 @@ function HandleProduct({ product, allProducts }) {
   const point = [1, 2, 3, 5];
   return (
     <>
-      <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-12 mx-auto">
-          <div className="lg:w-4/5  md:container md:mx-auto flex flex-wrap">
+      <section className=" body-font ">
+        <div className="container  py-12 mx-auto">
+          <div className="lg:w-full gap-5 md:container md:mx-auto flex md:flex-row flex-col ">
             <div className="lg:w-[45%] w-full h-fit ">
               <Swiper
                 pagination={{
@@ -88,7 +88,7 @@ function HandleProduct({ product, allProducts }) {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <div className="lg:w-1/2 w-full lg:pl-10 lg:mt-0">
+            <div className="lg:w-1/2s w-full  lg:mt-0">
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                 {product.title}
               </h1>
@@ -97,18 +97,18 @@ function HandleProduct({ product, allProducts }) {
                   <a className="text-gray-500">Games</a>
                 </span>
               </div>
-              <p className="leading-relaxed text-subtext overflow-hidden text-ellipsis h-32">
+              <p className="leading-relaxed text-subtext overflow-hidden text-justify p-1 md:h-32">
                 {product.description}
               </p>
-              <div className="flex flex-col mt-3 border-black ">
-                <div className="flex">
+              <div className="flex flex-col  mt-3 border-black ">
+                <div className="flex md:justify-start justify-center ">
                   <span className="title-font font-medium text-2xl text-title">
                     {product.priceRange.minVariantPrice.amount}
                   </span>
                 </div>
 
                 {/* Avialabilityyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy */}
-                <div className="flex gap-5 mt-4  items-center">
+                <div className="flex gap-5 mt-4  md:justify-start justify-center  items-center">
                   <span className="border-b w-[100px]  ">1234856</span>
                   <div className="">
                     <button className="border-2 border-black p-2 text-title rounded-3xl">
@@ -124,7 +124,7 @@ function HandleProduct({ product, allProducts }) {
                 </div>
                 {/* rating starrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */}
                 <div>
-                  <div className="flex items-center">
+                  <div className="flex mt-5 md:justify-start justify-center  items-center">
                     <svg
                       aria-hidden="true"
                       className="w-5 h-5 text-yellow-400"
@@ -178,7 +178,7 @@ function HandleProduct({ product, allProducts }) {
                   </div>
                 </div>
                 {/* item grammmm buttton................................. */}
-                <div className="flex gap-2 py-2">
+                <div className="flex mt-5 md:justify-start justify-center gap-2 py-2">
                   <button className="border border-black px-5 text-title rounded-md">
                     {" "}
                     300g
@@ -243,7 +243,7 @@ function HandleProduct({ product, allProducts }) {
               </div>
             </div>
           </div>
-          <div className=" mx-auto md:container  pb-10">
+          <div className=" mx-auto md:container    pb-10">
             <Swiper
               onSwiper={(swiper) => setSwiperRef(swiper)}
               modules={[Pagination, Autoplay]}
@@ -276,15 +276,15 @@ function HandleProduct({ product, allProducts }) {
                 {point.map(({ link, id, img, Levels, dur, mode, title }) => {
                   return (
                     <SwiperSlide key={id}>
-                      <div className="min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1  justify-between  px-8   rounded-lg overflow-hidden text-center relative">
-                        <div className="p-5">
+                      <div className="md:min-w-[400px]  border hover:shadow-md bg-white hover:scale-100 ease-in duration-300  flex flex-col lg:flex-1  justify-between  px-8   rounded-lg overflow-hidden text-center relative">
+                        <div className="p-3">
                           <p className="mt-4 text-subtext text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Nostrum saepe eum blanditiis beatae nam fugit
                             sunt consequatur, at iure qui fuga maxime voluptate
                             asperiores delectus?
                           </p>
-                          <p className="mt-5 text-left">jerry.</p>
+                          <p className="mt-5 text-left">jerry</p>
                         </div>
                       </div>
                     </SwiperSlide>

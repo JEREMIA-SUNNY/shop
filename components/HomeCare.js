@@ -20,7 +20,7 @@ function HomeCare({ products }) {
   return (
     <>
       <section className="relative ">
-        <div className="bg-[#F3F6F9]">
+        <div className="bg-coustom1">
           <div className="md:container  md:mx-auto">
             <div className="flex justify-between py-10 mb-5 container ">
               <div className="flex   justify-between">
@@ -82,40 +82,19 @@ function HomeCare({ products }) {
                       <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
                         <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
-                          <div className="relative w-full h-fit p-2">
-                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
-                              <div className="flex gap-2 justify-center ">
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/1.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
+                        <div className="relative w-full h-fit p-2">
+                            <div className="flex relative z-50  justify-center    rounded-b-3xl  px-8 pb-1">
+                              <div className="flex justify-center flex-col md:w-[80%]   bg-white pb-1 rounded-b-3xl  items-center">
+                                <div className=" flex justify-center">
+                                  <span className="px-7 md:px-12 text-center font-semibold text-subtext">
+                                    8.1/10
+                                  </span>
                                 </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/2.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/3.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/4.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
+                                <div className="w-1/2  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
+                                  <div
+                                    className="bg-green-600 h-1 rounded-full"
+                                    style={{ width: "50%" }}
+                                  ></div>
                                 </div>
                               </div>
                             </div>
@@ -123,11 +102,11 @@ function HomeCare({ products }) {
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
+                              className="object-cover relative mt-[-25%] md:mt-[-10%] z-40  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] z-50 shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
                                   BUY
                                 </Link>
@@ -169,15 +148,15 @@ function HomeCare({ products }) {
             width="100%"
             height="150px"
             id="svg"
-            viewBox="0 0 1440 400"
+            viewBox="0 0 1440 390"
             xmlns="http://www.w3.org/2000/svg"
             className="transition duration-300 ease-in-out delay-150"
           >
             <path
-              d="M 0,400 C 0,400 0,200 0,200 C 41.823051669991315,189.02013863348628 83.64610333998263,178.04027726697254 112,168 C 140.35389666001737,157.95972273302746 155.23863831006082,148.85902956559607 189,156 C 222.76136168993918,163.14097043440393 275.3993434197741,186.5236044706431 315,186 C 354.6006565802259,185.4763955293569 381.1639880108429,161.04655255183152 413,156 C 444.8360119891571,150.95344744816848 481.9447045368544,165.2901853220308 514,171 C 546.0552954631456,176.7098146779692 573.0571938417396,173.79270616004536 608,179 C 642.9428061582604,184.20729383995464 685.8265200961869,197.53899003778767 717,210 C 748.1734799038131,222.46100996221233 767.6367257735128,234.05133368880385 805,241 C 842.3632742264872,247.94866631119615 897.6265768097618,250.25567520699704 935,242 C 972.3734231902382,233.74432479300296 991.8569669874394,214.925965483208 1023,204 C 1054.1430330125606,193.074034516792 1096.9455552404802,190.04046286017106 1136,208 C 1175.0544447595198,225.95953713982894 1210.3608120506399,264.91218307610774 1242,270 C 1273.6391879493601,275.08781692389226 1301.6111965569598,246.3108048353978 1334,229 C 1366.3888034430402,211.6891951646022 1403.19440172152,205.8445975823011 1440,200 C 1440,200 1440,400 1440,400 Z"
+              d="M 0,400 C 0,400 0,200 0,200 C 57.40260117898967,169.1260144333712 114.80520235797934,138.25202886674245 158,145 C 201.19479764202066,151.74797113325755 230.18179174707234,196.11789896640144 276,200 C 321.81820825292766,203.88210103359856 384.46763065373125,167.27637526765182 436,176 C 487.53236934626875,184.72362473234818 527.9476856380024,238.77659996299136 567,233 C 606.0523143619976,227.22340003700864 643.7416267942584,161.61722488038276 693,137 C 742.2583732057416,112.38277511961722 803.0858071849638,128.75450051547753 859,145 C 914.9141928150362,161.24549948452247 965.9151444658862,177.36477305770708 1011,198 C 1056.0848555341138,218.63522694229292 1095.2536149514922,243.78640725369428 1142,243 C 1188.7463850485078,242.21359274630572 1243.070395728145,215.48959792751594 1294,204 C 1344.929604271855,192.51040207248406 1392.4648021359276,196.25520103624203 1440,200 C 1440,200 1440,400 1440,400 Z"
               stroke="none"
               strokeWidth="0"
-              fill="#F3F6F9"
+              fill="#f7f5f0"
               fillOpacity="1"
               className="transition-all duration-300 ease-in-out delay-150 path-0"
               transform="rotate(-180 720 200)"

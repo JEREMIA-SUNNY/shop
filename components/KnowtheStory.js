@@ -19,13 +19,209 @@ export default function KnowtheStory() {
   };
   return (
     <>
-      <div className="flex justify-between  mb-5 md:container md:mx-auto">
-        <div className="flex   justify-between">
-          <p className="w-fit p-2 text-[#23313B] text-4xl">
-            Know The Story Of The Product
-          </p>
+      <div className="flex my-10 justify-center">
+        <p className="w-fit text-center font-notosans font-[4rem] font-extrabold p-2 text-[#23313B] text-4xl">
+          Pick Better
+        </p>
+      </div>
+
+      <div className="flex gap-5 justify-center">
+        <div className="flex mt-5">
+          <div className="md:flex hidden   bg-white rounded-b-3xl px-8 pb-2 ">
+            <div className="flex flex-col justify-center">
+              <p className="font-notosans font-bold text-center">A good Pick</p>
+              <div className=" flex justify-center">
+                <span className=" text-center font-semibold text-subtext">
+                  8.1/10
+                </span>
+              </div>
+              <div className="w-[200px]  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
+                <div
+                  className="bg-green-600 h-1 rounded-full"
+                  style={{ width: "60%" }}
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="/sample.png"
+              className="w-[150px] rounded-lg h-[150px]"
+              alt=""
+            />
+          </div>
         </div>
-        <div className="flex  gap-1 mt-5 mr-6">
+        <div>
+          <div className="flex w-[1px] flex-col h-[200px] items-center  justify-center gap-1 ">
+            <span className="border h-[60px] border-subtext lg:w-full"></span>
+            <p>vs</p>
+            <span className="border h-[60px] border-subtext lg:w-full"></span>
+          </div>
+        </div>
+        <div className="flex  mt-5">
+          <img
+            src="/sample.png"
+            className="w-[150px] rounded-lg h-[150px]"
+            alt=""
+          />
+          <div className="md:flex hidden   bg-white rounded-b-3xl px-8 pb-2 ">
+            <div className="flex flex-col justify-center">
+              <p className="font-notosans font-bold text-center">A good Pick</p>
+              <div className=" flex justify-center">
+                <span className=" text-center font-semibold text-subtext">
+                  8.1/10
+                </span>
+              </div>
+              <div className="w-[200px]  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
+                <div
+                  className="bg-green-600 h-1 rounded-full"
+                  style={{ width: "60%" }}
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+
+      <div className=""></div>
+      <div className="">
+        <div className="  md:mx-auto flex flex-col md:flex-row justify-center py-10 md:container">
+          <div className="flex relative z-10  mr-[30%]  rounded-full md:h-[700px] w-[400px] h-[400px] md:w-[700px] overflow-hidden justify-center">
+            <Swiper
+              onSwiper={(swiper) => setSwiperRef(swiper)}
+              modules={[Pagination, Autoplay, Navigation]}
+              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerGroup={1}
+              breakpoints={{
+                350: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+
+                  speed: 800,
+                },
+                769: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+
+                  speed: 800,
+                },
+                1024: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+                  speed: 800,
+                  autoplay: true,
+                },
+              }}
+              effect=""
+            >
+              <SwiperSlide className="">
+                <div className="bg-slate-700 h-[700px] md:h-[700px] rounded-full">
+                  <div className="flex flex-col pl-28 pt-28 ">
+                    <p className="text-white">processing</p>
+                    <p>Meet The Maker</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="bg-slate-700 h-[700px] md:h-[700px] rounded-full">
+                  <div className="flex flex-col pl-28 pt-28 ">
+                    <p className="text-white">processing</p>
+                    <p>List Of Process</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="bg-slate-700 h-[700px] md:h-[700px] rounded-full">
+                  <div className="flex flex-col pl-28 pt-28 ">
+                    <p className="text-white">Transport</p>
+                    <p>2135 total miles</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="bg-slate-700 h-[700px] md:h-[700px] rounded-full">
+                  <div className="flex flex-col pl-28 pt-28 ">
+                    <p className="text-white">End Of Life</p>
+                    <p>How can i safely put it back to earth </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <div className="flex relative md:mt-0 mt-[-50%] z-30 md:z-0 md:absolute md:mr-[-20%]    rounded-full md:h-[700px] w-[400px] h-[400px] md:w-[700px] overflow-hidden justify-center">
+            <Swiper
+              onSwiper={(swiper) => setSwiperRef(swiper)}
+              modules={[Pagination, Autoplay, Navigation]}
+              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerGroup={1}
+              breakpoints={{
+                350: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+
+                  speed: 800,
+
+                  pagination: {},
+                },
+                769: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+
+                  speed: 800,
+
+                  pagination: {},
+                },
+                1024: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10,
+                  speed: 800,
+                  pagination: {},
+                },
+              }}
+              pagination={{ clickable: true }}
+              effect=""
+            >
+              <SwiperSlide className="">
+                <div className=" rounded-full">
+                  <img
+                    className="object-cover rounded-full w-[] h-[400px] md:h-[700px]"
+                    src="/forest.jpg"
+                    alt=""
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="">
+                  <img
+                    className="object-cover rounded-full h-[400px] md:h-[700px]"
+                    src="/forest.jpg"
+                    alt=""
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <div className="">
+                  <img
+                    className="object-cover rounded-full  h-[400px]  md:h-[700px]"
+                    src="/forest.jpg"
+                    alt=""
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        <div className="flex justify-center  gap-1 mt-5 ">
           <div>
             <button onClick={prevHandler}>
               <img src="/icons/prevblack.png" alt="" />
@@ -37,102 +233,10 @@ export default function KnowtheStory() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="">
-        {/* <img className="w-screen" src="/blue1.png" alt="" /> */}
-
-        <svg
-          width="100%"
-          height="50px"
-          id="svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 400"
-          xmlns="http://www.w3.org/2000/svg"
-          className="transition duration-300 ease-in-out delay-150"
-        >
-          <path
-            d="M 0,400 C 0,400 0,200 0,200 C 70.38845726970034,208.70977925761497 140.77691453940068,217.41955851522997 183,228 C 225.22308546059932,238.58044148477003 239.28079911209767,251.03154519669505 292,233 C 344.71920088790233,214.96845480330495 436.09988901220856,166.4542606979899 493,176 C 549.9001109877914,185.5457393020101 572.3196448390678,253.15141201134543 627,269 C 681.6803551609322,284.8485879886546 768.6215316315205,248.94009125662842 818,241 C 867.3784683684795,233.05990874337158 879.1942286348502,253.0882229621408 932,247 C 984.8057713651498,240.9117770378592 1078.6015538290787,208.70701689480828 1138,212 C 1197.3984461709213,215.29298310519172 1222.3995560488347,254.08370945862617 1267,258 C 1311.6004439511653,261.9162905413738 1375.8002219755826,230.9581452706869 1440,200 C 1440,200 1440,400 1440,400 Z"
-            stroke="none"
-            strokeWidth="0"
-            fill="#FDF8F2"
-            fillOpacity="1"
-            className="transition-all duration-300 ease-in-out delay-150 path-0"
-          ></path>
-        </svg>
-      </div>
-      <div className="bg-[#FDF8F2]">
-        <div className=" mx-auto md:container">
-          <Swiper
-            onSwiper={(swiper) => setSwiperRef(swiper)}
-            modules={[Pagination, Autoplay]}
-            slidesPerView={1}
-            spaceBetween={20}
-            slidesPerGroup={1}
-            breakpoints={{
-              769: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                spaceBetween: 20,
-
-                speed: 800,
-
-                pagination: {},
-              },
-              1024: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                spaceBetween: 20,
-
-                speed: 800,
-                pagination: {},
-              },
-            }}
-            autoplay={true}
-          >
-            <SwiperSlide>
-              <div className="md:container md:mx-auto">
-                <div className="flex mt-8 justify-between">
-                  <div className="flex flex-col">
-                    <p className="text-3xl font-notosansmediu text-[#233139]">
-                      Total Miles
-                    </p>
-                    <p className="mt-4 text-[#233139]">1200 Km</p>
-                    <p className="mt-8  text-[#647887]">Materials</p>
-                    <p className="mt-2 text-[#647887]">Processing</p>
-                    <p className="mt-2 text-[#647887]">Packaging</p>
-                  </div>
-                  <div>
-                    <img src="/map.png" alt="map of del" />
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="md:container md:mx-auto">
-                <div className="flex mt-8 justify-between">
-                  <div className="flex flex-col">
-                    <p className="text-3xl font-notosansmediu text-[#233139]">
-                      Meet The Maker
-                    </p>
-                    <div className="flex gap-10 mt-10">
-                      <p className="border  rounded-t-full rounded-b-full px-8 py-2 text-[#233139]">
-                        No Harsh Chemical
-                      </p>
-                      <p className="border  rounded-t-full rounded-b-full px-8 py-2 text-[#233139]">
-                        Naturally Processed
-                      </p>
-                      <p className="border  rounded-t-full rounded-b-full px-8 py-2 text-[#233139]">
-                        Hand Made
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <img src="/map.png" alt="map of del" />
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+        <div className="flex justify-center bg-[#13456aa]">
+          <button className="h-[40px] md:mt-1  mb-5 px-4 border rounded-3xl border-black bg-white">
+            <Link href={"/pickbetter"}>Learn More</Link>
+          </button>{" "}
         </div>
       </div>
     </>

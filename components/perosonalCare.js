@@ -7,9 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
 import { useState } from "react";
-import OurRating from "../components/OurRating";
-
-function HomeItem({ products }) {
+function PersonalCare({ products }) {
+  console.log("this is inside", products);
   const [swiperRef, setSwiperRef] = useState(0);
   const prevHandler = () => {
     swiperRef.slidePrev();
@@ -18,19 +17,16 @@ function HomeItem({ products }) {
   const nextHandler = () => {
     swiperRef.slideNext();
   };
-
   return (
     <>
-      <section className="  bg-[#F3F6F9]">
-        <div className="">
-          <div className="md:container relative -top pt-60 md:pt-96 md:mx-auto">
-            <div className="flex justify-between md:mx-auto  md:container ">
+      <section className="relative ">
+        <div className="bg-[#F3F6F9]">
+          <div className="md:container  md:mx-auto">
+            <div className="flex justify-between py-10 mb-5 container ">
               <div className="flex   justify-between">
-                <p className="w-fit p-2 md:ml-5 mb-10 text-[#23313B]  text-4xl">
-                  Personal Care
-                </p>
+                <p className="w-fit p-2 text-[#23313B] text-4xl">Personal Care</p>
               </div>
-              <div className="flex gap-1 mt-5 mr-6">
+              <div className="flex  gap-1 mt-5 mr-6">
                 <div>
                   <button onClick={prevHandler}>
                     <img src="/icons/prevblack.png" alt="" />
@@ -86,18 +82,18 @@ function HomeItem({ products }) {
                       <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
                         <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
-                          <div className="relative w-full h-fit p-2">
-                            <div className="md:flex hidden  absolute bg-white rounded-b-3xl px-8 pb-2 ml-[10%] ">
-                              <div className="flex flex-col justify-center">
+                        <div className="relative w-full h-fit p-2">
+                            <div className="flex relative z-50  justify-center    rounded-b-3xl  px-8 pb-1">
+                              <div className="flex justify-center flex-col md:w-[80%]   bg-white pb-1 rounded-b-3xl  items-center">
                                 <div className=" flex justify-center">
-                                  <span className=" text-center font-semibold text-subtext">
+                                  <span className="px-7 md:px-12 text-center font-semibold text-subtext">
                                     8.1/10
                                   </span>
                                 </div>
-                                <div className="w-[200px]  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
+                                <div className="w-1/2  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
                                   <div
                                     className="bg-green-600 h-1 rounded-full"
-                                    style={{ width: "60%" }}
+                                    style={{ width: "50%" }}
                                   ></div>
                                 </div>
                               </div>
@@ -106,11 +102,11 @@ function HomeItem({ products }) {
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
+                              className="object-cover relative mt-[-25%] md:mt-[-10%] z-40  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] z-50 shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
                                   BUY
                                 </Link>
@@ -139,33 +135,37 @@ function HomeItem({ products }) {
                 })}
               </Swiper>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center bg-[#13456aa]">
               <button className="h-[40px] mt-4  px-4 border rounded-3xl border-black bg-white">
                 VIEW ALL PRODUCTS
               </button>{" "}
             </div>
-
-           
           </div>
         </div>
+        <div>
+          <svg
+            preserveAspectRatio="none"
+            width="100%"
+            height="150px"
+            id="svg"
+            viewBox="0 0 1440 400"
+            xmlns="http://www.w3.org/2000/svg"
+            className="transition duration-300 ease-in-out delay-150"
+          >
+            <path
+              d="M 0,400 C 0,400 0,200 0,200 C 41.823051669991315,189.02013863348628 83.64610333998263,178.04027726697254 112,168 C 140.35389666001737,157.95972273302746 155.23863831006082,148.85902956559607 189,156 C 222.76136168993918,163.14097043440393 275.3993434197741,186.5236044706431 315,186 C 354.6006565802259,185.4763955293569 381.1639880108429,161.04655255183152 413,156 C 444.8360119891571,150.95344744816848 481.9447045368544,165.2901853220308 514,171 C 546.0552954631456,176.7098146779692 573.0571938417396,173.79270616004536 608,179 C 642.9428061582604,184.20729383995464 685.8265200961869,197.53899003778767 717,210 C 748.1734799038131,222.46100996221233 767.6367257735128,234.05133368880385 805,241 C 842.3632742264872,247.94866631119615 897.6265768097618,250.25567520699704 935,242 C 972.3734231902382,233.74432479300296 991.8569669874394,214.925965483208 1023,204 C 1054.1430330125606,193.074034516792 1096.9455552404802,190.04046286017106 1136,208 C 1175.0544447595198,225.95953713982894 1210.3608120506399,264.91218307610774 1242,270 C 1273.6391879493601,275.08781692389226 1301.6111965569598,246.3108048353978 1334,229 C 1366.3888034430402,211.6891951646022 1403.19440172152,205.8445975823011 1440,200 C 1440,200 1440,400 1440,400 Z"
+              stroke="none"
+              strokeWidth="0"
+              fill="#F3F6F9"
+              fillOpacity="1"
+              className="transition-all duration-300 ease-in-out delay-150 path-0"
+              transform="rotate(-180 720 200)"
+            ></path>
+          </svg>
+        </div>
       </section>
-      <div>
-        <svg
-          preserveAspectRatio="none"
-          width="100%"
-          height="150px"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-        >
-          <path
-            fill="#F3F6F9"
-            fillOpacity="1"
-            d="M0,160L30,160C60,160,120,160,180,144C240,128,300,96,360,74.7C420,53,480,43,540,53.3C600,64,660,96,720,117.3C780,139,840,149,900,128C960,107,1020,53,1080,74.7C1140,96,1200,192,1260,197.3C1320,203,1380,117,1410,74.7L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
     </>
   );
 }
 
-export default HomeItem;
+export default PersonalCare;

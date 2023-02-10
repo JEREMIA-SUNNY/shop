@@ -8,7 +8,6 @@ module.exports = {
     extend: {
       colors: {
         lightgray: "#e9e9e9",
-
         orange: "#ffb511",
         coustom1: "#f7f5f0",
         buttonRed: "#BD2B23",

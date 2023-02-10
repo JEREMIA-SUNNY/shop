@@ -14,6 +14,9 @@ export default function LifeStyle() {
         >
           Conscious Products that dont break <br /> your monthly budget
         </p>
+       <div className="flex justify-center">
+       <img src="/homepage.png" alt="" />
+       </div>
         <p className="text-[#647887] font-sans mt-4 text-center">
           {" "}
           we dont charge any sale commisions to our vendor <br /> they pass on
@@ -21,7 +24,7 @@ export default function LifeStyle() {
         </p>
         <div className="flex justify-center mt-5">
           <button className="bg-[#BD2B23] text-white text-sm px-12 py-2 rounded-3xl">
-            SHOP NOW
+          FIND OUT NOW
           </button>
         </div>
       </div>

@@ -11,6 +11,8 @@ import PersonalProduct from "../../components/personalProduct";
 import { useState } from "react";
 import useCollapse from "react-collapsed";
 import KnowtheStory from "../../components/KnowtheStory";
+import EcosocialCategories from "../../components/ecosocialHelath";
+import Link from "next/link";
 function HandleProduct({ product, allProducts }) {
   // console.log(product);
   const [isExpanded, setExpanded] = useState(false);
@@ -97,13 +99,13 @@ function HandleProduct({ product, allProducts }) {
                   <a className="text-gray-500">Games</a>
                 </span>
               </div>
-              <p className="leading-relaxed text-subtext overflow-hidden text-justify p-1 md:h-32">
+              {/* <p className="leading-relaxed text-subtext overflow-hidden text-justify p-1 md:h-32">
                 {product.description}
-              </p>
+              </p> */}
               <div className="flex flex-col  mt-3 border-black ">
                 <div className="flex md:justify-start justify-center ">
                   <span className="title-font font-medium text-2xl text-title">
-                    {product.priceRange.minVariantPrice.amount}
+                    ₹ {product.priceRange.minVariantPrice.amount}
                   </span>
                 </div>
 
@@ -123,7 +125,7 @@ function HandleProduct({ product, allProducts }) {
                   </p>
                 </div>
                 {/* rating starrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */}
-                <div>
+                <div className="flex gap-2">
                   <div className="flex mt-5 md:justify-start justify-center  items-center">
                     <svg
                       aria-hidden="true"
@@ -176,6 +178,7 @@ function HandleProduct({ product, allProducts }) {
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                     </svg>
                   </div>
+                  <p className="underline mt-5  ">120 Rating</p>
                 </div>
                 {/* item grammmm buttton................................. */}
                 <div className="flex mt-5 md:justify-start justify-center gap-2 py-2">
@@ -190,16 +193,27 @@ function HandleProduct({ product, allProducts }) {
                     100g
                   </button>
                 </div>
+                {/* certificationnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */}
+                <div className="flex justify-center mt-5 relative">
+                  <p className="bg-white absolute mt-[-12px] ml-[0%] text-subtext font-notosans font-semibold text-center">
+                    Certification
+                  </p>
+                  <div className="border border-black w-full h-[100px]"></div>
+                </div>
+
                 {/* Butoooooonnn of orderrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */}
                 <div className="flex gap-5 mt-5">
                   <div className="flex rounded-3xl px-4 gap-5 justify-center border">
                     <button className="p-1">-</button> <button>1</button>{" "}
                     <button className="p-1">+</button>
                   </div>
-
+                  <Link href={"/yourCart"}>
                   <button className="flex  text-white bg-[#BD2B23] border-0 py-2 px-6 focus:outline-none  rounded-3xl">
-                    Add To Cart
+                
+               
+                   Add To Cart
                   </button>
+                  </Link>
                 </div>
               </div>
 
@@ -221,6 +235,9 @@ function HandleProduct({ product, allProducts }) {
           </div>
         </div>
       </section>
+
+      <EcosocialCategories />
+
       <div>
         {/* swiper of mapppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp */}
         <KnowtheStory />

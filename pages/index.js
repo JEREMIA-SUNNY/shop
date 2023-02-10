@@ -6,14 +6,15 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import HomeItems from "../components/homeitems";
 import OurRating from "../components/OurRating";
-import HomeCare from "../components/HomeCare";
+import PersonalCare from "../components/perosonalCare";
 import LifeStyle from "../components/lifeStyle";
 
 import HomeSlider2 from "../components/homeSlider2";
 import OurBrands from "../components/ourBrands";
-
+import HowOrderWillCome from "../components/howOrderWillCome";
 import HomePageOne from "../components/homePageOne";
-
+import DiscoverCategory from "../components/discoverCategories";
+import HomeCare from "../components/HomeCare";
 export default function Home({ products }) {
   // console.log(products)
 
@@ -22,10 +23,12 @@ export default function Home({ products }) {
       <section>
         <HomePageOne />
       </section>
-
+      <DiscoverCategory />
       <DryGroceries products={products} />
-      <HomeItems products={products} />
       <OurRating />
+      {/* personal care eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee*/}
+      <PersonalCare products={products} />
+      <HowOrderWillCome />
       <HomeCare products={products} />
       <LifeStyle />
       <HomeSlider2 />

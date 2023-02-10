@@ -83,40 +83,19 @@ export default function PersonalProduct({ products }) {
                       <div className=" md:p-2 rounded-3xl md:mb-5 ">
                         {" "}
                         <div className="flex flex-col  border transition duration-300 h-80   md:h-[500px] bg-white rounded-3xl shadow-sm hover:shadow">
-                          <div className="relative w-full h-fit p-2">
-                            <div className="md:flex hidden absolute bg-white rounded-b-3xl px-8 py-1 ml-[20%] ">
-                              <div className="flex gap-2 justify-center ">
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/1.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
+                        <div className="relative w-full h-fit p-2">
+                            <div className="flex relative z-50  justify-center    rounded-b-3xl  px-8 pb-1">
+                              <div className="flex justify-center flex-col md:w-[80%]   bg-white pb-1 rounded-b-3xl  items-center">
+                                <div className=" flex justify-center">
+                                  <span className="px-7 md:px-12 text-center font-semibold text-subtext">
+                                    8.1/10
+                                  </span>
                                 </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/2.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/3.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  {" "}
-                                  <img
-                                    src="/rating/4.png"
-                                    className="w-[30px] h-[30px]"
-                                    alt=""
-                                  />
+                                <div className="w-1/2  bg-gray-200 rounded-full h-2. dark:bg-gray-700">
+                                  <div
+                                    className="bg-green-600 h-1 rounded-full"
+                                    style={{ width: "50%" }}
+                                  ></div>
                                 </div>
                               </div>
                             </div>
@@ -124,11 +103,11 @@ export default function PersonalProduct({ products }) {
                               src={
                                 product.node.images.edges[0].node.transformedSrc
                               }
-                              className="object-cover  w-full h-44 md:h-80 rounded-2xl"
+                              className="object-cover relative mt-[-25%] md:mt-[-10%] z-40  w-full h-44 md:h-80 rounded-2xl"
                               alt="Plan"
                             />
                             <div className="flex justify-center">
-                              <button className="w-[100px] shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
+                              <button className="w-[100px] z-50 shadow-2xl bg-white text-buttonRed font-notosans font-medium absolute top-[90%] rounded-3xl = p-2">
                                 <Link href={`/products/${product.node.handle}`}>
                                   BUY
                                 </Link>

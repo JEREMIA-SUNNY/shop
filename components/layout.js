@@ -63,7 +63,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Good Picks</title>
+        <title>A Good Pick</title>
       </Head>
 
       <header className="">

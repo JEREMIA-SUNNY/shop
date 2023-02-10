@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head >
-        <title>A good Picks</title>
+        <title>A Good Pick</title>
         <meta name="description" content="Official website for A good Pick" />
         <link rel="icon" href="" />
       </Head>
